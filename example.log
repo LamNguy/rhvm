@@ -1,0 +1,1570 @@
+DEBUG:root:* About to connect() to rhvmanager01.svt.hn port 443 (#0)
+DEBUG:root:* Trying 10.1.20.119...
+DEBUG:root:* Connected to rhvmanager01.svt.hn (10.1.20.119) port 443 (#0)
+DEBUG:root:* Initializing NSS with certpath: sql:/etc/pki/nssdb
+DEBUG:root:* CAfile: /home/centos/tools/ca.pem
+DEBUG:root:*   CApath: none
+DEBUG:root:* SSL connection using TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+DEBUG:root:* Server certificate:
+DEBUG:root:* subject: CN=rhvmanager01.svt.hn,O=svt.hn,C=US
+DEBUG:root:* start date: Sep 27 08:24:44 2020 GMT
+DEBUG:root:* expire date: Sep 02 08:24:44 2025 GMT
+DEBUG:root:* common name: rhvmanager01.svt.hn
+DEBUG:root:* issuer: CN=rhvmanager01.svt.hn.44410,O=svt.hn,C=US
+DEBUG:root:< POST /ovirt-engine/sso/oauth/token HTTP/1.1
+DEBUG:root:< Host: rhvmanager01.svt.hn
+DEBUG:root:< User-Agent: PythonSDK/4.3.4
+DEBUG:root:< Accept: application/json
+DEBUG:root:< Content-Length: 83
+DEBUG:root:< Content-Type: application/x-www-form-urlencoded
+DEBUG:root:< username=admin%40internal&scope=ovirt-app-api&password=Admin123&grant_type=password
+DEBUG:root:* upload completely sent off: 83 out of 83 bytes
+DEBUG:root:> HTTP/1.1 200 OK
+DEBUG:root:> Date: Tue, 26 Jan 2021 10:11:20 GMT
+DEBUG:root:> Server: Apache/2.4.37 (Red Hat Enterprise Linux) OpenSSL/1.1.1c mod_auth_gssapi/1.6.1 mod_wsgi/4.6.4 Python/3.6
+DEBUG:root:> Set-Cookie: locale=en_US; path=/; secure; HttpOnly; Max-Age=2147483647; Expires=Sun, 13-Feb-2089 13:25:27 GMT
+DEBUG:root:> X-XSS-PROTECTION: 1; MODE=BLOCK
+DEBUG:root:> X-CONTENT-TYPE-OPTIONS: NOSNIFF
+DEBUG:root:> X-FRAME-OPTIONS: SAMEORIGIN
+DEBUG:root:> Content-Type: application/json
+DEBUG:root:> Content-Length: 310
+DEBUG:root:> Vary: Accept-Encoding
+DEBUG:root:> 
+DEBUG:root:> {"access_token":"iHYqd6IBiBBrsfeV2GiN9VovL1anN_IgZmBhSWxEHUMCvOmYkuMGRUSo5KnwqwhLrVsdMbjFli_9wbwHvemUug","scope":"ovirt-app-api ovirt-ext=token-info:authz-search ovirt-ext=token-info:public-authz-search ovirt-ext=token-info:validate ovirt-ext=token:password-access","exp":"1612260680000","token_type":"bearer"}
+DEBUG:root:* Connection #0 to host rhvmanager01.svt.hn left intact
+DEBUG:root:* About to connect() to rhvmanager01.svt.hn port 443 (#1)
+DEBUG:root:* Trying 10.1.20.119...
+DEBUG:root:* Connected to rhvmanager01.svt.hn (10.1.20.119) port 443 (#1)
+DEBUG:root:* CAfile: /home/centos/tools/ca.pem
+DEBUG:root:*   CApath: none
+DEBUG:root:* SSL connection using TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+DEBUG:root:* Server certificate:
+DEBUG:root:* subject: CN=rhvmanager01.svt.hn,O=svt.hn,C=US
+DEBUG:root:* start date: Sep 27 08:24:44 2020 GMT
+DEBUG:root:* expire date: Sep 02 08:24:44 2025 GMT
+DEBUG:root:* common name: rhvmanager01.svt.hn
+DEBUG:root:* issuer: CN=rhvmanager01.svt.hn.44410,O=svt.hn,C=US
+DEBUG:root:< GET /ovirt-engine/api/vms HTTP/1.1
+DEBUG:root:< Host: rhvmanager01.svt.hn
+DEBUG:root:< User-Agent: PythonSDK/4.3.4
+DEBUG:root:< Version: 4
+DEBUG:root:< Content-Type: application/xml
+DEBUG:root:< Accept: application/xml
+DEBUG:root:< Authorization: Bearer iHYqd6IBiBBrsfeV2GiN9VovL1anN_IgZmBhSWxEHUMCvOmYkuMGRUSo5KnwqwhLrVsdMbjFli_9wbwHvemUug
+DEBUG:root:> HTTP/1.1 200 OK
+DEBUG:root:> Date: Tue, 26 Jan 2021 10:11:20 GMT
+DEBUG:root:> Server: Apache/2.4.37 (Red Hat Enterprise Linux) OpenSSL/1.1.1c mod_auth_gssapi/1.6.1 mod_wsgi/4.6.4 Python/3.6
+DEBUG:root:> Content-Type: application/xml;charset=UTF-8
+DEBUG:root:> Correlation-Id: bff45385-6143-4bda-b12f-19a732ad80e4
+DEBUG:root:> Vary: Accept-Encoding
+DEBUG:root:> Transfer-Encoding: chunked
+DEBUG:root:> 
+DEBUG:root:> 1ff8
+DEBUG:root:> <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+DEBUG:root:> <vms>
+DEBUG:root:>     <vm href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277" id="28c138bd-160e-4456-9af7-d037934cf277">
+DEBUG:root:>         <actions>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/shutdown" rel="shutdown"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/start" rel="start"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/stop" rel="stop"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/suspend" rel="suspend"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/detach" rel="detach"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/logon" rel="logon"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/maintenance" rel="maintenance"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/previewsnapshot" rel="previewsnapshot"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/reordermacaddresses" rel="reordermacaddresses"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/thawfilesystems" rel="thawfilesystems"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/undosnapshot" rel="undosnapshot"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/ticket" rel="ticket"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/reboot" rel="reboot"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/migrate" rel="migrate"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/commitsnapshot" rel="commitsnapshot"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/clone" rel="clone"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/freezefilesystems" rel="freezefilesystems"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/cancelmigration" rel="cancelmigration"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/export" rel="export"/>
+DEBUG:root:>         </actions>
+DEBUG:root:>         <name>haproxy01</name>
+DEBUG:root:>         <description></description>
+DEBUG:root:>         <comment></comment>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/numanodes" rel="numanodes"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/reporteddevices" rel="reporteddevices"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/sessions" rel="sessions"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/backups" rel="backups"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/checkpoints" rel="checkpoints"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/diskattachments" rel="diskattachments"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/snapshots" rel="snapshots"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/applications" rel="applications"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/hostdevices" rel="hostdevices"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/watchdogs" rel="watchdogs"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/graphicsconsoles" rel="graphicsconsoles"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/cdroms" rel="cdroms"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/nics" rel="nics"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/katelloerrata" rel="katelloerrata"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/permissions" rel="permissions"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/tags" rel="tags"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/affinitylabels" rel="affinitylabels"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/statistics" rel="statistics"/>
+DEBUG:root:>         <bios>
+DEBUG:root:>             <boot_menu>
+DEBUG:root:>                 <enabled>false</enabled>
+DEBUG:root:>             </boot_menu>
+DEBUG:root:>             <type>q35_sea_bios</type>
+DEBUG:root:>         </bios>
+DEBUG:root:>         <cpu>
+DEBUG:root:>             <architecture>x86_64</architecture>
+DEBUG:root:>             <topology>
+DEBUG:root:>                 <cores>1</cores>
+DEBUG:root:>                 <sockets>2</sockets>
+DEBUG:root:>                 <threads>1</threads>
+DEBUG:root:>             </topology>
+DEBUG:root:>         </cpu>
+DEBUG:root:>         <cpu_shares>0</cpu_shares>
+DEBUG:root:>         <creation_time>2020-09-29T11:03:29.705+07:00</creation_time>
+DEBUG:root:>         <delete_protected>false</delete_protected>
+DEBUG:root:>         <display>
+DEBUG:root:>             <allow_override>false</allow_override>
+DEBUG:root:>             <copy_paste_enabled>true</copy_paste_enabled>
+DEBUG:root:>             <disconnect_action>LOCK_SCREEN</disconnect_action>
+DEBUG:root:>             <file_transfer_enabled>true</file_transfer_enabled>
+DEBUG:root:>             <monitors>1</monitors>
+DEBUG:root:>             <single_qxl_pci>false</single_qxl_pci>
+DEBUG:root:>             <smartcard_enabled>false</smartcard_enabled>
+DEBUG:root:>             <type>spice</type>
+DEBUG:root:>         </display>
+DEBUG:root:>         <high_availability>
+DEBUG:root:>             <enabled>false</enabled>
+DEBUG:root:>             <priority>1</priority>
+DEBUG:root:>         </high_availability>
+DEBUG:root:>         <io>
+DEBUG:root:>             <threads>1</threads>
+DEBUG:root:>         </io>
+DEBUG:root:>         <large_icon href="/ovirt-engine/api/icons/689738d8-5a90-4fd8-8c40-0af5d89ebd15" id="689738d8-5a90-4fd8-8c40-0af5d89ebd15"/>
+DEBUG:root:>         <memory>2147483648</memory>
+DEBUG:root:>         <memory_policy>
+DEBUG:root:>             <guaranteed>2147483648</guaranteed>
+DEBUG:root:>             <max>4294967296</max>
+DEBUG:root:>         </memory_policy>
+DEBUG:root:>         <migration>
+DEBUG:root:>             <auto_converge>inherit</auto_converge>
+DEBUG:root:>             <compressed>inherit</compressed>
+DEBUG:root:>             <encrypted>inherit</encrypted>
+DEBUG:root:>         </migration>
+DEBUG:root:>         <migration_downtime>-1</migration_downtime>
+DEBUG:root:>         <multi_queues_enabled>true</multi_queues_enabled>
+DEBUG:root:>         <origin>rhev</origin>
+DEBUG:root:>         <os>
+DEBUG:root:>             <boot>
+DEBUG:root:>                 <devices>
+DEBUG:root:>                     <device>hd</device>
+DEBUG:root:>                     <device>cdrom</device>
+DEBUG:root:>                 </devices>
+DEBUG:root:>             </boot>
+DEBUG:root:>             <type>other</type>
+DEBUG:root:>         </os>
+DEBUG:root:>         <placement_policy>
+DEBUG:root:>             <affinity>migratable</affinity>
+DEBUG:root:>         </placement_policy>
+DEBUG:root:>         <small_icon href="/ovirt-engine/api/icons/e82853d2-67d0-47e2-8cbc-cbbb3d9ecf39" id="e82853d2-67d0-47e2-8cbc-cbbb3d9ecf39"/>
+DEBUG:root:>         <sso>
+DEBUG:root:>             <methods>
+DEBUG:root:>                 <method id="guest_agent"/>
+DEBUG:root:>             </methods>
+DEBUG:root:>         </sso>
+DEBUG:root:>         <start_paused>false</start_paused>
+DEBUG:root:>         <stateless>false</stateless>
+DEBUG:root:>         <storage_error_resume_behaviour>auto_resume</storage_error_resume_behaviour>
+DEBUG:root:>         <time_zone>
+DEBUG:root:>             <name>Etc/GMT</name>
+DEBUG:root:>         </time_zone>
+DEBUG:root:>         <type>server</type>
+DEBUG:root:>         <usb>
+DEBUG:root:>             <enabled>false</enabled>
+DEBUG:root:>         </usb>
+DEBUG:root:>         <cluster href="/ovirt-engine/api/clusters/1db86f68-0164-11eb-b560-00163e29af93" id="1db86f68-0164-11eb-b560-00163e29af93"/>
+DEBUG:root:>         <cpu_profile href="/ovirt-engine/api/cpuprofiles/58ca604e-01a7-003f-01de-000000000250" id="58ca604e-01a7-003f-01de-000000000250"/>
+DEBUG:root:>         <quota id="22b0d82a-0164-11eb-a302-00163e29af93"/>
+DEBUG:root:>         <next_run_configuration_exists>false</next_run_configuration_exists>
+DEBUG:root:>         <numa_tune_mode>interleave</numa_tune_mode>
+DEBUG:root:>         <status>down</status>
+DEBUG:root:>         <stop_time>2021-01-22T16:21:59.885+07:00</stop_time>
+DEBUG:root:>         <original_template href="/ovirt-engine/api/templates/00000000-0000-0000-0000-000000000000" id="00000000-0000-0000-0000-000000000000"/>
+DEBUG:root:>         <template href="/ovirt-engine/api/templates/00000000-0000-0000-0000-000000000000" id="00000000-0000-0000-0000-000000000000"/>
+DEBUG:root:>     </vm>
+DEBUG:root:>     <vm href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a" id="b374b833-4bed-4cce-82c2-2c079a0ad26a">
+DEBUG:root:>         <actions>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/b
+DEBUG:root:> 
+DEBUG:root:> 1ff8
+DEBUG:root:> 374b833-4bed-4cce-82c2-2c079a0ad26a/shutdown" rel="shutdown"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a/start" rel="start"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a/stop" rel="stop"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a/suspend" rel="suspend"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a/detach" rel="detach"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a/logon" rel="logon"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a/maintenance" rel="maintenance"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a/previewsnapshot" rel="previewsnapshot"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a/reordermacaddresses" rel="reordermacaddresses"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a/thawfilesystems" rel="thawfilesystems"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a/undosnapshot" rel="undosnapshot"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a/ticket" rel="ticket"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a/reboot" rel="reboot"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a/migrate" rel="migrate"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a/commitsnapshot" rel="commitsnapshot"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a/clone" rel="clone"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a/freezefilesystems" rel="freezefilesystems"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a/cancelmigration" rel="cancelmigration"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a/export" rel="export"/>
+DEBUG:root:>         </actions>
+DEBUG:root:>         <name>haproxy02</name>
+DEBUG:root:>         <description></description>
+DEBUG:root:>         <comment></comment>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a/numanodes" rel="numanodes"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a/reporteddevices" rel="reporteddevices"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a/sessions" rel="sessions"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a/backups" rel="backups"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a/checkpoints" rel="checkpoints"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a/diskattachments" rel="diskattachments"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a/snapshots" rel="snapshots"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a/applications" rel="applications"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a/hostdevices" rel="hostdevices"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a/watchdogs" rel="watchdogs"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a/graphicsconsoles" rel="graphicsconsoles"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a/cdroms" rel="cdroms"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a/nics" rel="nics"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a/katelloerrata" rel="katelloerrata"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a/permissions" rel="permissions"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a/tags" rel="tags"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a/affinitylabels" rel="affinitylabels"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a/statistics" rel="statistics"/>
+DEBUG:root:>         <bios>
+DEBUG:root:>             <boot_menu>
+DEBUG:root:>                 <enabled>false</enabled>
+DEBUG:root:>             </boot_menu>
+DEBUG:root:>             <type>q35_sea_bios</type>
+DEBUG:root:>         </bios>
+DEBUG:root:>         <cpu>
+DEBUG:root:>             <architecture>x86_64</architecture>
+DEBUG:root:>             <topology>
+DEBUG:root:>                 <cores>1</cores>
+DEBUG:root:>                 <sockets>2</sockets>
+DEBUG:root:>                 <threads>1</threads>
+DEBUG:root:>             </topology>
+DEBUG:root:>         </cpu>
+DEBUG:root:>         <cpu_shares>0</cpu_shares>
+DEBUG:root:>         <creation_time>2020-09-29T11:50:18.969+07:00</creation_time>
+DEBUG:root:>         <delete_protected>false</delete_protected>
+DEBUG:root:>         <display>
+DEBUG:root:>             <allow_override>false</allow_override>
+DEBUG:root:>             <copy_paste_enabled>true</copy_paste_enabled>
+DEBUG:root:>             <disconnect_action>LOCK_SCREEN</disconnect_action>
+DEBUG:root:>             <file_transfer_enabled>true</file_transfer_enabled>
+DEBUG:root:>             <monitors>1</monitors>
+DEBUG:root:>             <single_qxl_pci>false</single_qxl_pci>
+DEBUG:root:>             <smartcard_enabled>false</smartcard_enabled>
+DEBUG:root:>             <type>spice</type>
+DEBUG:root:>         </display>
+DEBUG:root:>         <high_availability>
+DEBUG:root:>             <enabled>false</enabled>
+DEBUG:root:>             <priority>1</priority>
+DEBUG:root:>         </high_availability>
+DEBUG:root:>         <io>
+DEBUG:root:>             <threads>1</threads>
+DEBUG:root:>         </io>
+DEBUG:root:>         <large_icon href="/ovirt-engine/api/icons/689738d8-5a90-4fd8-8c40-0af5d89ebd15" id="689738d8-5a90-4fd8-8c40-0af5d89ebd15"/>
+DEBUG:root:>         <memory>2147483648</memory>
+DEBUG:root:>         <memory_policy>
+DEBUG:root:>             <guaranteed>2147483648</guaranteed>
+DEBUG:root:>             <max>4294967296</max>
+DEBUG:root:>         </memory_policy>
+DEBUG:root:>         <migration>
+DEBUG:root:>             <auto_converge>inherit</auto_converge>
+DEBUG:root:>             <compressed>inherit</compressed>
+DEBUG:root:>             <encrypted>inherit</encrypted>
+DEBUG:root:>         </migration>
+DEBUG:root:>         <migration_downtime>-1</migration_downtime>
+DEBUG:root:>         <multi_queues_enabled>true</multi_queues_enabled>
+DEBUG:root:>         <origin>rhev</origin>
+DEBUG:root:>         <os>
+DEBUG:root:>             <boot>
+DEBUG:root:>                 <devices>
+DEBUG:root:>                     <device>hd</device>
+DEBUG:root:>                     <device>cdrom</device>
+DEBUG:root:>                 </devices>
+DEBUG:root:>             </boot>
+DEBUG:root:>             <type>other</type>
+DEBUG:root:>         </os>
+DEBUG:root:>         <placement_policy>
+DEBUG:root:>             <affinity>migratable</affinity>
+DEBUG:root:>         </placement_policy>
+DEBUG:root:>         <small_icon href="/ovirt-engine/api/icons/e82853d2-67d0-47e2-8cbc-cbbb3d9ecf39" id="e82853d2-67d0-47e2-8cbc-cbbb3d9ecf39"/>
+DEBUG:root:>         <sso>
+DEBUG:root:>             <methods>
+DEBUG:root:>                 <method id="guest_agent"/>
+DEBUG:root:>             </methods>
+DEBUG:root:>         </sso>
+DEBUG:root:>         <start_paused>false</start_paused>
+DEBUG:root:>         <stateless>false</stateless>
+DEBUG:root:>         <storage_error_resume_behaviour>auto_resume</storage_error_resume_behaviour>
+DEBUG:root:>         <time_zone>
+DEBUG:root:>             <name>Etc/GMT</name>
+DEBUG:root:>         </time_zone>
+DEBUG:root:>         <type>server</type>
+DEBUG:root:>         <usb>
+DEBUG:root:>             <enabled>false</enabled>
+DEBUG:root:>         </usb>
+DEBUG:root:>         <cluster href="/ovirt-engine/api/clusters/1db86f68-0164-11eb-b560-00163e29af93" id="1db86f68-0164-11eb-b560-00163e29af93"/>
+DEBUG:root:>         <cpu_profile href="/ovirt-engine/api/cpuprofiles/58ca604e-01a7-003f-01de-000000000250" id="58ca604e-01a7-003f-01de-000000000250"/>
+DEBUG:root:>         <quota id="22b0d82a-0164-11eb-a302-00163e29af93"/>
+DEBUG:root:>         <next_run_configuration_exists>false</next_run_configuration_exists>
+DEBUG:root:>         <numa_tune_mode>interleave</numa_tune_mode>
+DEBUG:root:>         <status>down</status>
+DEBUG:root:>         <stop_time>2021-01-22T16:22:00.433+07:00</stop_time>
+DEBUG:root:>         <original_template href="/ovirt-engine/api/templates/d2f8fe4d-10d0-46e7-8e01-5ebdd0f83065" id="d2f8fe4d-10d0-46e7-8e01-5ebdd0f83065"/>
+DEBUG:root:>         <template href="/ovirt-engine/api/templates/00000000-0000-0000-0000-000000000000" id="00000000-0000-0000-0000-000000000000"/>
+DEBUG:root:>     </vm>
+DEBUG:root:>     <vm href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca" id="175a94c2-3d18-4682-aa41-09db50b0e6ca">
+DEBUG:root:>         <actions>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca/shutdown" rel="shutdown"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca/start" rel="start"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b
+DEBUG:root:> 
+DEBUG:root:> 10
+DEBUG:root:> 0e6ca/stop" rel=
+DEBUG:root:> 8d
+DEBUG:root:> "stop"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca/suspend" rel="suspend"/>
+DEBUG:root:>             <link href="
+DEBUG:root:> 1ff8
+DEBUG:root:> /ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca/detach" rel="detach"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca/logon" rel="logon"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca/maintenance" rel="maintenance"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca/previewsnapshot" rel="previewsnapshot"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca/reordermacaddresses" rel="reordermacaddresses"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca/thawfilesystems" rel="thawfilesystems"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca/undosnapshot" rel="undosnapshot"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca/ticket" rel="ticket"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca/reboot" rel="reboot"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca/migrate" rel="migrate"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca/commitsnapshot" rel="commitsnapshot"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca/clone" rel="clone"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca/freezefilesystems" rel="freezefilesystems"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca/cancelmigration" rel="cancelmigration"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca/export" rel="export"/>
+DEBUG:root:>         </actions>
+DEBUG:root:>         <name>HostedEngine</name>
+DEBUG:root:>         <description>Hosted engine VM</description>
+DEBUG:root:>         <comment></comment>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca/numanodes" rel="numanodes"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca/reporteddevices" rel="reporteddevices"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca/sessions" rel="sessions"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca/backups" rel="backups"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca/checkpoints" rel="checkpoints"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca/diskattachments" rel="diskattachments"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca/snapshots" rel="snapshots"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca/applications" rel="applications"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca/hostdevices" rel="hostdevices"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca/watchdogs" rel="watchdogs"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca/graphicsconsoles" rel="graphicsconsoles"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca/cdroms" rel="cdroms"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca/nics" rel="nics"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca/katelloerrata" rel="katelloerrata"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca/permissions" rel="permissions"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca/tags" rel="tags"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca/affinitylabels" rel="affinitylabels"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca/statistics" rel="statistics"/>
+DEBUG:root:>         <bios>
+DEBUG:root:>             <boot_menu>
+DEBUG:root:>                 <enabled>false</enabled>
+DEBUG:root:>             </boot_menu>
+DEBUG:root:>             <type>cluster_default</type>
+DEBUG:root:>         </bios>
+DEBUG:root:>         <cpu>
+DEBUG:root:>             <architecture>x86_64</architecture>
+DEBUG:root:>             <topology>
+DEBUG:root:>                 <cores>4</cores>
+DEBUG:root:>                 <sockets>1</sockets>
+DEBUG:root:>                 <threads>1</threads>
+DEBUG:root:>             </topology>
+DEBUG:root:>         </cpu>
+DEBUG:root:>         <cpu_shares>0</cpu_shares>
+DEBUG:root:>         <creation_time>2020-09-28T15:42:28.152+07:00</creation_time>
+DEBUG:root:>         <delete_protected>true</delete_protected>
+DEBUG:root:>         <display>
+DEBUG:root:>             <address>10.1.20.121</address>
+DEBUG:root:>             <allow_override>false</allow_override>
+DEBUG:root:>             <certificate>
+DEBUG:root:>                 <content>-----BEGIN CERTIFICATE-----
+DEBUG:root:> MIIDsTCCApmgAwIBAgICEAAwDQYJKoZIhvcNAQELBQAwQjELMAkGA1UEBhMCVVMxDzANBgNVBAoM
+DEBUG:root:> BnN2dC5objEiMCAGA1UEAwwZcmh2bWFuYWdlcjAxLnN2dC5obi40NDQxMDAeFw0yMDA5MjcwODI0
+DEBUG:root:> NDFaFw0zMDA5MjYwODI0NDFaMEIxCzAJBgNVBAYTAlVTMQ8wDQYDVQQKDAZzdnQuaG4xIjAgBgNV
+DEBUG:root:> BAMMGXJodm1hbmFnZXIwMS5zdnQuaG4uNDQ0MTAwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEK
+DEBUG:root:> AoIBAQDBSL/UQlppnmNqFOUyHsgNtNK9aWoP20Feoj0sALqkaZvK4mb4NyUiMwBepeDmtwxTbKqN
+DEBUG:root:> Olhf5kesSH66BNahZFY8tmHa5yWQjyIW8H35zs5OCxrhJODy+oRHOPxY24mAlU35veQySFq2L1YK
+DEBUG:root:> 40pDWOM/0QIaPED0DmikELVkimzp9R4uKZgDQjzULZ5rM4MJR2m0ZRtrRgdKQ6pmgjCVgMyt4V8V
+DEBUG:root:> y13xOKKXr9gxrku9bOK24Ukvisd5dHZXD3uXapDL+a03zU158jlPSVSOKSIX0BfDDCs5GA4mfNtW
+DEBUG:root:> qPEt6Dcd1cTXR+WB+hNd5GBZ7KupkYjlVmZA4MoVjKwjAgMBAAGjgbAwga0wHQYDVR0OBBYEFI9J
+DEBUG:root:> iJUz9eGhySn9xwcecXgBMtcWMGsGA1UdIwRkMGKAFI9JiJUz9eGhySn9xwcecXgBMtcWoUakRDBC
+DEBUG:root:> MQswCQYDVQQGEwJVUzEPMA0GA1UECgwGc3Z0LmhuMSIwIAYDVQQDDBlyaHZtYW5hZ2VyMDEuc3Z0
+DEBUG:root:> LmhuLjQ0NDEwggIQADAPBgNVHRMBAf8EBTADAQH/MA4GA1UdDwEB/wQEAwIBBjANBgkqhkiG9w0B
+DEBUG:root:> AQsFAAOCAQEAX1nEslNfYdQuyI5puPXMh62CagJ7XIswafPajmQj8dC/z79IPpyUPsLGYRu9zXmT
+DEBUG:root:> 1F3dVSk3U86lzG8iRIXEn8N3DVYf7rY2f7gTLIsskVPpbbk+ZygvBOAJorPaYwNYJB4H0Mke6Kvp
+DEBUG:root:> wcKrcJ7wwrqX2jzOTdSe6PKh8FN4F1nQQM/Wah502n5OSRfBJ8jehW1zh/0xTOUsf6NAHJR0PwRd
+DEBUG:root:> VwfOJ/f2SSeAi9FDv5AbdCwSK6GRhy0uOTvkXpCJbTs5s/ZxEvFGs6DgBmXPyQYvaIp8858McM+A
+DEBUG:root:> kzcVcCGgvcCLwOCBIZIL7ybJtb5zS08edtGqKNsew2dNS64Jig==
+DEBUG:root:> -----END CERTIFICATE-----
+DEBUG:root:> </content>
+DEBUG:root:>                 <organization>svt.hn</organization>
+DEBUG:root:>                 <subject>O=svt.hn,CN=node01.svt.hn</subject>
+DEBUG:root:>             </certificate>
+DEBUG:root:>             <copy_paste_enabled>true</copy_paste_enabled>
+DEBUG:root:>             <disconnect_action>LOCK_SCREEN</disconnect_action>
+DEBUG:root:>             <file_transfer_enabled>true</file_transfer_enabled>
+DEBUG:root:>             <monitors>1</monitors>
+DEBUG:root:>             <port>5901</port>
+DEBUG:root:>             <secure_port>5902</secure_port>
+DEBUG:root:>             <single_qxl_pci>false</single_qxl_pci>
+DEBUG:root:>             <smartcard_enabled>false</smartcard_enabled>
+DEBUG:root:>             <type>spice</type>
+DEBUG:root:>         </display>
+DEBUG:root:>         <high_availability>
+DEBUG:root:>             <enabled>false</enabled>
+DEBUG:root:>             <priority>1</priority>
+DEBUG:root:>         </high_availability>
+DEBUG:root:>         <io>
+DEBUG:root:>             <threads>1</threads>
+DEBUG:root:>         </io>
+DEBUG:root:>         <large_icon href="/ovirt-engine/api/icons/689738d8-5a90-4fd8-8c40-0af5d89ebd15" id="689738d8-5a90-4fd8-8c40-0af5d89ebd15"/>
+DEBUG:root:>         <memory>17179869184</memory>
+DEBUG:root:>         <memory_policy>
+DEBUG:root:>             <guaranteed>1073741824</guaranteed>
+DEBUG:root:>             <max>68719476736</max>
+DEBUG:root:>         </memory_policy>
+DEBUG:root:>         <migration>
+DEBUG:root:>             <auto_converge>inherit</auto_converge>
+DEBUG:root:>             <compressed>inherit</compressed>
+DEBUG:root:>             <encrypted>inherit</encrypted>
+DEBUG:root:>         </migration>
+DEBUG:root:>         <migration_downtime>-1</migration_downtime>
+DEBUG:root:>         <multi_queues_enabled>true</multi_queues_enabled>
+DEBUG:root:>         <origin>managed_hosted_engine</origin>
+DEBUG:root:>         <os>
+DEBUG:root:>             <boot>
+DEBUG:root:>                 <devices>
+DEBUG:root:>                     <device>hd</device>
+DEBUG:root:>                 </devices>
+DEBUG:root:>             </boot>
+DEBUG:root:>             <type>rhel_8x64</type>
+DEBUG:root:>         </os>
+DEBUG:root:>         <placement_policy>
+DEBUG:root:>             <affinity>migratable</affinity>
+DEBUG:root:>         </placement_policy>
+DEBUG:root:>         <small_icon href="/ovirt-engine/api/icons/e82853d2-67d0-47e2-8cbc-cbbb3d9ecf39" id="e82853d2-67d0-47e2-8cbc-cbbb3d9ecf39"/>
+DEBUG:root:>         <sso>
+DEBUG:root:>             <methods>
+DEBUG:root:>                 <method id="guest_agent"/>
+DEBUG:root:>             </methods>
+DEBUG:root:>         </sso>
+DEBUG:root:>         <start_paused>false</start_paused>
+DEBUG:root:>         <stateless>false</stateless>
+DEBUG:root:>         <storage_error_resume_behaviour>auto_resume</storage_error_resume_behaviour>
+DEBUG:root:>         <time_zone>
+DEBUG:root:>             <name>Etc/GMT</name>
+DEBUG:root:>         </time_zone>
+DEBUG:root:>         <type>server</type>
+DEBUG:root:>         <usb>
+DEBUG:root:>             <enabled>false</enabled>
+DEBUG:root:>         </usb>
+DEBUG:root:> 
+DEBUG:root:> 1ff8
+DEBUG:root:> <cluster href="/ovirt-engine/api/clusters/1db86f68-0164-11eb-b560-00163e29af93" id="1db86f68-0164-11eb-b560-00163e29af93"/>
+DEBUG:root:>         <cpu_profile href="/ovirt-engine/api/cpuprofiles/58ca604e-01a7-003f-01de-000000000250" id="58ca604e-01a7-003f-01de-000000000250"/>
+DEBUG:root:>         <quota id="22b0d82a-0164-11eb-a302-00163e29af93"/>
+DEBUG:root:>         <fqdn>rhvmanager01.svt.hn</fqdn>
+DEBUG:root:>         <guest_operating_system>
+DEBUG:root:>             <architecture>x86_64</architecture>
+DEBUG:root:>             <codename></codename>
+DEBUG:root:>             <distribution>Red Hat Enterprise Linux</distribution>
+DEBUG:root:>             <family>Linux</family>
+DEBUG:root:>             <kernel>
+DEBUG:root:>                 <version>
+DEBUG:root:>                     <build>0</build>
+DEBUG:root:>                     <full_version>4.18.0-193.19.1.el8_2.x86_64</full_version>
+DEBUG:root:>                     <major>4</major>
+DEBUG:root:>                     <minor>18</minor>
+DEBUG:root:>                     <revision>193</revision>
+DEBUG:root:>                 </version>
+DEBUG:root:>             </kernel>
+DEBUG:root:>             <version>
+DEBUG:root:>                 <full_version>8.2</full_version>
+DEBUG:root:>                 <major>8</major>
+DEBUG:root:>                 <minor>2</minor>
+DEBUG:root:>             </version>
+DEBUG:root:>         </guest_operating_system>
+DEBUG:root:>         <guest_time_zone>
+DEBUG:root:>             <name>+07</name>
+DEBUG:root:>             <utc_offset>+07:00</utc_offset>
+DEBUG:root:>         </guest_time_zone>
+DEBUG:root:>         <next_run_configuration_exists>false</next_run_configuration_exists>
+DEBUG:root:>         <numa_tune_mode>interleave</numa_tune_mode>
+DEBUG:root:>         <run_once>false</run_once>
+DEBUG:root:>         <status>up</status>
+DEBUG:root:>         <stop_time>2020-09-28T15:42:28.157+07:00</stop_time>
+DEBUG:root:>         <host href="/ovirt-engine/api/hosts/28cb4835-aa65-48c8-945d-76ddd843d82e" id="28cb4835-aa65-48c8-945d-76ddd843d82e"/>
+DEBUG:root:>         <original_template href="/ovirt-engine/api/templates/00000000-0000-0000-0000-000000000000" id="00000000-0000-0000-0000-000000000000"/>
+DEBUG:root:>         <template href="/ovirt-engine/api/templates/00000000-0000-0000-0000-000000000000" id="00000000-0000-0000-0000-000000000000"/>
+DEBUG:root:>     </vm>
+DEBUG:root:>     <vm href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887" id="d6a85b69-858d-4215-a1b5-7e4161046887">
+DEBUG:root:>         <actions>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/shutdown" rel="shutdown"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/start" rel="start"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/stop" rel="stop"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/suspend" rel="suspend"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/detach" rel="detach"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/logon" rel="logon"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/maintenance" rel="maintenance"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/previewsnapshot" rel="previewsnapshot"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/reordermacaddresses" rel="reordermacaddresses"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/thawfilesystems" rel="thawfilesystems"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/undosnapshot" rel="undosnapshot"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/ticket" rel="ticket"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/reboot" rel="reboot"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/migrate" rel="migrate"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/commitsnapshot" rel="commitsnapshot"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/clone" rel="clone"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/freezefilesystems" rel="freezefilesystems"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/cancelmigration" rel="cancelmigration"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/export" rel="export"/>
+DEBUG:root:>         </actions>
+DEBUG:root:>         <name>rhl-01</name>
+DEBUG:root:>         <description></description>
+DEBUG:root:>         <comment></comment>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/numanodes" rel="numanodes"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/reporteddevices" rel="reporteddevices"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/sessions" rel="sessions"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/backups" rel="backups"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/checkpoints" rel="checkpoints"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/diskattachments" rel="diskattachments"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/snapshots" rel="snapshots"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/applications" rel="applications"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/hostdevices" rel="hostdevices"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/watchdogs" rel="watchdogs"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/graphicsconsoles" rel="graphicsconsoles"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/cdroms" rel="cdroms"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/nics" rel="nics"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/katelloerrata" rel="katelloerrata"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/permissions" rel="permissions"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/tags" rel="tags"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/affinitylabels" rel="affinitylabels"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/statistics" rel="statistics"/>
+DEBUG:root:>         <bios>
+DEBUG:root:>             <boot_menu>
+DEBUG:root:>                 <enabled>false</enabled>
+DEBUG:root:>             </boot_menu>
+DEBUG:root:>             <type>q35_sea_bios</type>
+DEBUG:root:>         </bios>
+DEBUG:root:>         <cpu>
+DEBUG:root:>             <architecture>x86_64</architecture>
+DEBUG:root:>             <topology>
+DEBUG:root:>                 <cores>1</cores>
+DEBUG:root:>                 <sockets>1</sockets>
+DEBUG:root:>                 <threads>1</threads>
+DEBUG:root:>             </topology>
+DEBUG:root:>         </cpu>
+DEBUG:root:>         <cpu_shares>0</cpu_shares>
+DEBUG:root:>         <creation_time>2020-11-03T13:33:34.323+07:00</creation_time>
+DEBUG:root:>         <delete_protected>false</delete_protected>
+DEBUG:root:>         <display>
+DEBUG:root:>             <allow_override>false</allow_override>
+DEBUG:root:>             <copy_paste_enabled>true</copy_paste_enabled>
+DEBUG:root:>             <disconnect_action>LOCK_SCREEN</disconnect_action>
+DEBUG:root:>             <file_transfer_enabled>true</file_transfer_enabled>
+DEBUG:root:>             <monitors>1</monitors>
+DEBUG:root:>             <single_qxl_pci>false</single_qxl_pci>
+DEBUG:root:>             <smartcard_enabled>false</smartcard_enabled>
+DEBUG:root:>             <type>spice</type>
+DEBUG:root:>         </display>
+DEBUG:root:>         <high_availability>
+DEBUG:root:>             <enabled>true</enabled>
+DEBUG:root:>             <priority>1</priority>
+DEBUG:root:>         </high_availability>
+DEBUG:root:>         <io>
+DEBUG:root:>             <threads>1</threads>
+DEBUG:root:>         </io>
+DEBUG:root:>         <large_icon href="/ovirt-engine/api/icons/689738d8-5a90-4fd8-8c40-0af5d89ebd15" id="689738d8-5a90-4fd8-8c40-0af5d89ebd15"/>
+DEBUG:root:>         <memory>1073741824</memory>
+DEBUG:root:>         <memory_policy>
+DEBUG:root:>             <guaranteed>1073741824</guaranteed>
+DEBUG:root:>             <max>4294967296</max>
+DEBUG:root:>         </memory_policy>
+DEBUG:root:>         <migration>
+DEBUG:root:>             <auto_converge>inherit</auto_converge>
+DEBUG:root:>             <compressed>inherit</compressed>
+DEBUG:root:>             <encrypted>inherit</encrypted>
+DEBUG:root:>         </migration>
+DEBUG:root:>         <migration_downtime>-1</migration_downtime>
+DEBUG:root:>         <multi_queues_enabled>true</multi_queues_enabled>
+DEBUG:root:>         <origin>rhev</origin>
+DEBUG:root:>         <os>
+DEBUG:root:>             <boot>
+DEBUG:root:>                 <devices>
+DEBUG:root:>                     <device>hd</device>
+DEBUG:root:> 
+DEBUG:root:> 10
+DEBUG:root:>               </
+DEBUG:root:> 392
+DEBUG:root:> devices>
+DEBUG:root:>             </boot>
+DEBUG:root:>             <type>other</type>
+DEBUG:root:>         </os>
+DEBUG:root:>         <placement_policy>
+DEBUG:root:>             <affinity>migratable</affinity>
+DEBUG:root:>         </placement_policy>
+DEBUG:root:>         <small_icon href="/ovirt-engine/api/icons/e82853d2-67d0-47e2-8cbc-cbbb3d9ecf39" id="e82853d2-67d0-47e2-8cbc-cbbb3d9ecf39"/>
+DEBUG:root:>         <sso>
+DEBUG:root:>             <methods>
+DEBUG:root:>                 <method id="guest_agent"/>
+DEBUG:root:>             </methods>
+DEBUG:root:>         </sso>
+DEBUG:root:>         <start_paused>false</start_paused>
+DEBUG:root:>         <stateless>false</stateless>
+DEBUG:root:>         <storage_error_resume_behaviour>auto_resume</storage_error_resume_behaviour>
+DEBUG:root:>         <time_zone>
+DEBUG:root:>             <name>Etc/GMT</name>
+DEBUG:root:>         </time_zone>
+DEBUG:root:>         <type>server</type>
+DEBUG:root:>         <usb>
+DEBUG:root:>             <enabled>false</enabled>
+DEBUG:root:>         </usb>
+DEBUG:root:>         <cluster href="/ovirt-engine/api/clusters/1db86f68-0164-11eb-b560-00163e29af93" id="1db86f68-0164-11eb-b560-00163e29af93"/>
+DEBUG:root:>         <cpu_profile href="
+DEBUG:root:> 1ff8
+DEBUG:root:> /ovirt-engine/api/cpuprofiles/58ca604e-01a7-003f-01de-000000000250" id="58ca604e-01a7-003f-01de-000000000250"/>
+DEBUG:root:>         <quota id="22b0d82a-0164-11eb-a302-00163e29af93"/>
+DEBUG:root:>         <next_run_configuration_exists>false</next_run_configuration_exists>
+DEBUG:root:>         <numa_tune_mode>interleave</numa_tune_mode>
+DEBUG:root:>         <status>down</status>
+DEBUG:root:>         <stop_time>2021-01-26T17:03:58.489+07:00</stop_time>
+DEBUG:root:>         <original_template href="/ovirt-engine/api/templates/00000000-0000-0000-0000-000000000000" id="00000000-0000-0000-0000-000000000000"/>
+DEBUG:root:>         <template href="/ovirt-engine/api/templates/00000000-0000-0000-0000-000000000000" id="00000000-0000-0000-0000-000000000000"/>
+DEBUG:root:>     </vm>
+DEBUG:root:>     <vm href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19" id="35f3d098-24d9-420e-81f0-93b7b96fda19">
+DEBUG:root:>         <actions>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/shutdown" rel="shutdown"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/start" rel="start"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/stop" rel="stop"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/suspend" rel="suspend"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/detach" rel="detach"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/logon" rel="logon"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/maintenance" rel="maintenance"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/previewsnapshot" rel="previewsnapshot"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/reordermacaddresses" rel="reordermacaddresses"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/thawfilesystems" rel="thawfilesystems"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/undosnapshot" rel="undosnapshot"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/ticket" rel="ticket"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/reboot" rel="reboot"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/migrate" rel="migrate"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/commitsnapshot" rel="commitsnapshot"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/clone" rel="clone"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/freezefilesystems" rel="freezefilesystems"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/cancelmigration" rel="cancelmigration"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/export" rel="export"/>
+DEBUG:root:>         </actions>
+DEBUG:root:>         <name>ubuntu</name>
+DEBUG:root:>         <description></description>
+DEBUG:root:>         <comment></comment>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/numanodes" rel="numanodes"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/reporteddevices" rel="reporteddevices"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/sessions" rel="sessions"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/backups" rel="backups"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/checkpoints" rel="checkpoints"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/diskattachments" rel="diskattachments"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/snapshots" rel="snapshots"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/applications" rel="applications"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/hostdevices" rel="hostdevices"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/watchdogs" rel="watchdogs"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/graphicsconsoles" rel="graphicsconsoles"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/cdroms" rel="cdroms"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/nics" rel="nics"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/katelloerrata" rel="katelloerrata"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/permissions" rel="permissions"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/tags" rel="tags"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/affinitylabels" rel="affinitylabels"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/statistics" rel="statistics"/>
+DEBUG:root:>         <bios>
+DEBUG:root:>             <boot_menu>
+DEBUG:root:>                 <enabled>false</enabled>
+DEBUG:root:>             </boot_menu>
+DEBUG:root:>             <type>cluster_default</type>
+DEBUG:root:>         </bios>
+DEBUG:root:>         <cpu>
+DEBUG:root:>             <architecture>x86_64</architecture>
+DEBUG:root:>             <topology>
+DEBUG:root:>                 <cores>1</cores>
+DEBUG:root:>                 <sockets>1</sockets>
+DEBUG:root:>                 <threads>1</threads>
+DEBUG:root:>             </topology>
+DEBUG:root:>         </cpu>
+DEBUG:root:>         <cpu_shares>0</cpu_shares>
+DEBUG:root:>         <creation_time>2021-01-26T15:49:04.950+07:00</creation_time>
+DEBUG:root:>         <delete_protected>false</delete_protected>
+DEBUG:root:>         <display>
+DEBUG:root:>             <allow_override>false</allow_override>
+DEBUG:root:>             <copy_paste_enabled>true</copy_paste_enabled>
+DEBUG:root:>             <disconnect_action>LOCK_SCREEN</disconnect_action>
+DEBUG:root:>             <file_transfer_enabled>true</file_transfer_enabled>
+DEBUG:root:>             <monitors>1</monitors>
+DEBUG:root:>             <single_qxl_pci>false</single_qxl_pci>
+DEBUG:root:>             <smartcard_enabled>false</smartcard_enabled>
+DEBUG:root:>             <type>spice</type>
+DEBUG:root:>         </display>
+DEBUG:root:>         <high_availability>
+DEBUG:root:>             <enabled>false</enabled>
+DEBUG:root:>             <priority>1</priority>
+DEBUG:root:>         </high_availability>
+DEBUG:root:>         <io>
+DEBUG:root:>             <threads>1</threads>
+DEBUG:root:>         </io>
+DEBUG:root:>         <large_icon href="/ovirt-engine/api/icons/689738d8-5a90-4fd8-8c40-0af5d89ebd15" id="689738d8-5a90-4fd8-8c40-0af5d89ebd15"/>
+DEBUG:root:>         <memory>1073741824</memory>
+DEBUG:root:>         <memory_policy>
+DEBUG:root:>             <guaranteed>1073741824</guaranteed>
+DEBUG:root:>             <max>4294967296</max>
+DEBUG:root:>         </memory_policy>
+DEBUG:root:>         <migration>
+DEBUG:root:>             <auto_converge>inherit</auto_converge>
+DEBUG:root:>             <compressed>inherit</compressed>
+DEBUG:root:>             <encrypted>inherit</encrypted>
+DEBUG:root:>         </migration>
+DEBUG:root:>         <migration_downtime>-1</migration_downtime>
+DEBUG:root:>         <multi_queues_enabled>true</multi_queues_enabled>
+DEBUG:root:>         <origin>rhev</origin>
+DEBUG:root:>         <os>
+DEBUG:root:>             <boot>
+DEBUG:root:>                 <devices>
+DEBUG:root:>                     <device>hd</device>
+DEBUG:root:>                 </devices>
+DEBUG:root:>             </boot>
+DEBUG:root:>             <type>other</type>
+DEBUG:root:>         </os>
+DEBUG:root:>         <placement_policy>
+DEBUG:root:>             <affinity>migratable</affinity>
+DEBUG:root:>         </placement_policy>
+DEBUG:root:>         <small_icon href="/ovirt-engine/api/icons/e82853d2-67d0-47e2-8cbc-cbbb3d9ecf39" id="e82853d2-67d0-47e2-8cbc-cbbb3d9ecf39"/>
+DEBUG:root:>         <sso>
+DEBUG:root:>             <methods>
+DEBUG:root:>                 <method id="guest_agent"/>
+DEBUG:root:>             </methods>
+DEBUG:root:>         </sso>
+DEBUG:root:>         <start_paused>false</start_paused>
+DEBUG:root:>         <stateless>false</stateless>
+DEBUG:root:>         <storage_error_resume_behaviour>auto_resume</storage_error_resume_behaviour>
+DEBUG:root:>         <time_zone>
+DEBUG:root:>             <name>Etc/GMT</name>
+DEBUG:root:>         </time_zone>
+DEBUG:root:>         <type>server</type>
+DEBUG:root:>         <usb>
+DEBUG:root:>             <enabled>false</enabled>
+DEBUG:root:>         </usb>
+DEBUG:root:>         <cluster href="/ovirt-engine/api/clusters/1db86f68-0164-11eb-b560-00163e29af93" id="1db86f68-0164-11eb-b560-00163e29af93"/>
+DEBUG:root:>         <cpu_profile href="/ovirt-engine/api/cpuprofiles/58ca604e-01a7-003f-01de-000000000250" id="58ca604e-01a7-003f-01de-000000000250"/>
+DEBUG:root:>         <quota id="22b0d82a-0164-11eb-a302-00163e29af93"/>
+DEBUG:root:>         <next_run_configuration_exists>false</next_run_configuration_exists>
+DEBUG:root:>         <numa_tune_mode>interleave</num
+DEBUG:root:> 
+DEBUG:root:> 18e
+DEBUG:root:> a_tune_mode>
+DEBUG:root:>         <status>down</status>
+DEBUG:root:>         <stop_time>2021-01-26T15:50:03.861+07:00</stop_time>
+DEBUG:root:>         <original_template href="/ovirt-engine/api/templates/00000000-0000-0000-0000-000000000000" id="00000000-0000-0000-0000-000000000000"/>
+DEBUG:root:>         <template href="/ovirt-engine/api/templates/00000000-0000-0000-0000-000000000000" id="00000000-0000-0000-0000-000000000000"/>
+DEBUG:root:>     </vm>
+DEBUG:root:> </vms>
+DEBUG:root:> 
+DEBUG:root:> 0
+DEBUG:root:* Connection #1 to host rhvmanager01.svt.hn left intact
+DEBUG:root:* About to connect() to rhvmanager01.svt.hn port 443 (#0)
+DEBUG:root:* Trying 10.1.20.119...
+DEBUG:root:* Connected to rhvmanager01.svt.hn (10.1.20.119) port 443 (#0)
+DEBUG:root:* Initializing NSS with certpath: sql:/etc/pki/nssdb
+DEBUG:root:* CAfile: /home/centos/tools/ca.pem
+DEBUG:root:*   CApath: none
+DEBUG:root:* SSL connection using TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+DEBUG:root:* Server certificate:
+DEBUG:root:* subject: CN=rhvmanager01.svt.hn,O=svt.hn,C=US
+DEBUG:root:* start date: Sep 27 08:24:44 2020 GMT
+DEBUG:root:* expire date: Sep 02 08:24:44 2025 GMT
+DEBUG:root:* common name: rhvmanager01.svt.hn
+DEBUG:root:* issuer: CN=rhvmanager01.svt.hn.44410,O=svt.hn,C=US
+DEBUG:root:< POST /ovirt-engine/sso/oauth/token HTTP/1.1
+DEBUG:root:< Host: rhvmanager01.svt.hn
+DEBUG:root:< User-Agent: PythonSDK/4.3.4
+DEBUG:root:< Accept: application/json
+DEBUG:root:< Content-Length: 83
+DEBUG:root:< Content-Type: application/x-www-form-urlencoded
+DEBUG:root:< username=admin%40internal&scope=ovirt-app-api&password=Admin123&grant_type=password
+DEBUG:root:* upload completely sent off: 83 out of 83 bytes
+DEBUG:root:> HTTP/1.1 200 OK
+DEBUG:root:> Date: Tue, 26 Jan 2021 10:12:04 GMT
+DEBUG:root:> Server: Apache/2.4.37 (Red Hat Enterprise Linux) OpenSSL/1.1.1c mod_auth_gssapi/1.6.1 mod_wsgi/4.6.4 Python/3.6
+DEBUG:root:> Set-Cookie: locale=en_US; path=/; secure; HttpOnly; Max-Age=2147483647; Expires=Sun, 13-Feb-2089 13:26:11 GMT
+DEBUG:root:> X-XSS-PROTECTION: 1; MODE=BLOCK
+DEBUG:root:> X-CONTENT-TYPE-OPTIONS: NOSNIFF
+DEBUG:root:> X-FRAME-OPTIONS: SAMEORIGIN
+DEBUG:root:> Content-Type: application/json
+DEBUG:root:> Content-Length: 310
+DEBUG:root:> Vary: Accept-Encoding
+DEBUG:root:> 
+DEBUG:root:> {"access_token":"5DPNyeZqk6NZUg23Vio-EoriZEOa21cI8oKcXMF1Kln1fgKFReGiySb9lt_xe6mP60V6BpNTgD2mTajGrAzoKQ","scope":"ovirt-app-api ovirt-ext=token-info:authz-search ovirt-ext=token-info:public-authz-search ovirt-ext=token-info:validate ovirt-ext=token:password-access","exp":"1612260724000","token_type":"bearer"}
+DEBUG:root:* Connection #0 to host rhvmanager01.svt.hn left intact
+DEBUG:root:* About to connect() to rhvmanager01.svt.hn port 443 (#1)
+DEBUG:root:* Trying 10.1.20.119...
+DEBUG:root:* Connected to rhvmanager01.svt.hn (10.1.20.119) port 443 (#1)
+DEBUG:root:* CAfile: /home/centos/tools/ca.pem
+DEBUG:root:*   CApath: none
+DEBUG:root:* SSL connection using TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+DEBUG:root:* Server certificate:
+DEBUG:root:* subject: CN=rhvmanager01.svt.hn,O=svt.hn,C=US
+DEBUG:root:* start date: Sep 27 08:24:44 2020 GMT
+DEBUG:root:* expire date: Sep 02 08:24:44 2025 GMT
+DEBUG:root:* common name: rhvmanager01.svt.hn
+DEBUG:root:* issuer: CN=rhvmanager01.svt.hn.44410,O=svt.hn,C=US
+DEBUG:root:< GET /ovirt-engine/api/vms HTTP/1.1
+DEBUG:root:< Host: rhvmanager01.svt.hn
+DEBUG:root:< User-Agent: PythonSDK/4.3.4
+DEBUG:root:< Version: 4
+DEBUG:root:< Content-Type: application/xml
+DEBUG:root:< Accept: application/xml
+DEBUG:root:< Authorization: Bearer 5DPNyeZqk6NZUg23Vio-EoriZEOa21cI8oKcXMF1Kln1fgKFReGiySb9lt_xe6mP60V6BpNTgD2mTajGrAzoKQ
+DEBUG:root:> HTTP/1.1 200 OK
+DEBUG:root:> Date: Tue, 26 Jan 2021 10:12:04 GMT
+DEBUG:root:> Server: Apache/2.4.37 (Red Hat Enterprise Linux) OpenSSL/1.1.1c mod_auth_gssapi/1.6.1 mod_wsgi/4.6.4 Python/3.6
+DEBUG:root:> Content-Type: application/xml;charset=UTF-8
+DEBUG:root:> Correlation-Id: 58295e53-6443-483f-a2e6-0eaa7ddbf98e
+DEBUG:root:> Vary: Accept-Encoding
+DEBUG:root:> Transfer-Encoding: chunked
+DEBUG:root:> 
+DEBUG:root:> 1ff8
+DEBUG:root:> <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+DEBUG:root:> <vms>
+DEBUG:root:>     <vm href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277" id="28c138bd-160e-4456-9af7-d037934cf277">
+DEBUG:root:>         <actions>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/shutdown" rel="shutdown"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/start" rel="start"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/stop" rel="stop"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/suspend" rel="suspend"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/detach" rel="detach"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/logon" rel="logon"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/maintenance" rel="maintenance"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/previewsnapshot" rel="previewsnapshot"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/reordermacaddresses" rel="reordermacaddresses"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/thawfilesystems" rel="thawfilesystems"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/undosnapshot" rel="undosnapshot"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/ticket" rel="ticket"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/reboot" rel="reboot"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/migrate" rel="migrate"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/commitsnapshot" rel="commitsnapshot"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/clone" rel="clone"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/freezefilesystems" rel="freezefilesystems"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/cancelmigration" rel="cancelmigration"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/export" rel="export"/>
+DEBUG:root:>         </actions>
+DEBUG:root:>         <name>haproxy01</name>
+DEBUG:root:>         <description></description>
+DEBUG:root:>         <comment></comment>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/numanodes" rel="numanodes"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/reporteddevices" rel="reporteddevices"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/sessions" rel="sessions"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/backups" rel="backups"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/checkpoints" rel="checkpoints"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/diskattachments" rel="diskattachments"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/snapshots" rel="snapshots"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/applications" rel="applications"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/hostdevices" rel="hostdevices"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/watchdogs" rel="watchdogs"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/graphicsconsoles" rel="graphicsconsoles"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/cdroms" rel="cdroms"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/nics" rel="nics"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/katelloerrata" rel="katelloerrata"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/permissions" rel="permissions"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/tags" rel="tags"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/affinitylabels" rel="affinitylabels"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/28c138bd-160e-4456-9af7-d037934cf277/statistics" rel="statistics"/>
+DEBUG:root:>         <bios>
+DEBUG:root:>             <boot_menu>
+DEBUG:root:>                 <enabled>false</enabled>
+DEBUG:root:>             </boot_menu>
+DEBUG:root:>             <type>q35_sea_bios</type>
+DEBUG:root:>         </bios>
+DEBUG:root:>         <cpu>
+DEBUG:root:>             <architecture>x86_64</architecture>
+DEBUG:root:>             <topology>
+DEBUG:root:>                 <cores>1</cores>
+DEBUG:root:>                 <sockets>2</sockets>
+DEBUG:root:>                 <threads>1</threads>
+DEBUG:root:>             </topology>
+DEBUG:root:>         </cpu>
+DEBUG:root:>         <cpu_shares>0</cpu_shares>
+DEBUG:root:>         <creation_time>2020-09-29T11:03:29.705+07:00</creation_time>
+DEBUG:root:>         <delete_protected>false</delete_protected>
+DEBUG:root:>         <display>
+DEBUG:root:>             <allow_override>false</allow_override>
+DEBUG:root:>             <copy_paste_enabled>true</copy_paste_enabled>
+DEBUG:root:>             <disconnect_action>LOCK_SCREEN</disconnect_action>
+DEBUG:root:>             <file_transfer_enabled>true</file_transfer_enabled>
+DEBUG:root:>             <monitors>1</monitors>
+DEBUG:root:>             <single_qxl_pci>false</single_qxl_pci>
+DEBUG:root:>             <smartcard_enabled>false</smartcard_enabled>
+DEBUG:root:>             <type>spice</type>
+DEBUG:root:>         </display>
+DEBUG:root:>         <high_availability>
+DEBUG:root:>             <enabled>false</enabled>
+DEBUG:root:>             <priority>1</priority>
+DEBUG:root:>         </high_availability>
+DEBUG:root:>         <io>
+DEBUG:root:>             <threads>1</threads>
+DEBUG:root:>         </io>
+DEBUG:root:>         <large_icon href="/ovirt-engine/api/icons/689738d8-5a90-4fd8-8c40-0af5d89ebd15" id="689738d8-5a90-4fd8-8c40-0af5d89ebd15"/>
+DEBUG:root:>         <memory>2147483648</memory>
+DEBUG:root:>         <memory_policy>
+DEBUG:root:>             <guaranteed>2147483648</guaranteed>
+DEBUG:root:>             <max>4294967296</max>
+DEBUG:root:>         </memory_policy>
+DEBUG:root:>         <migration>
+DEBUG:root:>             <auto_converge>inherit</auto_converge>
+DEBUG:root:>             <compressed>inherit</compressed>
+DEBUG:root:>             <encrypted>inherit</encrypted>
+DEBUG:root:>         </migration>
+DEBUG:root:>         <migration_downtime>-1</migration_downtime>
+DEBUG:root:>         <multi_queues_enabled>true</multi_queues_enabled>
+DEBUG:root:>         <origin>rhev</origin>
+DEBUG:root:>         <os>
+DEBUG:root:>             <boot>
+DEBUG:root:>                 <devices>
+DEBUG:root:>                     <device>hd</device>
+DEBUG:root:>                     <device>cdrom</device>
+DEBUG:root:>                 </devices>
+DEBUG:root:>             </boot>
+DEBUG:root:>             <type>other</type>
+DEBUG:root:>         </os>
+DEBUG:root:>         <placement_policy>
+DEBUG:root:>             <affinity>migratable</affinity>
+DEBUG:root:>         </placement_policy>
+DEBUG:root:>         <small_icon href="/ovirt-engine/api/icons/e82853d2-67d0-47e2-8cbc-cbbb3d9ecf39" id="e82853d2-67d0-47e2-8cbc-cbbb3d9ecf39"/>
+DEBUG:root:>         <sso>
+DEBUG:root:>             <methods>
+DEBUG:root:>                 <method id="guest_agent"/>
+DEBUG:root:>             </methods>
+DEBUG:root:>         </sso>
+DEBUG:root:>         <start_paused>false</start_paused>
+DEBUG:root:>         <stateless>false</stateless>
+DEBUG:root:>         <storage_error_resume_behaviour>auto_resume</storage_error_resume_behaviour>
+DEBUG:root:>         <time_zone>
+DEBUG:root:>             <name>Etc/GMT</name>
+DEBUG:root:>         </time_zone>
+DEBUG:root:>         <type>server</type>
+DEBUG:root:>         <usb>
+DEBUG:root:>             <enabled>false</enabled>
+DEBUG:root:>         </usb>
+DEBUG:root:>         <cluster href="/ovirt-engine/api/clusters/1db86f68-0164-11eb-b560-00163e29af93" id="1db86f68-0164-11eb-b560-00163e29af93"/>
+DEBUG:root:>         <cpu_profile href="/ovirt-engine/api/cpuprofiles/58ca604e-01a7-003f-01de-000000000250" id="58ca604e-01a7-003f-01de-000000000250"/>
+DEBUG:root:>         <quota id="22b0d82a-0164-11eb-a302-00163e29af93"/>
+DEBUG:root:>         <next_run_configuration_exists>false</next_run_configuration_exists>
+DEBUG:root:>         <numa_tune_mode>interleave</numa_tune_mode>
+DEBUG:root:>         <status>down</status>
+DEBUG:root:>         <stop_time>2021-01-22T16:21:59.885+07:00</stop_time>
+DEBUG:root:>         <original_template href="/ovirt-engine/api/templates/00000000-0000-0000-0000-000000000000" id="00000000-0000-0000-0000-000000000000"/>
+DEBUG:root:>         <template href="/ovirt-engine/api/templates/00000000-0000-0000-0000-000000000000" id="00000000-0000-0000-0000-000000000000"/>
+DEBUG:root:>     </vm>
+DEBUG:root:>     <vm href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a" id="b374b833-4bed-4cce-82c2-2c079a0ad26a">
+DEBUG:root:>         <actions>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/b
+DEBUG:root:> 
+DEBUG:root:> 1ff8
+DEBUG:root:> 374b833-4bed-4cce-82c2-2c079a0ad26a/shutdown" rel="shutdown"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a/start" rel="start"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a/stop" rel="stop"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a/suspend" rel="suspend"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a/detach" rel="detach"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a/logon" rel="logon"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a/maintenance" rel="maintenance"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a/previewsnapshot" rel="previewsnapshot"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a/reordermacaddresses" rel="reordermacaddresses"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a/thawfilesystems" rel="thawfilesystems"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a/undosnapshot" rel="undosnapshot"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a/ticket" rel="ticket"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a/reboot" rel="reboot"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a/migrate" rel="migrate"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a/commitsnapshot" rel="commitsnapshot"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a/clone" rel="clone"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a/freezefilesystems" rel="freezefilesystems"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a/cancelmigration" rel="cancelmigration"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a/export" rel="export"/>
+DEBUG:root:>         </actions>
+DEBUG:root:>         <name>haproxy02</name>
+DEBUG:root:>         <description></description>
+DEBUG:root:>         <comment></comment>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a/numanodes" rel="numanodes"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a/reporteddevices" rel="reporteddevices"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a/sessions" rel="sessions"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a/backups" rel="backups"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a/checkpoints" rel="checkpoints"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a/diskattachments" rel="diskattachments"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a/snapshots" rel="snapshots"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a/applications" rel="applications"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a/hostdevices" rel="hostdevices"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a/watchdogs" rel="watchdogs"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a/graphicsconsoles" rel="graphicsconsoles"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a/cdroms" rel="cdroms"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a/nics" rel="nics"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a/katelloerrata" rel="katelloerrata"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a/permissions" rel="permissions"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a/tags" rel="tags"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a/affinitylabels" rel="affinitylabels"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/b374b833-4bed-4cce-82c2-2c079a0ad26a/statistics" rel="statistics"/>
+DEBUG:root:>         <bios>
+DEBUG:root:>             <boot_menu>
+DEBUG:root:>                 <enabled>false</enabled>
+DEBUG:root:>             </boot_menu>
+DEBUG:root:>             <type>q35_sea_bios</type>
+DEBUG:root:>         </bios>
+DEBUG:root:>         <cpu>
+DEBUG:root:>             <architecture>x86_64</architecture>
+DEBUG:root:>             <topology>
+DEBUG:root:>                 <cores>1</cores>
+DEBUG:root:>                 <sockets>2</sockets>
+DEBUG:root:>                 <threads>1</threads>
+DEBUG:root:>             </topology>
+DEBUG:root:>         </cpu>
+DEBUG:root:>         <cpu_shares>0</cpu_shares>
+DEBUG:root:>         <creation_time>2020-09-29T11:50:18.969+07:00</creation_time>
+DEBUG:root:>         <delete_protected>false</delete_protected>
+DEBUG:root:>         <display>
+DEBUG:root:>             <allow_override>false</allow_override>
+DEBUG:root:>             <copy_paste_enabled>true</copy_paste_enabled>
+DEBUG:root:>             <disconnect_action>LOCK_SCREEN</disconnect_action>
+DEBUG:root:>             <file_transfer_enabled>true</file_transfer_enabled>
+DEBUG:root:>             <monitors>1</monitors>
+DEBUG:root:>             <single_qxl_pci>false</single_qxl_pci>
+DEBUG:root:>             <smartcard_enabled>false</smartcard_enabled>
+DEBUG:root:>             <type>spice</type>
+DEBUG:root:>         </display>
+DEBUG:root:>         <high_availability>
+DEBUG:root:>             <enabled>false</enabled>
+DEBUG:root:>             <priority>1</priority>
+DEBUG:root:>         </high_availability>
+DEBUG:root:>         <io>
+DEBUG:root:>             <threads>1</threads>
+DEBUG:root:>         </io>
+DEBUG:root:>         <large_icon href="/ovirt-engine/api/icons/689738d8-5a90-4fd8-8c40-0af5d89ebd15" id="689738d8-5a90-4fd8-8c40-0af5d89ebd15"/>
+DEBUG:root:>         <memory>2147483648</memory>
+DEBUG:root:>         <memory_policy>
+DEBUG:root:>             <guaranteed>2147483648</guaranteed>
+DEBUG:root:>             <max>4294967296</max>
+DEBUG:root:>         </memory_policy>
+DEBUG:root:>         <migration>
+DEBUG:root:>             <auto_converge>inherit</auto_converge>
+DEBUG:root:>             <compressed>inherit</compressed>
+DEBUG:root:>             <encrypted>inherit</encrypted>
+DEBUG:root:>         </migration>
+DEBUG:root:>         <migration_downtime>-1</migration_downtime>
+DEBUG:root:>         <multi_queues_enabled>true</multi_queues_enabled>
+DEBUG:root:>         <origin>rhev</origin>
+DEBUG:root:>         <os>
+DEBUG:root:>             <boot>
+DEBUG:root:>                 <devices>
+DEBUG:root:>                     <device>hd</device>
+DEBUG:root:>                     <device>cdrom</device>
+DEBUG:root:>                 </devices>
+DEBUG:root:>             </boot>
+DEBUG:root:>             <type>other</type>
+DEBUG:root:>         </os>
+DEBUG:root:>         <placement_policy>
+DEBUG:root:>             <affinity>migratable</affinity>
+DEBUG:root:>         </placement_policy>
+DEBUG:root:>         <small_icon href="/ovirt-engine/api/icons/e82853d2-67d0-47e2-8cbc-cbbb3d9ecf39" id="e82853d2-67d0-47e2-8cbc-cbbb3d9ecf39"/>
+DEBUG:root:>         <sso>
+DEBUG:root:>             <methods>
+DEBUG:root:>                 <method id="guest_agent"/>
+DEBUG:root:>             </methods>
+DEBUG:root:>         </sso>
+DEBUG:root:>         <start_paused>false</start_paused>
+DEBUG:root:>         <stateless>false</stateless>
+DEBUG:root:>         <storage_error_resume_behaviour>auto_resume</storage_error_resume_behaviour>
+DEBUG:root:>         <time_zone>
+DEBUG:root:>             <name>Etc/GMT</name>
+DEBUG:root:>         </time_zone>
+DEBUG:root:>         <type>server</type>
+DEBUG:root:>         <usb>
+DEBUG:root:>             <enabled>false</enabled>
+DEBUG:root:>         </usb>
+DEBUG:root:>         <cluster href="/ovirt-engine/api/clusters/1db86f68-0164-11eb-b560-00163e29af93" id="1db86f68-0164-11eb-b560-00163e29af93"/>
+DEBUG:root:>         <cpu_profile href="/ovirt-engine/api/cpuprofiles/58ca604e-01a7-003f-01de-000000000250" id="58ca604e-01a7-003f-01de-000000000250"/>
+DEBUG:root:>         <quota id="22b0d82a-0164-11eb-a302-00163e29af93"/>
+DEBUG:root:>         <next_run_configuration_exists>false</next_run_configuration_exists>
+DEBUG:root:>         <numa_tune_mode>interleave</numa_tune_mode>
+DEBUG:root:>         <status>down</status>
+DEBUG:root:>         <stop_time>2021-01-22T16:22:00.433+07:00</stop_time>
+DEBUG:root:>         <original_template href="/ovirt-engine/api/templates/d2f8fe4d-10d0-46e7-8e01-5ebdd0f83065" id="d2f8fe4d-10d0-46e7-8e01-5ebdd0f83065"/>
+DEBUG:root:>         <template href="/ovirt-engine/api/templates/00000000-0000-0000-0000-000000000000" id="00000000-0000-0000-0000-000000000000"/>
+DEBUG:root:>     </vm>
+DEBUG:root:>     <vm href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca" id="175a94c2-3d18-4682-aa41-09db50b0e6ca">
+DEBUG:root:>         <actions>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca/shutdown" rel="shutdown"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca/start" rel="start"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b
+DEBUG:root:> 
+DEBUG:root:> 10
+DEBUG:root:> 0e6ca/stop" rel=
+DEBUG:root:> 8d
+DEBUG:root:> "stop"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca/suspend" rel="suspend"/>
+DEBUG:root:>             <link href="
+DEBUG:root:> 1ff8
+DEBUG:root:> /ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca/detach" rel="detach"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca/logon" rel="logon"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca/maintenance" rel="maintenance"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca/previewsnapshot" rel="previewsnapshot"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca/reordermacaddresses" rel="reordermacaddresses"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca/thawfilesystems" rel="thawfilesystems"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca/undosnapshot" rel="undosnapshot"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca/ticket" rel="ticket"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca/reboot" rel="reboot"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca/migrate" rel="migrate"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca/commitsnapshot" rel="commitsnapshot"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca/clone" rel="clone"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca/freezefilesystems" rel="freezefilesystems"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca/cancelmigration" rel="cancelmigration"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca/export" rel="export"/>
+DEBUG:root:>         </actions>
+DEBUG:root:>         <name>HostedEngine</name>
+DEBUG:root:>         <description>Hosted engine VM</description>
+DEBUG:root:>         <comment></comment>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca/numanodes" rel="numanodes"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca/reporteddevices" rel="reporteddevices"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca/sessions" rel="sessions"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca/backups" rel="backups"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca/checkpoints" rel="checkpoints"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca/diskattachments" rel="diskattachments"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca/snapshots" rel="snapshots"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca/applications" rel="applications"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca/hostdevices" rel="hostdevices"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca/watchdogs" rel="watchdogs"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca/graphicsconsoles" rel="graphicsconsoles"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca/cdroms" rel="cdroms"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca/nics" rel="nics"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca/katelloerrata" rel="katelloerrata"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca/permissions" rel="permissions"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca/tags" rel="tags"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca/affinitylabels" rel="affinitylabels"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/175a94c2-3d18-4682-aa41-09db50b0e6ca/statistics" rel="statistics"/>
+DEBUG:root:>         <bios>
+DEBUG:root:>             <boot_menu>
+DEBUG:root:>                 <enabled>false</enabled>
+DEBUG:root:>             </boot_menu>
+DEBUG:root:>             <type>cluster_default</type>
+DEBUG:root:>         </bios>
+DEBUG:root:>         <cpu>
+DEBUG:root:>             <architecture>x86_64</architecture>
+DEBUG:root:>             <topology>
+DEBUG:root:>                 <cores>4</cores>
+DEBUG:root:>                 <sockets>1</sockets>
+DEBUG:root:>                 <threads>1</threads>
+DEBUG:root:>             </topology>
+DEBUG:root:>         </cpu>
+DEBUG:root:>         <cpu_shares>0</cpu_shares>
+DEBUG:root:>         <creation_time>2020-09-28T15:42:28.152+07:00</creation_time>
+DEBUG:root:>         <delete_protected>true</delete_protected>
+DEBUG:root:>         <display>
+DEBUG:root:>             <address>10.1.20.121</address>
+DEBUG:root:>             <allow_override>false</allow_override>
+DEBUG:root:>             <certificate>
+DEBUG:root:>                 <content>-----BEGIN CERTIFICATE-----
+DEBUG:root:> MIIDsTCCApmgAwIBAgICEAAwDQYJKoZIhvcNAQELBQAwQjELMAkGA1UEBhMCVVMxDzANBgNVBAoM
+DEBUG:root:> BnN2dC5objEiMCAGA1UEAwwZcmh2bWFuYWdlcjAxLnN2dC5obi40NDQxMDAeFw0yMDA5MjcwODI0
+DEBUG:root:> NDFaFw0zMDA5MjYwODI0NDFaMEIxCzAJBgNVBAYTAlVTMQ8wDQYDVQQKDAZzdnQuaG4xIjAgBgNV
+DEBUG:root:> BAMMGXJodm1hbmFnZXIwMS5zdnQuaG4uNDQ0MTAwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEK
+DEBUG:root:> AoIBAQDBSL/UQlppnmNqFOUyHsgNtNK9aWoP20Feoj0sALqkaZvK4mb4NyUiMwBepeDmtwxTbKqN
+DEBUG:root:> Olhf5kesSH66BNahZFY8tmHa5yWQjyIW8H35zs5OCxrhJODy+oRHOPxY24mAlU35veQySFq2L1YK
+DEBUG:root:> 40pDWOM/0QIaPED0DmikELVkimzp9R4uKZgDQjzULZ5rM4MJR2m0ZRtrRgdKQ6pmgjCVgMyt4V8V
+DEBUG:root:> y13xOKKXr9gxrku9bOK24Ukvisd5dHZXD3uXapDL+a03zU158jlPSVSOKSIX0BfDDCs5GA4mfNtW
+DEBUG:root:> qPEt6Dcd1cTXR+WB+hNd5GBZ7KupkYjlVmZA4MoVjKwjAgMBAAGjgbAwga0wHQYDVR0OBBYEFI9J
+DEBUG:root:> iJUz9eGhySn9xwcecXgBMtcWMGsGA1UdIwRkMGKAFI9JiJUz9eGhySn9xwcecXgBMtcWoUakRDBC
+DEBUG:root:> MQswCQYDVQQGEwJVUzEPMA0GA1UECgwGc3Z0LmhuMSIwIAYDVQQDDBlyaHZtYW5hZ2VyMDEuc3Z0
+DEBUG:root:> LmhuLjQ0NDEwggIQADAPBgNVHRMBAf8EBTADAQH/MA4GA1UdDwEB/wQEAwIBBjANBgkqhkiG9w0B
+DEBUG:root:> AQsFAAOCAQEAX1nEslNfYdQuyI5puPXMh62CagJ7XIswafPajmQj8dC/z79IPpyUPsLGYRu9zXmT
+DEBUG:root:> 1F3dVSk3U86lzG8iRIXEn8N3DVYf7rY2f7gTLIsskVPpbbk+ZygvBOAJorPaYwNYJB4H0Mke6Kvp
+DEBUG:root:> wcKrcJ7wwrqX2jzOTdSe6PKh8FN4F1nQQM/Wah502n5OSRfBJ8jehW1zh/0xTOUsf6NAHJR0PwRd
+DEBUG:root:> VwfOJ/f2SSeAi9FDv5AbdCwSK6GRhy0uOTvkXpCJbTs5s/ZxEvFGs6DgBmXPyQYvaIp8858McM+A
+DEBUG:root:> kzcVcCGgvcCLwOCBIZIL7ybJtb5zS08edtGqKNsew2dNS64Jig==
+DEBUG:root:> -----END CERTIFICATE-----
+DEBUG:root:> </content>
+DEBUG:root:>                 <organization>svt.hn</organization>
+DEBUG:root:>                 <subject>O=svt.hn,CN=node01.svt.hn</subject>
+DEBUG:root:>             </certificate>
+DEBUG:root:>             <copy_paste_enabled>true</copy_paste_enabled>
+DEBUG:root:>             <disconnect_action>LOCK_SCREEN</disconnect_action>
+DEBUG:root:>             <file_transfer_enabled>true</file_transfer_enabled>
+DEBUG:root:>             <monitors>1</monitors>
+DEBUG:root:>             <port>5901</port>
+DEBUG:root:>             <secure_port>5902</secure_port>
+DEBUG:root:>             <single_qxl_pci>false</single_qxl_pci>
+DEBUG:root:>             <smartcard_enabled>false</smartcard_enabled>
+DEBUG:root:>             <type>spice</type>
+DEBUG:root:>         </display>
+DEBUG:root:>         <high_availability>
+DEBUG:root:>             <enabled>false</enabled>
+DEBUG:root:>             <priority>1</priority>
+DEBUG:root:>         </high_availability>
+DEBUG:root:>         <io>
+DEBUG:root:>             <threads>1</threads>
+DEBUG:root:>         </io>
+DEBUG:root:>         <large_icon href="/ovirt-engine/api/icons/689738d8-5a90-4fd8-8c40-0af5d89ebd15" id="689738d8-5a90-4fd8-8c40-0af5d89ebd15"/>
+DEBUG:root:>         <memory>17179869184</memory>
+DEBUG:root:>         <memory_policy>
+DEBUG:root:>             <guaranteed>1073741824</guaranteed>
+DEBUG:root:>             <max>68719476736</max>
+DEBUG:root:>         </memory_policy>
+DEBUG:root:>         <migration>
+DEBUG:root:>             <auto_converge>inherit</auto_converge>
+DEBUG:root:>             <compressed>inherit</compressed>
+DEBUG:root:>             <encrypted>inherit</encrypted>
+DEBUG:root:>         </migration>
+DEBUG:root:>         <migration_downtime>-1</migration_downtime>
+DEBUG:root:>         <multi_queues_enabled>true</multi_queues_enabled>
+DEBUG:root:>         <origin>managed_hosted_engine</origin>
+DEBUG:root:>         <os>
+DEBUG:root:>             <boot>
+DEBUG:root:>                 <devices>
+DEBUG:root:>                     <device>hd</device>
+DEBUG:root:>                 </devices>
+DEBUG:root:>             </boot>
+DEBUG:root:>             <type>rhel_8x64</type>
+DEBUG:root:>         </os>
+DEBUG:root:>         <placement_policy>
+DEBUG:root:>             <affinity>migratable</affinity>
+DEBUG:root:>         </placement_policy>
+DEBUG:root:>         <small_icon href="/ovirt-engine/api/icons/e82853d2-67d0-47e2-8cbc-cbbb3d9ecf39" id="e82853d2-67d0-47e2-8cbc-cbbb3d9ecf39"/>
+DEBUG:root:>         <sso>
+DEBUG:root:>             <methods>
+DEBUG:root:>                 <method id="guest_agent"/>
+DEBUG:root:>             </methods>
+DEBUG:root:>         </sso>
+DEBUG:root:>         <start_paused>false</start_paused>
+DEBUG:root:>         <stateless>false</stateless>
+DEBUG:root:>         <storage_error_resume_behaviour>auto_resume</storage_error_resume_behaviour>
+DEBUG:root:>         <time_zone>
+DEBUG:root:>             <name>Etc/GMT</name>
+DEBUG:root:>         </time_zone>
+DEBUG:root:>         <type>server</type>
+DEBUG:root:>         <usb>
+DEBUG:root:>             <enabled>false</enabled>
+DEBUG:root:>         </usb>
+DEBUG:root:> 
+DEBUG:root:> 1ff8
+DEBUG:root:> <cluster href="/ovirt-engine/api/clusters/1db86f68-0164-11eb-b560-00163e29af93" id="1db86f68-0164-11eb-b560-00163e29af93"/>
+DEBUG:root:>         <cpu_profile href="/ovirt-engine/api/cpuprofiles/58ca604e-01a7-003f-01de-000000000250" id="58ca604e-01a7-003f-01de-000000000250"/>
+DEBUG:root:>         <quota id="22b0d82a-0164-11eb-a302-00163e29af93"/>
+DEBUG:root:>         <fqdn>rhvmanager01.svt.hn</fqdn>
+DEBUG:root:>         <guest_operating_system>
+DEBUG:root:>             <architecture>x86_64</architecture>
+DEBUG:root:>             <codename></codename>
+DEBUG:root:>             <distribution>Red Hat Enterprise Linux</distribution>
+DEBUG:root:>             <family>Linux</family>
+DEBUG:root:>             <kernel>
+DEBUG:root:>                 <version>
+DEBUG:root:>                     <build>0</build>
+DEBUG:root:>                     <full_version>4.18.0-193.19.1.el8_2.x86_64</full_version>
+DEBUG:root:>                     <major>4</major>
+DEBUG:root:>                     <minor>18</minor>
+DEBUG:root:>                     <revision>193</revision>
+DEBUG:root:>                 </version>
+DEBUG:root:>             </kernel>
+DEBUG:root:>             <version>
+DEBUG:root:>                 <full_version>8.2</full_version>
+DEBUG:root:>                 <major>8</major>
+DEBUG:root:>                 <minor>2</minor>
+DEBUG:root:>             </version>
+DEBUG:root:>         </guest_operating_system>
+DEBUG:root:>         <guest_time_zone>
+DEBUG:root:>             <name>+07</name>
+DEBUG:root:>             <utc_offset>+07:00</utc_offset>
+DEBUG:root:>         </guest_time_zone>
+DEBUG:root:>         <next_run_configuration_exists>false</next_run_configuration_exists>
+DEBUG:root:>         <numa_tune_mode>interleave</numa_tune_mode>
+DEBUG:root:>         <run_once>false</run_once>
+DEBUG:root:>         <status>up</status>
+DEBUG:root:>         <stop_time>2020-09-28T15:42:28.157+07:00</stop_time>
+DEBUG:root:>         <host href="/ovirt-engine/api/hosts/28cb4835-aa65-48c8-945d-76ddd843d82e" id="28cb4835-aa65-48c8-945d-76ddd843d82e"/>
+DEBUG:root:>         <original_template href="/ovirt-engine/api/templates/00000000-0000-0000-0000-000000000000" id="00000000-0000-0000-0000-000000000000"/>
+DEBUG:root:>         <template href="/ovirt-engine/api/templates/00000000-0000-0000-0000-000000000000" id="00000000-0000-0000-0000-000000000000"/>
+DEBUG:root:>     </vm>
+DEBUG:root:>     <vm href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887" id="d6a85b69-858d-4215-a1b5-7e4161046887">
+DEBUG:root:>         <actions>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/shutdown" rel="shutdown"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/start" rel="start"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/stop" rel="stop"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/suspend" rel="suspend"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/detach" rel="detach"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/logon" rel="logon"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/maintenance" rel="maintenance"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/previewsnapshot" rel="previewsnapshot"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/reordermacaddresses" rel="reordermacaddresses"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/thawfilesystems" rel="thawfilesystems"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/undosnapshot" rel="undosnapshot"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/ticket" rel="ticket"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/reboot" rel="reboot"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/migrate" rel="migrate"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/commitsnapshot" rel="commitsnapshot"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/clone" rel="clone"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/freezefilesystems" rel="freezefilesystems"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/cancelmigration" rel="cancelmigration"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/export" rel="export"/>
+DEBUG:root:>         </actions>
+DEBUG:root:>         <name>rhl-01</name>
+DEBUG:root:>         <description></description>
+DEBUG:root:>         <comment></comment>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/numanodes" rel="numanodes"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/reporteddevices" rel="reporteddevices"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/sessions" rel="sessions"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/backups" rel="backups"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/checkpoints" rel="checkpoints"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/diskattachments" rel="diskattachments"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/snapshots" rel="snapshots"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/applications" rel="applications"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/hostdevices" rel="hostdevices"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/watchdogs" rel="watchdogs"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/graphicsconsoles" rel="graphicsconsoles"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/cdroms" rel="cdroms"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/nics" rel="nics"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/katelloerrata" rel="katelloerrata"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/permissions" rel="permissions"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/tags" rel="tags"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/affinitylabels" rel="affinitylabels"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/d6a85b69-858d-4215-a1b5-7e4161046887/statistics" rel="statistics"/>
+DEBUG:root:>         <bios>
+DEBUG:root:>             <boot_menu>
+DEBUG:root:>                 <enabled>false</enabled>
+DEBUG:root:>             </boot_menu>
+DEBUG:root:>             <type>q35_sea_bios</type>
+DEBUG:root:>         </bios>
+DEBUG:root:>         <cpu>
+DEBUG:root:>             <architecture>x86_64</architecture>
+DEBUG:root:>             <topology>
+DEBUG:root:>                 <cores>1</cores>
+DEBUG:root:>                 <sockets>1</sockets>
+DEBUG:root:>                 <threads>1</threads>
+DEBUG:root:>             </topology>
+DEBUG:root:>         </cpu>
+DEBUG:root:>         <cpu_shares>0</cpu_shares>
+DEBUG:root:>         <creation_time>2020-11-03T13:33:34.323+07:00</creation_time>
+DEBUG:root:>         <delete_protected>false</delete_protected>
+DEBUG:root:>         <display>
+DEBUG:root:>             <allow_override>false</allow_override>
+DEBUG:root:>             <copy_paste_enabled>true</copy_paste_enabled>
+DEBUG:root:>             <disconnect_action>LOCK_SCREEN</disconnect_action>
+DEBUG:root:>             <file_transfer_enabled>true</file_transfer_enabled>
+DEBUG:root:>             <monitors>1</monitors>
+DEBUG:root:>             <single_qxl_pci>false</single_qxl_pci>
+DEBUG:root:>             <smartcard_enabled>false</smartcard_enabled>
+DEBUG:root:>             <type>spice</type>
+DEBUG:root:>         </display>
+DEBUG:root:>         <high_availability>
+DEBUG:root:>             <enabled>true</enabled>
+DEBUG:root:>             <priority>1</priority>
+DEBUG:root:>         </high_availability>
+DEBUG:root:>         <io>
+DEBUG:root:>             <threads>1</threads>
+DEBUG:root:>         </io>
+DEBUG:root:>         <large_icon href="/ovirt-engine/api/icons/689738d8-5a90-4fd8-8c40-0af5d89ebd15" id="689738d8-5a90-4fd8-8c40-0af5d89ebd15"/>
+DEBUG:root:>         <memory>1073741824</memory>
+DEBUG:root:>         <memory_policy>
+DEBUG:root:>             <guaranteed>1073741824</guaranteed>
+DEBUG:root:>             <max>4294967296</max>
+DEBUG:root:>         </memory_policy>
+DEBUG:root:>         <migration>
+DEBUG:root:>             <auto_converge>inherit</auto_converge>
+DEBUG:root:>             <compressed>inherit</compressed>
+DEBUG:root:>             <encrypted>inherit</encrypted>
+DEBUG:root:>         </migration>
+DEBUG:root:>         <migration_downtime>-1</migration_downtime>
+DEBUG:root:>         <multi_queues_enabled>true</multi_queues_enabled>
+DEBUG:root:>         <origin>rhev</origin>
+DEBUG:root:>         <os>
+DEBUG:root:>             <boot>
+DEBUG:root:>                 <devices>
+DEBUG:root:>                     <device>hd</device>
+DEBUG:root:> 
+DEBUG:root:> 10
+DEBUG:root:>               </
+DEBUG:root:> 392
+DEBUG:root:> devices>
+DEBUG:root:>             </boot>
+DEBUG:root:>             <type>other</type>
+DEBUG:root:>         </os>
+DEBUG:root:>         <placement_policy>
+DEBUG:root:>             <affinity>migratable</affinity>
+DEBUG:root:>         </placement_policy>
+DEBUG:root:>         <small_icon href="/ovirt-engine/api/icons/e82853d2-67d0-47e2-8cbc-cbbb3d9ecf39" id="e82853d2-67d0-47e2-8cbc-cbbb3d9ecf39"/>
+DEBUG:root:>         <sso>
+DEBUG:root:>             <methods>
+DEBUG:root:>                 <method id="guest_agent"/>
+DEBUG:root:>             </methods>
+DEBUG:root:>         </sso>
+DEBUG:root:>         <start_paused>false</start_paused>
+DEBUG:root:>         <stateless>false</stateless>
+DEBUG:root:>         <storage_error_resume_behaviour>auto_resume</storage_error_resume_behaviour>
+DEBUG:root:>         <time_zone>
+DEBUG:root:>             <name>Etc/GMT</name>
+DEBUG:root:>         </time_zone>
+DEBUG:root:>         <type>server</type>
+DEBUG:root:>         <usb>
+DEBUG:root:>             <enabled>false</enabled>
+DEBUG:root:>         </usb>
+DEBUG:root:>         <cluster href="/ovirt-engine/api/clusters/1db86f68-0164-11eb-b560-00163e29af93" id="1db86f68-0164-11eb-b560-00163e29af93"/>
+DEBUG:root:>         <cpu_profile href="
+DEBUG:root:> 1ff8
+DEBUG:root:> /ovirt-engine/api/cpuprofiles/58ca604e-01a7-003f-01de-000000000250" id="58ca604e-01a7-003f-01de-000000000250"/>
+DEBUG:root:>         <quota id="22b0d82a-0164-11eb-a302-00163e29af93"/>
+DEBUG:root:>         <next_run_configuration_exists>false</next_run_configuration_exists>
+DEBUG:root:>         <numa_tune_mode>interleave</numa_tune_mode>
+DEBUG:root:>         <status>down</status>
+DEBUG:root:>         <stop_time>2021-01-26T17:03:58.489+07:00</stop_time>
+DEBUG:root:>         <original_template href="/ovirt-engine/api/templates/00000000-0000-0000-0000-000000000000" id="00000000-0000-0000-0000-000000000000"/>
+DEBUG:root:>         <template href="/ovirt-engine/api/templates/00000000-0000-0000-0000-000000000000" id="00000000-0000-0000-0000-000000000000"/>
+DEBUG:root:>     </vm>
+DEBUG:root:>     <vm href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19" id="35f3d098-24d9-420e-81f0-93b7b96fda19">
+DEBUG:root:>         <actions>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/shutdown" rel="shutdown"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/start" rel="start"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/stop" rel="stop"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/suspend" rel="suspend"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/detach" rel="detach"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/logon" rel="logon"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/maintenance" rel="maintenance"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/previewsnapshot" rel="previewsnapshot"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/reordermacaddresses" rel="reordermacaddresses"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/thawfilesystems" rel="thawfilesystems"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/undosnapshot" rel="undosnapshot"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/ticket" rel="ticket"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/reboot" rel="reboot"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/migrate" rel="migrate"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/commitsnapshot" rel="commitsnapshot"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/clone" rel="clone"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/freezefilesystems" rel="freezefilesystems"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/cancelmigration" rel="cancelmigration"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/export" rel="export"/>
+DEBUG:root:>         </actions>
+DEBUG:root:>         <name>ubuntu</name>
+DEBUG:root:>         <description></description>
+DEBUG:root:>         <comment></comment>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/numanodes" rel="numanodes"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/reporteddevices" rel="reporteddevices"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/sessions" rel="sessions"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/backups" rel="backups"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/checkpoints" rel="checkpoints"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/diskattachments" rel="diskattachments"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/snapshots" rel="snapshots"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/applications" rel="applications"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/hostdevices" rel="hostdevices"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/watchdogs" rel="watchdogs"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/graphicsconsoles" rel="graphicsconsoles"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/cdroms" rel="cdroms"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/nics" rel="nics"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/katelloerrata" rel="katelloerrata"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/permissions" rel="permissions"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/tags" rel="tags"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/affinitylabels" rel="affinitylabels"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/vms/35f3d098-24d9-420e-81f0-93b7b96fda19/statistics" rel="statistics"/>
+DEBUG:root:>         <bios>
+DEBUG:root:>             <boot_menu>
+DEBUG:root:>                 <enabled>false</enabled>
+DEBUG:root:>             </boot_menu>
+DEBUG:root:>             <type>cluster_default</type>
+DEBUG:root:>         </bios>
+DEBUG:root:>         <cpu>
+DEBUG:root:>             <architecture>x86_64</architecture>
+DEBUG:root:>             <topology>
+DEBUG:root:>                 <cores>1</cores>
+DEBUG:root:>                 <sockets>1</sockets>
+DEBUG:root:>                 <threads>1</threads>
+DEBUG:root:>             </topology>
+DEBUG:root:>         </cpu>
+DEBUG:root:>         <cpu_shares>0</cpu_shares>
+DEBUG:root:>         <creation_time>2021-01-26T15:49:04.950+07:00</creation_time>
+DEBUG:root:>         <delete_protected>false</delete_protected>
+DEBUG:root:>         <display>
+DEBUG:root:>             <allow_override>false</allow_override>
+DEBUG:root:>             <copy_paste_enabled>true</copy_paste_enabled>
+DEBUG:root:>             <disconnect_action>LOCK_SCREEN</disconnect_action>
+DEBUG:root:>             <file_transfer_enabled>true</file_transfer_enabled>
+DEBUG:root:>             <monitors>1</monitors>
+DEBUG:root:>             <single_qxl_pci>false</single_qxl_pci>
+DEBUG:root:>             <smartcard_enabled>false</smartcard_enabled>
+DEBUG:root:>             <type>spice</type>
+DEBUG:root:>         </display>
+DEBUG:root:>         <high_availability>
+DEBUG:root:>             <enabled>false</enabled>
+DEBUG:root:>             <priority>1</priority>
+DEBUG:root:>         </high_availability>
+DEBUG:root:>         <io>
+DEBUG:root:>             <threads>1</threads>
+DEBUG:root:>         </io>
+DEBUG:root:>         <large_icon href="/ovirt-engine/api/icons/689738d8-5a90-4fd8-8c40-0af5d89ebd15" id="689738d8-5a90-4fd8-8c40-0af5d89ebd15"/>
+DEBUG:root:>         <memory>1073741824</memory>
+DEBUG:root:>         <memory_policy>
+DEBUG:root:>             <guaranteed>1073741824</guaranteed>
+DEBUG:root:>             <max>4294967296</max>
+DEBUG:root:>         </memory_policy>
+DEBUG:root:>         <migration>
+DEBUG:root:>             <auto_converge>inherit</auto_converge>
+DEBUG:root:>             <compressed>inherit</compressed>
+DEBUG:root:>             <encrypted>inherit</encrypted>
+DEBUG:root:>         </migration>
+DEBUG:root:>         <migration_downtime>-1</migration_downtime>
+DEBUG:root:>         <multi_queues_enabled>true</multi_queues_enabled>
+DEBUG:root:>         <origin>rhev</origin>
+DEBUG:root:>         <os>
+DEBUG:root:>             <boot>
+DEBUG:root:>                 <devices>
+DEBUG:root:>                     <device>hd</device>
+DEBUG:root:>                 </devices>
+DEBUG:root:>             </boot>
+DEBUG:root:>             <type>other</type>
+DEBUG:root:>         </os>
+DEBUG:root:>         <placement_policy>
+DEBUG:root:>             <affinity>migratable</affinity>
+DEBUG:root:>         </placement_policy>
+DEBUG:root:>         <small_icon href="/ovirt-engine/api/icons/e82853d2-67d0-47e2-8cbc-cbbb3d9ecf39" id="e82853d2-67d0-47e2-8cbc-cbbb3d9ecf39"/>
+DEBUG:root:>         <sso>
+DEBUG:root:>             <methods>
+DEBUG:root:>                 <method id="guest_agent"/>
+DEBUG:root:>             </methods>
+DEBUG:root:>         </sso>
+DEBUG:root:>         <start_paused>false</start_paused>
+DEBUG:root:>         <stateless>false</stateless>
+DEBUG:root:>         <storage_error_resume_behaviour>auto_resume</storage_error_resume_behaviour>
+DEBUG:root:>         <time_zone>
+DEBUG:root:>             <name>Etc/GMT</name>
+DEBUG:root:>         </time_zone>
+DEBUG:root:>         <type>server</type>
+DEBUG:root:>         <usb>
+DEBUG:root:>             <enabled>false</enabled>
+DEBUG:root:>         </usb>
+DEBUG:root:>         <cluster href="/ovirt-engine/api/clusters/1db86f68-0164-11eb-b560-00163e29af93" id="1db86f68-0164-11eb-b560-00163e29af93"/>
+DEBUG:root:>         <cpu_profile href="/ovirt-engine/api/cpuprofiles/58ca604e-01a7-003f-01de-000000000250" id="58ca604e-01a7-003f-01de-000000000250"/>
+DEBUG:root:>         <quota id="22b0d82a-0164-11eb-a302-00163e29af93"/>
+DEBUG:root:>         <next_run_configuration_exists>false</next_run_configuration_exists>
+DEBUG:root:>         <numa_tune_mode>interleave</num
+DEBUG:root:> 
+DEBUG:root:> 18e
+DEBUG:root:> a_tune_mode>
+DEBUG:root:>         <status>down</status>
+DEBUG:root:>         <stop_time>2021-01-26T15:50:03.861+07:00</stop_time>
+DEBUG:root:>         <original_template href="/ovirt-engine/api/templates/00000000-0000-0000-0000-000000000000" id="00000000-0000-0000-0000-000000000000"/>
+DEBUG:root:>         <template href="/ovirt-engine/api/templates/00000000-0000-0000-0000-000000000000" id="00000000-0000-0000-0000-000000000000"/>
+DEBUG:root:>     </vm>
+DEBUG:root:> </vms>
+DEBUG:root:> 
+DEBUG:root:> 0
+DEBUG:root:* Connection #1 to host rhvmanager01.svt.hn left intact

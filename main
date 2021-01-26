@@ -1,0 +1,26 @@
+from modules.connection import *
+from modules.vm import *
+from modules.lun import *
+from modules.ip import *
+from modules.utils import *
+connection = Connection()
+utils = Utils(connection)
+#connection.test()
+#connection.get_vms()
+
+luns = []
+luns.append(LUN('a','1'))
+luns.append(LUN('b','0'))
+
+ips = []
+ips.append(IP('10.1.1.22', 'ens3'))
+ips.append(IP('10.1.2.33', 'eth0'))
+
+vm = {}
+vm['name'] = 'ubuntu'
+vm['ips'] = ips 
+vm['vcpu'] = 4
+vm['ram'] = 4*1024*1024
+vm['luns'] = luns
+myvm = VM(vm)
+utils.create_vm(myvm)
