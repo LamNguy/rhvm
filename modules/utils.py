@@ -29,7 +29,7 @@ class Utils:
 					name=vm.cluster,
 				),
 				template=types.Template(
-					name='ubuntu-18.04',
+					name='Blank',
 				),
 			),
 		)	
@@ -61,7 +61,58 @@ class Utils:
 	for lun in vm.luns:
 		print(lun.id)
 		print(lun.bootable) 
-		x = self.disk_service(search='id={}'.format(lun.id))
-		print(x)
-	#disk_attachments_service = vm_service.disk_attachments_service()
+		disk_attachments_service = vm_service.disk_attachments_service()
+		disk_attachment = disk_attachments_service.add(
+			types.DiskAttachment(
+				disk= types.Disk(
+					id = lun.id,
+				),
+				interface=types.DiskInterface.VIRTIO,
+				active = True,
+				bootable = lun.bootable,
+			),
+		)	
+		_disk_service = self.disk_service.disk_service(disk_attachment.id)
+		while True:
+			time.sleep(5)
+			disk = _disk_service.get()
+			print(disk.status)
+			break
+	#
+	# Cloud-init
+	#	
+	_netmask = '255.255.0.0'
+	_gateway = '10.1.0.1'
 	
+	for _ip in vm.ips:
+		vm_service.start(
+			use_cloud_init=True,
+			vm = types.Vm(
+				initialization=types.Initialization(
+					nic_configurations=[
+						types.NicConfiguration(
+							name= _ip.nic,
+							on_boot=True,
+							boot_protocol=types.BootProtocol.STATIC,
+							ip= types.Ip(
+								version=types.IpVersion.V4,
+								address = _ip.ip,
+								netmask = _netmask,
+								gateway = _gateway
+							)
+						)
+					],
+					dns_servers = '8.8.8.8',
+					dns_search ='example.com',
+				)
+			)
+		)
+		
+		while True:
+			time.sleep(5)
+			done_vm = vm_service.get()
+			if done_vm.status == types.VmStatus.UP :
+				print('done')
+				break
+			print(done_vm.status)
+
