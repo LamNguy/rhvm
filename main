@@ -9,18 +9,18 @@ utils = Utils(connection)
 #connection.get_vms()
 
 luns = []
-luns.append(LUN('a','1'))
-luns.append(LUN('b','0'))
+luns.append(LUN('4d7abf89-2f95-47e3-9c7e-4990c7ac5a6c','1'))
 
 ips = []
-ips.append(IP('10.1.1.22', 'ens3'))
-ips.append(IP('10.1.2.33', 'eth0'))
+ips.append(IP('10.1.1.22', 'enp1s0'))
+ips.append(IP('10.1.2.33', 'enp1s1'))
 
 vm = {}
 vm['name'] = 'ubuntu'
 vm['ips'] = ips 
 vm['vcpu'] = 4
-vm['ram'] = 4*1024*1024
+vm['ram'] = 4 
 vm['luns'] = luns
+vm['cluster'] = 'Default' 
 myvm = VM(vm)
 utils.create_vm(myvm)

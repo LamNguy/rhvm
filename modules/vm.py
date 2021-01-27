@@ -5,6 +5,7 @@ class VM:
         self.vcpu = vm['vcpu']
         self.ram = vm['ram']
 	self.luns = vm['luns']
+	self.cluster = vm['cluster']
     def test(self):
         print('VM_NAME:{}').format(self.name)
        	for ip in self.ips:
@@ -13,3 +14,4 @@ class VM:
         print('RAM:{}').format(self.ram)
 	for lun in self.luns:
 		print('ID:{},BOOTALBE:{}').format(lun.id, lun.bootable)	
+	print('Cluster: {}').format(self.cluster)
