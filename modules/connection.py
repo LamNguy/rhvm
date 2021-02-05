@@ -10,14 +10,16 @@ class Connection:
 
     def connection(self):
         logging.basicConfig(level=logging.DEBUG, filename='example.log')
-        return sdk.Connection(
-                    url=self.url,
-                    username=self.username,
-                    password=self.password,
-                    ca_file=self.cert_path,
-                    debug=True,
-                    log=logging.getLogger(),
+
+        return  sdk.Connection(
+                   url=self.url,
+                   username=self.username,
+                   password=self.password,
+                   ca_file=self.cert_path,
+                   debug=True,
+                   log=logging.getLogger(),
         )
+	
 
     def test(self):
         print(self.url)

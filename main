@@ -3,25 +3,38 @@ from modules.vm import *
 from modules.lun import *
 from modules.ip import *
 from modules.utils import *
-connection = Connection()
-utils = Utils(connection)
-#connection.test()
-#connection.get_vms()
+import pandas as pd
+import ovirtsdk4
+import sys
+
+try:
+	connection = Connection()
+	conn = connection.connection()
+	conn.test(raise_exception = True)  # return true if connect successful
+	utils = Utils(conn)
+except ovirtsdk4.AuthError :
+	print('Authentication failed, please check adminrc')
+	sys.exit()
+
+path = '/home/centos/rhvm/test_data.xlsx'
+data = pd.read_excel(path)
+print(data.shape)
+
 
 luns = []
-luns.append(LUN('da7d8b5c-0dbe-4ce9-b090-3cb2409da5a6',True))
-luns.append(LUN('1a27fec1-c265-4095-a6e9-58e9d3cdbe9c',False))
+luns.append(LUN('4c281778-2e65-4679-a751-845386b8054e',True))
 
 ips = []
-ips.append(IP('10.1.21.22', 'enp1s0'))
+ips.append(IP('10.1.21.22', 'nic1'))
 
 vm = {}
-vm['name'] = 'ubuntu1'
+vm['name'] = 'centos'
 vm['ips'] = ips 
 vm['vcpu'] = 4
 vm['ram'] = 4 
 vm['luns'] = luns
-vm['cluster'] = 'Default' 
+vm['cluster'] = 'managed' 
 myvm = VM(vm)
 utils.create_vm(myvm)
-connection.close()
+conn.close()
+

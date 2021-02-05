@@ -3,20 +3,15 @@ import ovirtsdk4.types as types
 import time
 class Utils:
     def __init__ (self, conn):
-        self.conn = conn.connection()
+        self.conn = conn
         self.instance_types_service = self.conn.system_service().instance_types_service()
         self.disk_service = self.conn.system_service().disks_service()
         self.vms_service = self.conn.system_service().vms_service()
         self.clusters_service = self.conn.system_service().clusters_service()
 	self.profiles_service = self.conn.system_service().vnic_profiles_service()
-	
-    def list_network (self, _cluster):
-	cluster = self.clusters_service.list(search='name={}'.format(_cluster))[0]
-	cluster_service = self.clusters_service.cluster_service(cluster.id)
-	networks_service = cluster_service.networks_service()
-	networks = networks_service.list()
-	for network in networks:
-		print(network.name)
+	self.networks_service = self.conn.system_service().networks_service()
+
+
 
     def create_vm (self, vm):
  	cpu = types.CpuTopology( cores=vm.vcpu )
@@ -33,12 +28,26 @@ class Utils:
 				),
 			),
 		)	
-	    
-	vm_service = self.vms_service.vm_service(_vm.id)
+	
 
+	
+
+	
+	#networks = self.networks_service.list()
+	#for n in networks:
+	#	print(n.vlan.id)
+	#	print(n.name)
+	#vlan_id = '126'
+	#x = self.networks_service.network_service(vlan_id)
+	#x.get()	
+	vm_service = self.vms_service.vm_service(_vm.id)
+	
+	
 
 	# add nic in "ovirtmgmt" management network
 	_network = 'ovirtmgmt'
+	
+	
 	nics_service = vm_service.nics_service()
         profile_id = None
 
@@ -54,6 +63,9 @@ class Utils:
 				vnic_profile=types.VnicProfile(id=profile_id)
 			),
 		)
+	
+
+
 	
 	#
 	#  ADD DISK 
@@ -78,6 +90,8 @@ class Utils:
 			disk = _disk_service.get()
 			print(disk.status)
 			break
+	
+	time.sleep(10)
 	#
 	# Cloud-init
 	#	
