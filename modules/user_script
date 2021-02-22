@@ -1,0 +1,42 @@
+#cloud-config 
+runcmd: 
+  - "/bin/bash /tmp/run.sh"
+  - "systemctl restart network"
+write_files: 
+  - 
+    content: |
+        mac={} 
+        ip={}
+        mask={}
+        gateway={}
+        
+        a=$(ip -o link | awk -v mac=$mac '$(NF-2)==mac {}')
+        x=${}
+        if [ -z x ] ; then
+                echo 'null'
+        else
+        
+                if [[ -f "/etc/sysconfig/network-scripts/ifcfg-$x" ]] ; then
+        
+                        static=$(grep BOOTPROTO "/etc/sysconfig/network-scripts/ifcfg-$x")
+                        if [ -z "$static" ] ; then
+                                echo 'null' >2
+                        else
+                                sed -i '/^BOOTPROTO/d' "/etc/sysconfig/network-scripts/ifcfg-$x"
+                                echo "BOOTPROTO=none" >>  "/etc/sysconfig/network-scripts/ifcfg-$x"
+                                sed -i '/^ONBOOT/d'  "/etc/sysconfig/network-scripts/ifcfg-$x"
+                                echo "ONBOOT=yes" >> "/etc/sysconfig/network-scripts/ifcfg-$x"
+                                sed -i '/^NETMASK/d'  "/etc/sysconfig/network-scripts/ifcfg-$x"
+                                echo "NETMASK=$mask" >>  "/etc/sysconfig/network-scripts/ifcfg-$x"
+                                sed -i '/^GATEWAY/d'  "/etc/sysconfig/network-scripts/ifcfg-$x"
+                                echo "GATEWAY=$gateway" >> "/etc/sysconfig/network-scripts/ifcfg-$x"
+                                sed -i '/^IPADDR/d'  "/etc/sysconfig/network-scripts/ifcfg-$x"
+                                echo "IPADDR=$ip" >>  "/etc/sysconfig/network-scripts/ifcfg-$x"                
+                        fi
+                else
+                        echo 'not found' >2
+                fi
+        fi
+    path: /tmp/run.sh
+    permissions: "0644"
+

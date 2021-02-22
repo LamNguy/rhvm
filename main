@@ -18,23 +18,33 @@ except ovirtsdk4.AuthError :
 
 path = '/home/centos/rhvm/test_data.xlsx'
 data = pd.read_excel(path)
-print(data.shape)
+vms = []
 
 
-luns = []
-luns.append(LUN('4c281778-2e65-4679-a751-845386b8054e',True))
+for index,row in data.iterrows():
+	vm = {}   
+	vm['luns'] = []
+	vm['ips'] = []	
 
-ips = []
-ips.append(IP('10.1.21.22', 'nic1'))
 
-vm = {}
-vm['name'] = 'centos'
-vm['ips'] = ips 
-vm['vcpu'] = 4
-vm['ram'] = 4 
-vm['luns'] = luns
-vm['cluster'] = 'managed' 
-myvm = VM(vm)
-utils.create_vm(myvm)
+	pre_vm = next((i for i in vms if i.id == row['id']),None)
+	if pre_vm is not None:
+		pre_vm.luns.append(LUN(row['os'],row['bootable']))
+		continue
+	
+	vm['luns'].append(LUN(row['os'],row['bootable']))
+	vm['ips'].append( nics(row['ip'], row['subnet'], row['gateway'] ))	
+	vm['id'] = row['id'] 
+	vm['name'] = row['name']
+	vm['ram'] = row['ram']
+	vm['vcpu'] = row['vcpu']
+	vm['cluster'] = 'managed'
+	vm['network'] = 'ovirtmgmt'
+	vms.append(VM(vm))
+
+
+for vm in vms:
+	utils.create_vm(vm)	
+
 conn.close()
 
