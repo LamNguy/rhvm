@@ -1,4 +1,6 @@
 from modules.vm import *
+from modules.lun import *
+from modules.ip import *
 import ovirtsdk4.types as types
 import time
 import sys
@@ -14,17 +16,32 @@ class Utils:
 	self.dcs_service = self.conn.system_service().data_centers_service()
 	self.data = open('/home/centos/rhvm/modules/user_script', 'r').read()
 
+    def vms_data (self,data):
+	vms = []
+	for index,row in data.iterrows():
+        	vm = {}
+        	vm['luns'] = []
+        	vm['ips'] = []
 
+        	pre_vm = next((i for i in vms if i.id == row['id']),None)
+        	if pre_vm is not None:
+                	pre_vm.luns.append(LUN(row['os'],row['bootable']))
+                	continue
 
+        	vm['luns'].append(LUN(row['os'],row['bootable']))
+        	vm['ips'].append( nics(row['ip'], row['subnet'], row['gateway'] ))
+        	vm['id'] = row['id']
+        	vm['name'] = row['name']
+        	vm['ram'] = row['ram']
+        	vm['vcpu'] = row['vcpu']
+        	vm['cluster'] = 'managed'
+        	vm['vlan'] = row['vlan']
+        	vms.append(VM(vm))
+	return vms 
     def user_script (self, data,  mac, ip , mask , gateway):
-	return  data.format(mac,ip,mask,gateway,'{print $2}','{a%?}')
+	return  self.data.format(mac,ip,mask,gateway,'{print $2}','{a%?}')
 
 
-    def get_vlan ( self, vm):
-	networks = self.networks_service.list()
-        for n in networks:
-               #print(n.vlan.id)
-               print(n.name)
     def create_vm (self, vm):
  	cpu = types.CpuTopology( cores=vm.vcpu )
 	_vm = self.vms_service.add(
@@ -53,9 +70,10 @@ class Utils:
 	#
  	# ADD VM_NICS 	
 	#
-
 	nics_service = vm_service.nics_service()
-	profile = next((i for i in self.profiles_service.list() if i.name == vm.network),None)
+	network = next(( i for i in self.networks_service.list() if i.vlan is not None and i.vlan.id == vm.vlan),None)
+	profile = next((i for i in self.profiles_service.list() if i.name == network.name),None)
+	
 	i = 0 		
         for ip in vm.ips:
 		nics_service.add(
@@ -86,11 +104,10 @@ class Utils:
 		)	
 		_disk_service = self.disk_service.disk_service(disk_attachment.id)
 		while True:
-			time.sleep(5)
+			time.sleep(3)
 			disk = _disk_service.get()
 			print(disk.status)
-			break
-	
+			break	
 
 	#
 	# Cloud-init

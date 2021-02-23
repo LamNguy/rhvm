@@ -5,6 +5,7 @@ class nics:
 	self.netmask = netmask
 	self.gateway = gateway 
 
+    # Print nics properties
     def test(self):
         print(self.ip)
         print(self.netmask)

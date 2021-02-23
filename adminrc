@@ -1,4 +1,4 @@
 export URL='https://rhvmanager02.svt.hn/ovirt-engine/api'
 export USER_NAME='admin@internal'
 export PASSWORD='Admin123'
-export CERT_PATH='/home/centos/rhvm/ca2.pem'
+export CERT_PATH='/home/centos/rhvm/ca.pem'
