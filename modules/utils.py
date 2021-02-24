@@ -3,6 +3,7 @@ from modules.lun import *
 from modules.ip import *
 import ovirtsdk4.types as types
 import time
+import json
 import sys
 class Utils:
     def __init__ (self, conn):
@@ -14,7 +15,12 @@ class Utils:
 	self.profiles_service = self.conn.system_service().vnic_profiles_service()
 	self.networks_service = self.conn.system_service().networks_service()
 	self.dcs_service = self.conn.system_service().data_centers_service()
+	self.hosts_service = self.conn.system_service().hosts_service()
 	self.data = open('/home/centos/rhvm/modules/user_script', 'r').read()
+
+    def list_host (self, _name):
+	host = self.hosts_service.list(search='name={}'.format(_name))[0]
+	return host.cluster.id
 
     def vms_data (self,data):
 	vms = []
@@ -34,8 +40,9 @@ class Utils:
         	vm['name'] = row['name']
         	vm['ram'] = row['ram']
         	vm['vcpu'] = row['vcpu']
-        	vm['cluster'] = 'managed'
+        	vm['cluster'] = self.list_host(row['host']) 
         	vm['vlan'] = row['vlan']
+		vm['host'] = row['host']
         	vms.append(VM(vm))
 	return vms 
     def user_script (self, data,  mac, ip , mask , gateway):
@@ -43,6 +50,17 @@ class Utils:
 
 
     def create_vm (self, vm):
+	import logging
+	filename='/home/centos/rhvm/vms/{}.log'.format(vm.name)
+	logging.basicConfig(filename=filename,
+				filemode='a',
+				level=logging.INFO)
+	
+	placement_policy = types.VmPlacementPolicy(
+		hosts =[
+			types.Host(name=vm.host)
+		]
+	)
  	cpu = types.CpuTopology( cores=vm.vcpu )
 	_vm = self.vms_service.add(
 			types.Vm(
@@ -50,15 +68,16 @@ class Utils:
 				memory=vm.ram*1024*1024*1024,
 				cpu=types.Cpu(topology=cpu),
 				cluster=types.Cluster(
-					name=vm.cluster,
+					id=vm.cluster,
 				),
 				template=types.Template(
 					name='Blank',
 				),
+				placement_policy = placement_policy  
 			),
 		)	
 	
-
+	logging.info('Create vm {}:{}:{}'.format(vm.name,vm.ram,vm.vcpu))
  
 	
 	#
@@ -101,7 +120,8 @@ class Utils:
 				active = True,
 				bootable = lun.bootable,
 			),
-		)	
+		)
+		logging.info('Disk attachment: {}, lun_id:{}, os:{}'.format(disk_attachment.id,lun.id,lun.bootable))	
 		_disk_service = self.disk_service.disk_service(disk_attachment.id)
 		while True:
 			time.sleep(3)

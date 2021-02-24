@@ -8,6 +8,7 @@ class VM:
 	self.luns = vm['luns']
 	self.cluster = vm['cluster']
 	self.vlan = vm['vlan']
+	self.host = vm['host']
  
     # Print vm properties 
     def test(self):
@@ -18,6 +19,7 @@ class VM:
 		print('IP:{},NETMASK:{},GATEWAY:{}').format(ip.ip, ip.netmask, ip.gateway)
         print('VCPU:{}').format(self.vcpu)
         print('RAM:{}').format(self.ram)
+	print('HOST:{}').format(self.host)
 	for lun in self.luns:
 		print('ID:{},BOOTALBE:{}').format(lun.id, lun.bootable)	
 	print('Cluster: {}').format(self.cluster)

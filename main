@@ -21,10 +21,8 @@ try:
 	conn.test(raise_exception = True)  # return true if connect successful
 	data = pd.read_excel(PATH_EXCEL)
 	vms = utils.vms_data(data)
-	for vm in vms:
-		vm.test()
-	#pool = ThreadPool(processes=cpu_count())
-        #res = pool.map(utils.create_vm, vms)
+	pool = ThreadPool(processes=cpu_count())
+        res = pool.map(utils.create_vm, vms)
 except ovirtsdk4.AuthError :
 	print('Authentication failed, please check adminrc')
 	sys.exit()
