@@ -18,6 +18,23 @@ class Utils:
 	self.hosts_service = self.conn.system_service().hosts_service()
 	self.data = open('/home/centos/rhvm/modules/user_script', 'r').read()
 
+
+    def get_disk (self,lun_id,vm_host):
+	disk=types.Disk(
+            name='test',
+            lun_storage=types.HostStorage(
+               type=types.StorageType.FCP,
+	       #host=types.Host(name=vm_host),
+	       logical_units= [
+	    		types.LogicalUnit(
+                        	id=lun_id,
+               	    	 )
+	       ],
+            ),
+        )
+	new_disk = self.disk_service.add(disk)
+	return new_disk.id 	
+
     def list_host (self, _name):
 	host = self.hosts_service.list(search='name={}'.format(_name))[0]
 	return host.cluster.id
@@ -110,11 +127,12 @@ class Utils:
 	#  ADD DISK 
 	#
 	for lun in vm.luns:
+		
 		disk_attachments_service = vm_service.disk_attachments_service()
 		disk_attachment = disk_attachments_service.add(
 			types.DiskAttachment(
 				disk= types.Disk(
-					id = lun.id,
+					id = self.get_disk(lun.id,vm.host),
 				),
 				interface=types.DiskInterface.VIRTIO,
 				active = True,
@@ -144,8 +162,9 @@ class Utils:
 				)
 			)
 		)
-		
+		#if vm no start down	
 		while True:
+			break
 			time.sleep(5)
 			done_vm = vm_service.get()
 			if done_vm.status == types.VmStatus.UP :
