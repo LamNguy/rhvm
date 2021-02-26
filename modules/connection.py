@@ -3,15 +3,20 @@ import logging
 import ovirtsdk4 as sdk
 import pandas as pd
 
+# Connection class provide the connection to rhvm manager, admin activate 'adminrc' file
+# to authenticate with certification file (ca.pem)
+
 class Connection:
     def __init__ (self, env=env ):
         self.url = env['URL']
         self.username = env['USER_NAME']
         self.password = env['PASSWORD']
         self.cert_path = env['CERT_PATH']
+
+
+    # connect to rhv manager 
     def connection(self):
         logging.basicConfig(level=logging.DEBUG, filename='example.log')
-
         return  sdk.Connection(
                    url=self.url,
                    username=self.username,

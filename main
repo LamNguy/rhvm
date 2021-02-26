@@ -1,7 +1,4 @@
 from modules.connection import * 
-from modules.vm import *
-from modules.lun import *
-from modules.ip import *
 from modules.utils import *
 import pandas as pd
 import ovirtsdk4
@@ -17,19 +14,19 @@ connection = Connection()
 
 try:
 	conn = connection.connection()
+	#connection.test()
 	utils = Utils(conn)	
 	conn.test(raise_exception = True)  # return true if connect successful
 	data = pd.read_excel(PATH_EXCEL)
 	vms = utils.vms_data(data)
-	#utils.list_disk()
+	#for vm in vms:
+	#	vm.test()	
 	pool = ThreadPool(processes=cpu_count())
         res = pool.map(utils.create_vm, vms)
 except ovirtsdk4.AuthError :
 	print('Authentication failed, please check adminrc')
-	sys.exit()
 except IOError: 
 	print('File data not exists')
-	sys.exit()
 except Exception as e:
 	print(e)
 finally:
