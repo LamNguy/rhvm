@@ -448,3 +448,16 @@ Alternatives:
 2021-03-01 07:36:59,173 - 2FA_N - Level:INFO - Successfully attach disk d16b6707-8539-441f-9415-735e130a75ce to 2FA_N
 2021-03-01 07:37:04,243 - 2FA_N - Level:INFO - Vm created with status down
 2021-03-01 07:37:04,243 - 2FA_N - Level:INFO - Trying to start vm...
+2021-03-01 07:44:21,930 - 2FA_N - Level:INFO - --------------------------------------------------------
+2021-03-01 07:44:21,931 - 2FA_N - Level:INFO - Create vm
+2021-03-01 07:44:21,931 - 2FA_N - Level:INFO - # CREATE VM TEMPLATE PHASE
+2021-03-01 07:44:21,932 - 2FA_N - Level:INFO - Successfully created vm template
+2021-03-01 07:44:21,933 - 2FA_N - Level:INFO - Instance properties: name:2FA_N,host:node02.svt.hn,cluster:eb7eed8a-54b8-11eb-a594-00163e3fc1a8,vcpu:1,ram:2
+2021-03-01 07:44:22,310 - 2FA_N - Level:INFO - # CREAT VM NIC PHASE
+2021-03-01 07:44:22,338 - 2FA_N - Level:ERROR - Can not find network with vlan 124
+2021-03-01 07:44:22,339 - 2FA_N - Level:ERROR - Failed create nic for vm
+2021-03-01 07:44:22,340 - 2FA_N - Level:INFO - # CREATE & ATTACH DISK PHASE
+2021-03-01 07:44:22,620 - 2FA_N - Level:INFO - Success mapping lun 88070f87-cde2-46f3-8d2f-b6ce26f818f7 with disk eb7d6248-19fb-420d-92f5-ad59a46cf99f, bootable True
+2021-03-01 07:44:22,720 - 2FA_N - Level:INFO - Successfully attach disk eb7d6248-19fb-420d-92f5-ad59a46cf99f to 2FA_N
+2021-03-01 07:44:27,807 - 2FA_N - Level:INFO - Vm created with status down
+2021-03-01 07:44:27,808 - 2FA_N - Level:INFO - Trying to start vm...

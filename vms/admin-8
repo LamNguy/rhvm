@@ -539,3 +539,17 @@ Alternatives:
 2021-03-01 07:37:04,520 - admin-8 - Level:INFO - Successfully attach disk 3e859e01-9cd0-45f9-9f45-57fa3b05e263 to admin-8
 2021-03-01 07:37:09,659 - admin-8 - Level:INFO - Vm created with status down
 2021-03-01 07:37:09,660 - admin-8 - Level:INFO - Trying to start vm...
+2021-03-01 07:44:22,311 - admin-8 - Level:INFO - --------------------------------------------------------
+2021-03-01 07:44:22,312 - admin-8 - Level:INFO - Create vm
+2021-03-01 07:44:22,313 - admin-8 - Level:INFO - # CREATE VM TEMPLATE PHASE
+2021-03-01 07:44:22,315 - admin-8 - Level:INFO - Successfully created vm template
+2021-03-01 07:44:22,316 - admin-8 - Level:INFO - Instance properties: name:admin-8,host:node02.svt.hn,cluster:eb7eed8a-54b8-11eb-a594-00163e3fc1a8,vcpu:1,ram:2
+2021-03-01 07:44:22,535 - admin-8 - Level:INFO - # CREAT VM NIC PHASE
+2021-03-01 07:44:22,789 - admin-8 - Level:INFO - Successfully created vm nic at vlan 123 with mac 56:6f:89:13:01:33
+2021-03-01 07:44:22,789 - admin-8 - Level:INFO - # CREATE & ATTACH DISK PHASE
+2021-03-01 07:44:22,837 - admin-8 - Level:INFO - Success mapping lun c746e044-1d0b-41e5-a1c3-def9b0855cdb with disk 69562839-e3bd-4219-b047-0e182fdf22cc, bootable True
+2021-03-01 07:44:22,884 - admin-8 - Level:INFO - Success mapping lun 30331767-9ee1-49d7-b84e-6738e3e4d3fa with disk 211b646f-f8f4-4eac-9ca4-d30486745225, bootable False
+2021-03-01 07:44:22,930 - admin-8 - Level:INFO - Successfully attach disk 69562839-e3bd-4219-b047-0e182fdf22cc to admin-8
+2021-03-01 07:44:28,018 - admin-8 - Level:INFO - Successfully attach disk 211b646f-f8f4-4eac-9ca4-d30486745225 to admin-8
+2021-03-01 07:44:33,129 - admin-8 - Level:INFO - Vm created with status down
+2021-03-01 07:44:33,129 - admin-8 - Level:INFO - Trying to start vm...

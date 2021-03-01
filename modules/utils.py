@@ -230,13 +230,19 @@ class Utils:
 			message = message + ',fail_disk'	
 		# attach luns
 		for lun in luns:
-			disk_attachment = disk_attachments_service.add(lun)
-			vm_disk_service = self.disk_service.disk_service(disk_attachment.id)  
-			logger.info('Successfully attach disk {} to {}'.format(disk_attachment.id,vm.name))
-			while True:
-				time.sleep(5)
-				print(vm_disk_service.get().status)
-				break
+			try:
+				disk_attachment = disk_attachments_service.add(lun)
+				vm_disk_service = self.disk_service.disk_service(disk_attachment.id)
+                        	logger.info('Successfully attach disk {} to {}'.format(disk_attachment.id,vm.name))
+                        	while True:
+                                	time.sleep(5)
+                                	print(vm_disk_service.get().status)
+                                	break
+			except Exception as e:
+				logger.debug('Fail at disk attachment')	
+				logger.error(e)
+				message = message + 'disk_attachment_fail'
+
 
 	#4 START VM	
 		logger.info('Vm created with status {}'.format(vm_service.get().status))

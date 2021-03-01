@@ -388,3 +388,10 @@
 2021-03-01 07:36:58,632 - admin_db - Level:INFO - Instance properties: name:admin_db,host:node04.svt.hn,cluster:Not-found-host,vcpu:1,ram:2
 2021-03-01 07:36:58,861 - admin_db - Level:ERROR - Can not add vm template
 2021-03-01 07:36:58,862 - admin_db - Level:ERROR - Fault reason is "Operation failed". Fault detail is "Invalid UUID string: Not-found-host". HTTP response code is 400.
+2021-03-01 07:44:21,953 - admin_db - Level:INFO - --------------------------------------------------------
+2021-03-01 07:44:21,953 - admin_db - Level:INFO - Create vm
+2021-03-01 07:44:21,953 - admin_db - Level:INFO - # CREATE VM TEMPLATE PHASE
+2021-03-01 07:44:21,954 - admin_db - Level:INFO - Successfully created vm template
+2021-03-01 07:44:21,955 - admin_db - Level:INFO - Instance properties: name:admin_db,host:node04.svt.hn,cluster:Not-found-host,vcpu:1,ram:2
+2021-03-01 07:44:22,322 - admin_db - Level:ERROR - Can not add vm template
+2021-03-01 07:44:22,323 - admin_db - Level:ERROR - Fault reason is "Operation failed". Fault detail is "Invalid UUID string: Not-found-host". HTTP response code is 400.
