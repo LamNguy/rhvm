@@ -2,7 +2,6 @@ class VM:
 
 # Class VM provide vm struct 
 #
-#
 
     def __init__ (self , vm ):
         self.name = vm['name']
@@ -14,7 +13,7 @@ class VM:
 	self.cluster = vm['cluster']
 	self.vlan = vm['vlan']
 	self.host = vm['host']
- 
+	 
     # Print vm properties 
     def test(self):
         print('VM_NAME:{}').format(self.name)

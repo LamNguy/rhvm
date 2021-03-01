@@ -1,0 +1,355 @@
+2021-03-01 03:38:31,337 - admin_db - Level:INFO - Create vm
+2021-03-01 03:38:31,951 - admin_db - Level:INFO - Successfully created vm template
+2021-03-01 03:40:13,503 - admin_db - Level:DEBUG - Vm existed
+2021-03-01 03:40:35,636 - admin_db - Level:INFO - Create vm
+2021-03-01 03:40:36,426 - admin_db - Level:INFO - Successfully created vm template
+2021-03-01 03:40:36,750 - admin_db - Level:INFO - Successfully created vm nic with mac 56:6f:89:13:00:f9
+2021-03-01 03:40:36,887 - admin_db - Level:INFO - Success mapping lun c73603c9-bbee-4ce7-8951-5b4457c90ff4 with disk a85dd9d0-9be3-4ce7-a3cc-86c0e8cc6fa6
+2021-03-01 03:40:36,887 - admin_db - Level:INFO - lun c73603c9-bbee-4ce7-8951-5b4457c90ff4 - disk a85dd9d0-9be3-4ce7-a3cc-86c0e8cc6fa6 - bootable: True
+2021-03-01 03:40:37,000 - admin_db - Level:INFO - Successfully attach disk None to admin_db
+2021-03-01 03:45:32,193 - admin_db - Level:INFO - Create vm
+2021-03-01 03:45:32,702 - admin_db - Level:INFO - Successfully created vm template
+2021-03-01 03:45:33,008 - admin_db - Level:INFO - Successfully created vm nic at vlan 123 with mac 56:6f:89:13:00:fb
+2021-03-01 03:45:33,164 - admin_db - Level:INFO - Success mapping lun c73603c9-bbee-4ce7-8951-5b4457c90ff4 with disk 1ae357b1-6356-4dbe-b645-db0e2536848c
+2021-03-01 03:45:33,165 - admin_db - Level:INFO - lun c73603c9-bbee-4ce7-8951-5b4457c90ff4 - disk 1ae357b1-6356-4dbe-b645-db0e2536848c - bootable: True
+2021-03-01 03:45:33,259 - admin_db - Level:INFO - Successfully attach disk 1ae357b1-6356-4dbe-b645-db0e2536848c to admin_db
+2021-03-01 03:49:50,896 - admin_db - Level:INFO - --------------------------------------------------------
+2021-03-01 03:49:50,898 - admin_db - Level:INFO - Create vm
+2021-03-01 03:49:51,502 - admin_db - Level:INFO - Successfully created vm template
+2021-03-01 03:49:52,114 - admin_db - Level:INFO - Successfully created vm nic at vlan 123 with mac 56:6f:89:13:00:fc
+2021-03-01 03:49:52,287 - admin_db - Level:INFO - Success mapping lun c73603c9-bbee-4ce7-8951-5b4457c90ff4 with disk cfd4bb7c-6260-430f-b47f-238ad16c9f51, bootable True
+2021-03-01 03:49:52,289 - admin_db - Level:INFO - lun c73603c9-bbee-4ce7-8951-5b4457c90ff4 - disk cfd4bb7c-6260-430f-b47f-238ad16c9f51 - bootable: True
+2021-03-01 03:49:52,541 - admin_db - Level:INFO - Successfully attach disk cfd4bb7c-6260-430f-b47f-238ad16c9f51 to admin_db
+2021-03-01 03:54:21,527 - admin_db - Level:INFO - --------------------------------------------------------
+2021-03-01 03:54:21,527 - admin_db - Level:INFO - Create vm
+2021-03-01 03:54:22,067 - admin_db - Level:INFO - Successfully created vm template
+2021-03-01 03:54:22,489 - admin_db - Level:INFO - Successfully created vm nic at vlan 123 with mac 56:6f:89:13:00:fe
+2021-03-01 03:54:22,682 - admin_db - Level:INFO - Success mapping lun c73603c9-bbee-4ce7-8951-5b4457c90ff4 with disk 5ffc1e4f-5e1d-4983-b52e-2b226de296a1, bootable True
+2021-03-01 03:54:22,824 - admin_db - Level:INFO - Successfully attach disk 5ffc1e4f-5e1d-4983-b52e-2b226de296a1 to admin_db
+2021-03-01 03:54:27,900 - admin_db - Level:INFO - Vm created with status down
+2021-03-01 04:01:38,778 - admin_db - Level:INFO - --------------------------------------------------------
+2021-03-01 04:01:38,779 - admin_db - Level:INFO - Create vm
+2021-03-01 04:01:38,779 - admin_db - Level:INFO - Successfully created vm template
+2021-03-01 04:01:38,780 - admin_db - Level:INFO - Instance properties: name:admin_db,host:node02.svt.hn,cluster:eb7eed8a-54b8-11eb-a594-00163e3fc1a8,vcpu:1,ram:2
+2021-03-01 04:01:39,814 - admin_db - Level:INFO - Successfully created vm nic at vlan 123 with mac 56:6f:89:13:01:01
+2021-03-01 04:01:39,939 - admin_db - Level:INFO - Success mapping lun c73603c9-bbee-4ce7-8951-5b4457c90ff4 with disk f2c21301-c7b2-4a86-901e-e324c55bb58a, bootable True
+2021-03-01 04:01:39,976 - admin_db - Level:INFO - Successfully attach disk f2c21301-c7b2-4a86-901e-e324c55bb58a to admin_db
+2021-03-01 04:01:45,029 - admin_db - Level:INFO - Vm created with status down
+2021-03-01 04:03:11,388 - admin_db - Level:INFO - --------------------------------------------------------
+2021-03-01 04:03:11,389 - admin_db - Level:DEBUG - Vm existed
+2021-03-01 04:03:45,209 - admin_db - Level:INFO - --------------------------------------------------------
+2021-03-01 04:03:45,210 - admin_db - Level:INFO - Create vm
+2021-03-01 04:03:45,211 - admin_db - Level:INFO - Successfully created vm template
+2021-03-01 04:03:45,212 - admin_db - Level:INFO - Instance properties: name:admin_db,host:node02.svt.hn,cluster:eb7eed8a-54b8-11eb-a594-00163e3fc1a8,vcpu:1,ram:2
+2021-03-01 04:03:46,042 - admin_db - Level:INFO - Successfully created vm nic at vlan 123 with mac 56:6f:89:13:01:02
+2021-03-01 04:03:46,165 - admin_db - Level:INFO - Success mapping lun c73603c9-bbee-4ce7-8951-5b4457c90ff4 with disk 9778243f-63d9-4338-9f97-a168c5a2e600, bootable True
+2021-03-01 04:03:46,262 - admin_db - Level:INFO - Successfully attach disk 9778243f-63d9-4338-9f97-a168c5a2e600 to admin_db
+2021-03-01 04:03:51,349 - admin_db - Level:INFO - Vm created with status down
+2021-03-01 04:06:57,105 - admin_db - Level:INFO - --------------------------------------------------------
+2021-03-01 04:06:57,105 - admin_db - Level:INFO - Create vm
+2021-03-01 04:06:57,107 - admin_db - Level:INFO - Successfully created vm template
+2021-03-01 04:06:57,107 - admin_db - Level:INFO - Instance properties: name:admin_db,host:node02.svt.hn,cluster:eb7eed8a-54b8-11eb-a594-00163e3fc1a8,vcpu:1,ram:2
+2021-03-01 04:06:58,041 - admin_db - Level:INFO - Successfully created vm nic at vlan 123 with mac 56:6f:89:13:01:04
+2021-03-01 04:06:58,211 - admin_db - Level:INFO - Success mapping lun c73603c9-bbee-4ce7-8951-5b4457c90ff4 with disk fd1eefa0-dc9b-405a-8cb1-c1ad2d7dc5b9, bootable True
+2021-03-01 04:06:58,298 - admin_db - Level:INFO - Successfully attach disk fd1eefa0-dc9b-405a-8cb1-c1ad2d7dc5b9 to admin_db
+2021-03-01 04:07:03,373 - admin_db - Level:INFO - Vm created with status down
+2021-03-01 04:11:39,656 - admin_db - Level:INFO - --------------------------------------------------------
+2021-03-01 04:11:39,657 - admin_db - Level:DEBUG - Vm existed
+2021-03-01 04:12:04,461 - admin_db - Level:INFO - --------------------------------------------------------
+2021-03-01 04:12:04,462 - admin_db - Level:INFO - Create vm
+2021-03-01 04:12:04,463 - admin_db - Level:INFO - Successfully created vm template
+2021-03-01 04:12:04,463 - admin_db - Level:INFO - Instance properties: name:admin_db,host:node02.svt.hn,cluster:eb7eed8a-54b8-11eb-a594-00163e3fc1a8,vcpu:1,ram:2
+2021-03-01 04:12:05,172 - admin_db - Level:INFO - Successfully created vm nic at vlan 123 with mac 56:6f:89:13:01:06
+2021-03-01 04:12:05,769 - admin_db - Level:DEBUG - lun c73603c9-bbee-4ce7-8951-5b4457c90ff4 is used
+2021-03-01 04:12:05,769 - admin_db - Level:ERROR - Can not attached c73603c9-bbee-4ce7-8951-5b4457c90ff4 to vm
+2021-03-01 04:12:05,875 - admin_db - Level:INFO - Vm created with status down
+2021-03-01 04:18:35,317 - admin_db - Level:INFO - --------------------------------------------------------
+2021-03-01 04:18:35,318 - admin_db - Level:DEBUG - Vm existed
+2021-03-01 04:19:12,710 - admin_db - Level:INFO - --------------------------------------------------------
+2021-03-01 04:19:12,711 - admin_db - Level:INFO - Create vm
+2021-03-01 04:19:12,712 - admin_db - Level:INFO - Successfully created vm template
+2021-03-01 04:19:12,712 - admin_db - Level:INFO - Instance properties: name:admin_db,host:node02.svt.hn,cluster:eb7eed8a-54b8-11eb-a594-00163e3fc1a8,vcpu:1,ram:2
+2021-03-01 04:19:13,717 - admin_db - Level:INFO - Successfully created vm nic at vlan 123 with mac 56:6f:89:13:01:09
+2021-03-01 04:19:14,291 - admin_db - Level:DEBUG - Mapping lun c73603c9-bbee-4ce7-8951-5b4457c90ff4 to host node02.svt.hn
+2021-03-01 04:19:14,291 - admin_db - Level:ERROR - Fault reason is "Operation Failed". Fault detail is "[Cannot add Virtual Disk. The provided LUN is not visible by the specified host, please check storage server connectivity.]". HTTP response code is 400.
+2021-03-01 04:19:14,292 - admin_db - Level:ERROR - Can not attached c73603c9-bbee-4ce7-8951-5b4457c90ff4 to vm
+2021-03-01 04:19:14,376 - admin_db - Level:INFO - Vm created with status down
+2021-03-01 04:51:33,579 - admin_db - Level:INFO - --------------------------------------------------------
+2021-03-01 04:51:33,580 - admin_db - Level:ERROR - Can not create vm with node04.svt.hn, please check host or cluster
+2021-03-01 04:55:58,081 - admin_db - Level:INFO - --------------------------------------------------------
+2021-03-01 04:55:58,081 - admin_db - Level:INFO - Create vm
+2021-03-01 04:55:58,083 - admin_db - Level:INFO - Successfully created vm template
+2021-03-01 04:55:58,083 - admin_db - Level:INFO - Instance properties: name:admin_db,host:node03.svt.hn,cluster:2fcefebf-7bad-4423-a43a-41672e163238,vcpu:1,ram:2
+2021-03-01 05:01:59,532 - admin_db - Level:INFO - --------------------------------------------------------
+2021-03-01 05:01:59,532 - admin_db - Level:INFO - Create vm
+2021-03-01 05:01:59,534 - admin_db - Level:INFO - Successfully created vm template
+2021-03-01 05:01:59,534 - admin_db - Level:INFO - Instance properties: name:admin_db,host:node03.svt.hn,cluster:2fcefebf-7bad-4423-a43a-41672e163238,vcpu:1,ram:2
+2021-03-01 05:05:12,044 - admin_db - Level:INFO - --------------------------------------------------------
+2021-03-01 05:05:12,044 - admin_db - Level:INFO - Create vm
+2021-03-01 05:05:12,046 - admin_db - Level:INFO - Successfully created vm template
+2021-03-01 05:05:12,046 - admin_db - Level:INFO - Instance properties: name:admin_db,host:node03.svt.hn,cluster:2fcefebf-7bad-4423-a43a-41672e163238,vcpu:1,ram:2
+2021-03-01 05:05:41,141 - admin_db - Level:INFO - --------------------------------------------------------
+2021-03-01 05:05:41,142 - admin_db - Level:INFO - Create vm
+2021-03-01 05:05:41,145 - admin_db - Level:INFO - Successfully created vm template
+2021-03-01 05:05:41,145 - admin_db - Level:INFO - Instance properties: name:admin_db,host:node03.svt.hn,cluster:2fcefebf-7bad-4423-a43a-41672e163238,vcpu:1,ram:2
+2021-03-01 05:08:15,494 - admin_db - Level:INFO - --------------------------------------------------------
+2021-03-01 05:08:15,494 - admin_db - Level:INFO - Create vm
+2021-03-01 05:08:15,495 - admin_db - Level:INFO - Successfully created vm template
+2021-03-01 05:08:15,495 - admin_db - Level:INFO - Instance properties: name:admin_db,host:node03.svt.hn,cluster:2fcefebf-7bad-4423-a43a-41672e163238,vcpu:1,ram:2
+2021-03-01 05:09:27,818 - admin_db - Level:INFO - --------------------------------------------------------
+2021-03-01 05:09:27,820 - admin_db - Level:INFO - Create vm
+2021-03-01 05:09:27,822 - admin_db - Level:INFO - Successfully created vm template
+2021-03-01 05:09:27,823 - admin_db - Level:INFO - Instance properties: name:admin_db,host:node03.svt.hn,cluster:2fcefebf-7bad-4423-a43a-41672e163238,vcpu:1,ram:2
+2021-03-01 05:10:50,972 - admin_db - Level:INFO - --------------------------------------------------------
+2021-03-01 05:10:50,973 - admin_db - Level:INFO - Create vm
+2021-03-01 05:10:50,975 - admin_db - Level:INFO - Successfully created vm template
+2021-03-01 05:10:50,976 - admin_db - Level:INFO - Instance properties: name:admin_db,host:node03.svt.hn,cluster:2fcefebf-7bad-4423-a43a-41672e163238,vcpu:1,ram:2
+2021-03-01 05:11:05,351 - admin_db - Level:INFO - --------------------------------------------------------
+2021-03-01 05:11:05,352 - admin_db - Level:INFO - Create vm
+2021-03-01 05:11:05,353 - admin_db - Level:INFO - Successfully created vm template
+2021-03-01 05:11:05,354 - admin_db - Level:INFO - Instance properties: name:admin_db,host:node03.svt.hn,cluster:2fcefebf-7bad-4423-a43a-41672e163238,vcpu:1,ram:2
+2021-03-01 05:11:22,174 - admin_db - Level:INFO - --------------------------------------------------------
+2021-03-01 05:11:22,175 - admin_db - Level:INFO - Create vm
+2021-03-01 05:11:22,177 - admin_db - Level:INFO - Successfully created vm template
+2021-03-01 05:11:22,178 - admin_db - Level:INFO - Instance properties: name:admin_db,host:node03.svt.hn,cluster:2fcefebf-7bad-4423-a43a-41672e163238,vcpu:1,ram:2
+2021-03-01 05:12:24,161 - admin_db - Level:INFO - --------------------------------------------------------
+2021-03-01 05:12:24,162 - admin_db - Level:INFO - Create vm
+2021-03-01 05:12:24,163 - admin_db - Level:INFO - Successfully created vm template
+2021-03-01 05:12:24,163 - admin_db - Level:INFO - Instance properties: name:admin_db,host:node03.svt.hn,cluster:2fcefebf-7bad-4423-a43a-41672e163238,vcpu:1,ram:2
+2021-03-01 05:15:04,905 - admin_db - Level:INFO - --------------------------------------------------------
+2021-03-01 05:15:04,907 - admin_db - Level:INFO - Create vm
+2021-03-01 05:15:04,907 - admin_db - Level:INFO - Successfully created vm template
+2021-03-01 05:15:04,907 - admin_db - Level:INFO - Instance properties: name:admin_db,host:node03.svt.hn,cluster:2fcefebf-7bad-4423-a43a-41672e163238,vcpu:1,ram:2
+2021-03-01 05:19:02,412 - admin_db - Level:INFO - --------------------------------------------------------
+2021-03-01 05:19:02,413 - admin_db - Level:INFO - Create vm
+2021-03-01 05:19:02,415 - admin_db - Level:INFO - Successfully created vm template
+2021-03-01 05:19:02,416 - admin_db - Level:INFO - Instance properties: name:admin_db,host:node03.svt.hn,cluster:2fcefebf-7bad-4423-a43a-41672e163238,vcpu:1,ram:2
+2021-03-01 05:19:02,515 - admin_db - Level:ERROR - Can not add vm template
+2021-03-01 05:19:02,515 - admin_db - Level:ERROR - Fault reason is "Operation Failed". Fault detail is "[Cannot add VM. Unknown Data Center status.]". HTTP response code is 409.
+2021-03-01 05:19:51,859 - admin_db - Level:INFO - --------------------------------------------------------
+2021-03-01 05:19:51,861 - admin_db - Level:INFO - Create vm
+2021-03-01 05:19:51,862 - admin_db - Level:INFO - Successfully created vm template
+2021-03-01 05:19:51,863 - admin_db - Level:INFO - Instance properties: name:admin_db,host:node03.svt.hn,cluster:2fcefebf-7bad-4423-a43a-41672e163238,vcpu:1,ram:2
+2021-03-01 05:19:52,227 - admin_db - Level:ERROR - Can not add vm template
+2021-03-01 05:19:52,227 - admin_db - Level:ERROR - Fault reason is "Operation Failed". Fault detail is "[Cannot add VM. Unknown Data Center status.]". HTTP response code is 409.
+2021-03-01 05:21:02,669 - admin_db - Level:INFO - --------------------------------------------------------
+2021-03-01 05:21:02,670 - admin_db - Level:INFO - Create vm
+2021-03-01 05:21:02,672 - admin_db - Level:INFO - Successfully created vm template
+2021-03-01 05:21:02,672 - admin_db - Level:INFO - Instance properties: name:admin_db,host:node03.svt.hn,cluster:2fcefebf-7bad-4423-a43a-41672e163238,vcpu:1,ram:2
+2021-03-01 05:21:02,976 - admin_db - Level:ERROR - Can not add vm template
+2021-03-01 05:21:02,978 - admin_db - Level:ERROR - Fault reason is "Operation Failed". Fault detail is "[Cannot add VM. Unknown Data Center status.]". HTTP response code is 409.
+2021-03-01 05:22:41,265 - admin_db - Level:INFO - --------------------------------------------------------
+2021-03-01 05:22:41,266 - admin_db - Level:INFO - Create vm
+2021-03-01 05:22:41,266 - admin_db - Level:INFO - Successfully created vm template
+2021-03-01 05:22:41,267 - admin_db - Level:INFO - Instance properties: name:admin_db,host:node02.svt.hn,cluster:eb7eed8a-54b8-11eb-a594-00163e3fc1a8,vcpu:1,ram:2
+2021-03-01 05:22:41,770 - admin_db - Level:INFO - Successfully created vm nic at vlan 123 with mac 56:6f:89:13:01:11
+2021-03-01 05:22:41,855 - admin_db - Level:INFO - Success mapping lun c73603c9-bbee-4ce7-8951-5b4457c90ff4 with disk ad1bcf5d-a901-400d-95c0-6fa5972f0e23, bootable True
+2021-03-01 05:22:41,917 - admin_db - Level:INFO - Successfully attach disk ad1bcf5d-a901-400d-95c0-6fa5972f0e23 to admin_db
+2021-03-01 05:22:47,108 - admin_db - Level:INFO - Vm created with status down
+2021-03-01 05:25:48,907 - admin_db - Level:INFO - --------------------------------------------------------
+2021-03-01 05:25:48,908 - admin_db - Level:INFO - Create vm
+2021-03-01 05:25:48,909 - admin_db - Level:INFO - Successfully created vm template
+2021-03-01 05:25:48,910 - admin_db - Level:INFO - Instance properties: name:admin_db,host:node02.svt.hn,cluster:eb7eed8a-54b8-11eb-a594-00163e3fc1a8,vcpu:1,ram:2
+2021-03-01 05:25:50,216 - admin_db - Level:INFO - Successfully created vm nic at vlan 123 with mac 56:6f:89:13:01:14
+2021-03-01 05:25:50,489 - admin_db - Level:INFO - Success mapping lun c73603c9-bbee-4ce7-8951-5b4457c90ff4 with disk bec53178-1910-4689-bf64-11e65f80ce38, bootable True
+2021-03-01 05:25:50,606 - admin_db - Level:INFO - Successfully attach disk bec53178-1910-4689-bf64-11e65f80ce38 to admin_db
+2021-03-01 05:25:55,668 - admin_db - Level:INFO - Vm created with status down
+2021-03-01 05:33:37,588 - admin_db - Level:INFO - --------------------------------------------------------
+2021-03-01 05:33:37,589 - admin_db - Level:DEBUG - Vm existed
+2021-03-01 05:37:54,206 - admin_db - Level:INFO - --------------------------------------------------------
+2021-03-01 05:37:54,206 - admin_db - Level:INFO - Create vm
+2021-03-01 05:37:54,208 - admin_db - Level:INFO - Successfully created vm template
+2021-03-01 05:37:54,208 - admin_db - Level:INFO - Instance properties: name:admin_db,host:node02.svt.hn,cluster:eb7eed8a-54b8-11eb-a594-00163e3fc1a8,vcpu:1,ram:2
+2021-03-01 05:37:54,209 - admin_db - Level:INFO - ### CREATE VM TEMPLATE PHASE
+2021-03-01 05:37:54,513 - admin_db - Level:INFO - ### CREAT VM NIC PHASE
+2021-03-01 05:37:54,845 - admin_db - Level:INFO - Successfully created vm nic at vlan 123 with mac 56:6f:89:13:01:15
+2021-03-01 05:37:54,845 - admin_db - Level:INFO - ### CREATE & ATTACH DISK PHASE
+2021-03-01 05:37:54,993 - admin_db - Level:INFO - Success mapping lun c73603c9-bbee-4ce7-8951-5b4457c90ff4 with disk b45a275a-55b8-41e2-94dc-58c5a380f389, bootable True
+2021-03-01 05:37:55,216 - admin_db - Level:INFO - Successfully attach disk b45a275a-55b8-41e2-94dc-58c5a380f389 to admin_db
+2021-03-01 05:38:00,306 - admin_db - Level:INFO - Vm created with status down
+2021-03-01 05:38:00,306 - admin_db - Level:INFO - ### CREATE VM
+2021-03-01 05:40:05,822 - admin_db - Level:INFO - --------------------------------------------------------
+2021-03-01 05:40:05,824 - admin_db - Level:INFO - Create vm
+2021-03-01 05:40:05,826 - admin_db - Level:INFO - Successfully created vm template
+2021-03-01 05:40:05,827 - admin_db - Level:INFO - Instance properties: name:admin_db,host:node02.svt.hn,cluster:eb7eed8a-54b8-11eb-a594-00163e3fc1a8,vcpu:1,ram:2
+2021-03-01 05:40:05,828 - admin_db - Level:INFO - ### CREATE VM TEMPLATE PHASE
+2021-03-01 05:40:06,394 - admin_db - Level:INFO - ### CREAT VM NIC PHASE
+2021-03-01 05:40:06,885 - admin_db - Level:INFO - Successfully created vm nic at vlan 123 with mac 56:6f:89:13:01:17
+2021-03-01 05:40:06,886 - admin_db - Level:INFO - ### CREATE & ATTACH DISK PHASE
+2021-03-01 05:40:06,946 - admin_db - Level:INFO - Success mapping lun c73603c9-bbee-4ce7-8951-5b4457c90ff4 with disk ed25d1dc-3ac3-488b-9d35-76160e67bcfc, bootable True
+2021-03-01 05:40:07,053 - admin_db - Level:INFO - Successfully attach disk ed25d1dc-3ac3-488b-9d35-76160e67bcfc to admin_db
+2021-03-01 05:40:12,120 - admin_db - Level:INFO - Vm created with status down
+2021-03-01 05:40:12,120 - admin_db - Level:INFO - ### CREATE VM
+2021-03-01 05:41:30,420 - admin_db - Level:INFO - --------------------------------------------------------
+2021-03-01 05:41:30,421 - admin_db - Level:DEBUG - Vm existed
+2021-03-01 05:41:48,090 - admin_db - Level:INFO - --------------------------------------------------------
+2021-03-01 05:41:48,091 - admin_db - Level:INFO - Create vm
+2021-03-01 05:41:48,091 - admin_db - Level:INFO - ### CREATE VM TEMPLATE PHASE
+
+2021-03-01 05:41:48,092 - admin_db - Level:INFO - Successfully created vm template
+2021-03-01 05:41:48,093 - admin_db - Level:INFO - Instance properties: name:admin_db,host:node02.svt.hn,cluster:eb7eed8a-54b8-11eb-a594-00163e3fc1a8,vcpu:1,ram:2
+2021-03-01 05:41:48,766 - admin_db - Level:INFO - ### CREAT VM NIC PHASE
+2021-03-01 05:41:49,112 - admin_db - Level:INFO - Successfully created vm nic at vlan 123 with mac 56:6f:89:13:01:1a
+2021-03-01 05:41:49,113 - admin_db - Level:INFO - ### CREATE & ATTACH DISK PHASE
+2021-03-01 05:41:49,171 - admin_db - Level:INFO - Success mapping lun c73603c9-bbee-4ce7-8951-5b4457c90ff4 with disk 606f39cf-8376-45d2-99eb-338815f5a862, bootable True
+2021-03-01 05:41:49,266 - admin_db - Level:INFO - Successfully attach disk 606f39cf-8376-45d2-99eb-338815f5a862 to admin_db
+2021-03-01 05:41:54,499 - admin_db - Level:INFO - Vm created with status down
+2021-03-01 05:41:54,500 - admin_db - Level:INFO - ### CREATE VM
+2021-03-01 05:44:02,877 - admin_db - Level:INFO - --------------------------------------------------------
+2021-03-01 05:44:02,879 - admin_db - Level:INFO - Create vm
+2021-03-01 05:44:02,880 - admin_db - Level:INFO - #
+# CREATE VM TEMPLATE PHASE
+#
+2021-03-01 05:44:02,880 - admin_db - Level:INFO - Successfully created vm template
+2021-03-01 05:44:02,881 - admin_db - Level:INFO - Instance properties: name:admin_db,host:node02.svt.hn,cluster:eb7eed8a-54b8-11eb-a594-00163e3fc1a8,vcpu:1,ram:2
+2021-03-01 05:44:03,423 - admin_db - Level:INFO - ### CREAT VM NIC PHASE
+2021-03-01 05:44:03,863 - admin_db - Level:INFO - Successfully created vm nic at vlan 123 with mac 56:6f:89:13:01:1b
+2021-03-01 05:44:03,865 - admin_db - Level:INFO - ### CREATE & ATTACH DISK PHASE
+2021-03-01 05:44:03,924 - admin_db - Level:INFO - Success mapping lun c73603c9-bbee-4ce7-8951-5b4457c90ff4 with disk 6cef8f78-74be-4393-9823-81ddff633fd8, bootable True
+2021-03-01 05:44:04,032 - admin_db - Level:INFO - Successfully attach disk 6cef8f78-74be-4393-9823-81ddff633fd8 to admin_db
+2021-03-01 05:44:09,160 - admin_db - Level:INFO - Vm created with status down
+2021-03-01 05:44:09,160 - admin_db - Level:INFO - ### CREATE VM
+2021-03-01 05:48:07,682 - admin_db - Level:INFO - --------------------------------------------------------
+2021-03-01 05:48:07,683 - admin_db - Level:INFO - Create vm
+2021-03-01 05:48:07,684 - admin_db - Level:INFO - # CREATE VM TEMPLATE PHASE
+2021-03-01 05:48:07,686 - admin_db - Level:INFO - Successfully created vm template
+2021-03-01 05:48:07,686 - admin_db - Level:INFO - Instance properties: name:admin_db,host:node02.svt.hn,cluster:eb7eed8a-54b8-11eb-a594-00163e3fc1a8,vcpu:1,ram:2
+2021-03-01 05:48:08,766 - admin_db - Level:INFO - # CREAT VM NIC PHASE
+2021-03-01 05:48:09,031 - admin_db - Level:INFO - Successfully created vm nic at vlan 123 with mac 56:6f:89:13:01:1d
+2021-03-01 05:48:09,032 - admin_db - Level:INFO - # CREATE & ATTACH DISK PHASE
+2021-03-01 05:48:09,140 - admin_db - Level:INFO - Success mapping lun c73603c9-bbee-4ce7-8951-5b4457c90ff4 with disk 136561f5-03e4-49ec-81c6-2721bbfd2ba4, bootable True
+2021-03-01 05:48:09,238 - admin_db - Level:INFO - Successfully attach disk 136561f5-03e4-49ec-81c6-2721bbfd2ba4 to admin_db
+2021-03-01 05:48:14,313 - admin_db - Level:INFO - Vm created with status down
+2021-03-01 05:48:14,314 - admin_db - Level:INFO - start vm...
+2021-03-01 05:49:04,304 - admin_db - Level:INFO - --------------------------------------------------------
+2021-03-01 05:49:04,305 - admin_db - Level:DEBUG - Vm existed
+2021-03-01 05:50:13,997 - admin_db - Level:INFO - --------------------------------------------------------
+2021-03-01 05:50:13,997 - admin_db - Level:DEBUG - Vm existed
+2021-03-01 05:56:28,814 - admin_db - Level:INFO - --------------------------------------------------------
+2021-03-01 05:56:28,816 - admin_db - Level:DEBUG - Vm existed
+2021-03-01 05:57:11,410 - admin_db - Level:INFO - --------------------------------------------------------
+2021-03-01 05:57:11,410 - admin_db - Level:DEBUG - Vm existed
+2021-03-01 05:58:31,794 - admin_db - Level:INFO - --------------------------------------------------------
+2021-03-01 05:58:31,795 - admin_db - Level:DEBUG - Vm existed
+2021-03-01 05:58:53,093 - admin_db - Level:INFO - --------------------------------------------------------
+2021-03-01 05:58:53,093 - admin_db - Level:DEBUG - Vm existed
+2021-03-01 05:59:11,136 - admin_db - Level:INFO - --------------------------------------------------------
+2021-03-01 05:59:11,137 - admin_db - Level:DEBUG - Vm existed
+2021-03-01 06:02:23,095 - admin_db - Level:INFO - --------------------------------------------------------
+2021-03-01 06:02:23,095 - admin_db - Level:DEBUG - Vm existed
+2021-03-01 06:05:19,881 - admin_db - Level:INFO - --------------------------------------------------------
+2021-03-01 06:05:19,882 - admin_db - Level:INFO - Create vm
+2021-03-01 06:05:19,882 - admin_db - Level:INFO - # CREATE VM TEMPLATE PHASE
+2021-03-01 06:05:19,884 - admin_db - Level:INFO - Successfully created vm template
+2021-03-01 06:05:19,885 - admin_db - Level:INFO - Instance properties: name:admin_db,host:node02.svt.hn,cluster:eb7eed8a-54b8-11eb-a594-00163e3fc1a8,vcpu:1,ram:2
+2021-03-01 06:05:20,481 - admin_db - Level:INFO - # CREAT VM NIC PHASE
+2021-03-01 06:05:20,892 - admin_db - Level:INFO - Successfully created vm nic at vlan 123 with mac 56:6f:89:13:01:1f
+2021-03-01 06:05:20,893 - admin_db - Level:INFO - # CREATE & ATTACH DISK PHASE
+2021-03-01 06:05:21,094 - admin_db - Level:INFO - Success mapping lun c73603c9-bbee-4ce7-8951-5b4457c90ff4 with disk 7e9ba908-8e5b-4424-b514-327e3917d7dc, bootable True
+2021-03-01 06:05:21,181 - admin_db - Level:INFO - Successfully attach disk 7e9ba908-8e5b-4424-b514-327e3917d7dc to admin_db
+2021-03-01 06:05:26,275 - admin_db - Level:INFO - Vm created with status down
+2021-03-01 06:05:26,275 - admin_db - Level:INFO - start vm...
+2021-03-01 06:06:36,009 - admin_db - Level:INFO - --------------------------------------------------------
+2021-03-01 06:06:36,010 - admin_db - Level:DEBUG - Vm existed
+2021-03-01 06:06:59,087 - admin_db - Level:INFO - --------------------------------------------------------
+2021-03-01 06:06:59,087 - admin_db - Level:INFO - Create vm
+2021-03-01 06:06:59,087 - admin_db - Level:INFO - # CREATE VM TEMPLATE PHASE
+2021-03-01 06:06:59,088 - admin_db - Level:INFO - Successfully created vm template
+2021-03-01 06:06:59,088 - admin_db - Level:INFO - Instance properties: name:admin_db,host:node02.svt.hn,cluster:eb7eed8a-54b8-11eb-a594-00163e3fc1a8,vcpu:1,ram:2
+2021-03-01 06:06:59,647 - admin_db - Level:INFO - # CREAT VM NIC PHASE
+2021-03-01 06:07:00,082 - admin_db - Level:INFO - Successfully created vm nic at vlan 123 with mac 56:6f:89:13:01:21
+2021-03-01 06:07:00,083 - admin_db - Level:INFO - # CREATE & ATTACH DISK PHASE
+2021-03-01 06:07:00,236 - admin_db - Level:INFO - Success mapping lun c73603c9-bbee-4ce7-8951-5b4457c90ff4 with disk 786da856-34bb-4504-aa22-932ea3ee98a2, bootable True
+2021-03-01 06:07:00,332 - admin_db - Level:INFO - Successfully attach disk 786da856-34bb-4504-aa22-932ea3ee98a2 to admin_db
+2021-03-01 06:07:05,415 - admin_db - Level:INFO - Vm created with status down
+2021-03-01 06:07:05,415 - admin_db - Level:INFO - start vm...
+2021-03-01 06:10:26,105 - admin_db - Level:INFO - --------------------------------------------------------
+2021-03-01 06:10:26,105 - admin_db - Level:DEBUG - Vm existed
+2021-03-01 06:25:28,575 - admin_db - Level:INFO - --------------------------------------------------------
+2021-03-01 06:25:28,575 - admin_db - Level:INFO - Create vm
+2021-03-01 06:25:28,575 - admin_db - Level:INFO - # CREATE VM TEMPLATE PHASE
+2021-03-01 06:25:28,576 - admin_db - Level:INFO - Successfully created vm template
+2021-03-01 06:25:28,576 - admin_db - Level:INFO - Instance properties: name:admin_db,host:node02.svt.hn,cluster:eb7eed8a-54b8-11eb-a594-00163e3fc1a8,vcpu:1,ram:2
+2021-03-01 06:25:29,205 - admin_db - Level:INFO - # CREAT VM NIC PHASE
+2021-03-01 06:25:29,594 - admin_db - Level:INFO - Successfully created vm nic at vlan 123 with mac 56:6f:89:13:01:23
+2021-03-01 06:25:29,595 - admin_db - Level:INFO - # CREATE & ATTACH DISK PHASE
+2021-03-01 06:25:29,726 - admin_db - Level:INFO - Success mapping lun c73603c9-bbee-4ce7-8951-5b4457c90ff4 with disk b42c99ee-10bf-4d6b-80b5-5701fb1c47cf, bootable True
+2021-03-01 06:25:29,788 - admin_db - Level:INFO - Successfully attach disk b42c99ee-10bf-4d6b-80b5-5701fb1c47cf to admin_db
+2021-03-01 06:25:34,867 - admin_db - Level:INFO - Vm created with status down
+2021-03-01 06:25:34,867 - admin_db - Level:INFO - start vm...
+2021-03-01 06:28:39,749 - admin_db - Level:INFO - --------------------------------------------------------
+2021-03-01 06:28:39,749 - admin_db - Level:DEBUG - Vm existed
+2021-03-01 06:40:11,850 - admin_db - Level:INFO - --------------------------------------------------------
+2021-03-01 06:40:11,850 - admin_db - Level:DEBUG - Vm existed
+2021-03-01 06:40:49,544 - admin_db - Level:INFO - --------------------------------------------------------
+2021-03-01 06:40:49,545 - admin_db - Level:INFO - Create vm
+2021-03-01 06:40:49,546 - admin_db - Level:INFO - # CREATE VM TEMPLATE PHASE
+2021-03-01 06:40:49,547 - admin_db - Level:INFO - Successfully created vm template
+2021-03-01 06:40:49,547 - admin_db - Level:INFO - Instance properties: name:admin_db,host:node02.svt.hn,cluster:eb7eed8a-54b8-11eb-a594-00163e3fc1a8,vcpu:1,ram:2
+2021-03-01 06:40:49,981 - admin_db - Level:INFO - # CREAT VM NIC PHASE
+2021-03-01 06:40:50,385 - admin_db - Level:INFO - Successfully created vm nic at vlan 123 with mac 56:6f:89:13:01:26
+2021-03-01 06:40:50,386 - admin_db - Level:INFO - # CREATE & ATTACH DISK PHASE
+2021-03-01 06:40:50,579 - admin_db - Level:INFO - Success mapping lun c73603c9-bbee-4ce7-8951-5b4457c90ff4 with disk 503fae8f-c52e-49fc-9f39-5d385bd854e0, bootable True
+2021-03-01 06:40:50,726 - admin_db - Level:INFO - Successfully attach disk 503fae8f-c52e-49fc-9f39-5d385bd854e0 to admin_db
+2021-03-01 06:40:55,820 - admin_db - Level:INFO - Vm created with status down
+2021-03-01 06:40:55,821 - admin_db - Level:INFO - start vm...
+2021-03-01 06:46:42,124 - admin_db - Level:INFO - --------------------------------------------------------
+2021-03-01 06:46:42,125 - admin_db - Level:INFO - Create vm
+2021-03-01 06:46:42,125 - admin_db - Level:INFO - # CREATE VM TEMPLATE PHASE
+2021-03-01 06:46:42,125 - admin_db - Level:INFO - Successfully created vm template
+2021-03-01 06:46:42,126 - admin_db - Level:INFO - Instance properties: name:admin_db,host:node02.svt.hn,cluster:eb7eed8a-54b8-11eb-a594-00163e3fc1a8,vcpu:1,ram:2
+2021-03-01 06:46:42,543 - admin_db - Level:INFO - # CREAT VM NIC PHASE
+2021-03-01 06:46:42,901 - admin_db - Level:INFO - Successfully created vm nic at vlan 123 with mac 56:6f:89:13:01:27
+2021-03-01 06:46:42,902 - admin_db - Level:INFO - # CREATE & ATTACH DISK PHASE
+2021-03-01 06:46:43,047 - admin_db - Level:INFO - Success mapping lun c73603c9-bbee-4ce7-8951-5b4457c90ff4 with disk da6f0acd-b5d9-40d2-b292-b496eaa34cc3, bootable True
+2021-03-01 06:46:43,144 - admin_db - Level:INFO - Successfully attach disk da6f0acd-b5d9-40d2-b292-b496eaa34cc3 to admin_db
+2021-03-01 06:46:48,210 - admin_db - Level:INFO - Vm created with status down
+2021-03-01 06:46:48,211 - admin_db - Level:INFO - start vm...
+2021-03-01 06:51:51,535 - admin_db - Level:INFO - --------------------------------------------------------
+2021-03-01 06:51:51,536 - admin_db - Level:DEBUG - Vm existed
+2021-03-01 06:52:19,040 - admin_db - Level:INFO - --------------------------------------------------------
+2021-03-01 06:52:19,041 - admin_db - Level:INFO - Create vm
+2021-03-01 06:52:19,042 - admin_db - Level:INFO - # CREATE VM TEMPLATE PHASE
+2021-03-01 06:52:19,043 - admin_db - Level:INFO - Successfully created vm template
+2021-03-01 06:52:19,043 - admin_db - Level:INFO - Instance properties: name:admin_db,host:node02.svt.hn,cluster:eb7eed8a-54b8-11eb-a594-00163e3fc1a8,vcpu:1,ram:2
+2021-03-01 06:52:19,424 - admin_db - Level:INFO - # CREAT VM NIC PHASE
+2021-03-01 06:54:54,226 - admin_db - Level:INFO - --------------------------------------------------------
+2021-03-01 06:54:54,228 - admin_db - Level:INFO - Create vm
+2021-03-01 06:54:54,228 - admin_db - Level:INFO - # CREATE VM TEMPLATE PHASE
+2021-03-01 06:54:54,231 - admin_db - Level:INFO - Successfully created vm template
+2021-03-01 06:54:54,231 - admin_db - Level:INFO - Instance properties: name:admin_db,host:node02.svt.hn,cluster:eb7eed8a-54b8-11eb-a594-00163e3fc1a8,vcpu:1,ram:2
+2021-03-01 06:54:54,868 - admin_db - Level:INFO - # CREAT VM NIC PHASE
+2021-03-01 06:54:55,260 - admin_db - Level:INFO - Successfully created vm nic at vlan 123 with mac 56:6f:89:13:01:29
+2021-03-01 06:54:55,260 - admin_db - Level:INFO - # CREATE & ATTACH DISK PHASE
+2021-03-01 06:54:55,379 - admin_db - Level:INFO - Success mapping lun c73603c9-bbee-4ce7-8951-5b4457c90ff4 with disk c7ed4ecf-ac9a-49a3-966b-208ea3afb144, bootable True
+2021-03-01 06:54:55,513 - admin_db - Level:INFO - Successfully attach disk c7ed4ecf-ac9a-49a3-966b-208ea3afb144 to admin_db
+2021-03-01 06:55:00,592 - admin_db - Level:INFO - Vm created with status down
+2021-03-01 06:55:00,593 - admin_db - Level:INFO - start vm...
+2021-03-01 07:06:15,286 - admin_db - Level:INFO - --------------------------------------------------------
+2021-03-01 07:06:15,288 - admin_db - Level:INFO - Create vm
+2021-03-01 07:06:15,289 - admin_db - Level:INFO - # CREATE VM TEMPLATE PHASE
+2021-03-01 07:06:15,291 - admin_db - Level:INFO - Successfully created vm template
+2021-03-01 07:06:15,292 - admin_db - Level:INFO - Instance properties: name:admin_db,host:node04.svt.hn,cluster:x,vcpu:1,ram:2
+2021-03-01 07:06:15,702 - admin_db - Level:ERROR - Can not add vm template
+2021-03-01 07:06:15,702 - admin_db - Level:ERROR - Fault reason is "Operation failed". Fault detail is "Invalid UUID string: x". HTTP response code is 400.
+2021-03-01 07:15:30,467 - admin_db - Level:INFO - --------------------------------------------------------
+2021-03-01 07:15:30,467 - admin_db - Level:INFO - Create vm
+2021-03-01 07:15:30,467 - admin_db - Level:INFO - # CREATE VM TEMPLATE PHASE
+2021-03-01 07:15:30,468 - admin_db - Level:INFO - Successfully created vm template
+2021-03-01 07:15:30,468 - admin_db - Level:INFO - Instance properties: name:admin_db,host:node04.svt.hn,cluster:Not-found-host,vcpu:1,ram:2
+2021-03-01 07:15:30,830 - admin_db - Level:ERROR - Can not add vm template
+2021-03-01 07:15:30,831 - admin_db - Level:ERROR - Fault reason is "Operation failed". Fault detail is "Invalid UUID string: Not-found-host". HTTP response code is 400.
+2021-03-01 07:18:22,635 - admin_db - Level:INFO - --------------------------------------------------------
+2021-03-01 07:18:22,636 - admin_db - Level:INFO - Create vm
+2021-03-01 07:18:22,636 - admin_db - Level:INFO - # CREATE VM TEMPLATE PHASE
+2021-03-01 07:18:22,637 - admin_db - Level:INFO - Successfully created vm template
+2021-03-01 07:18:22,637 - admin_db - Level:INFO - Instance properties: name:admin_db,host:node04.svt.hn,cluster:Not-found-host,vcpu:1,ram:2
+2021-03-01 07:18:22,720 - admin_db - Level:ERROR - Can not add vm template
+2021-03-01 07:18:22,721 - admin_db - Level:ERROR - Fault reason is "Operation failed". Fault detail is "Invalid UUID string: Not-found-host". HTTP response code is 400.
+2021-03-01 07:19:22,385 - admin_db - Level:INFO - --------------------------------------------------------
+2021-03-01 07:19:22,386 - admin_db - Level:INFO - Create vm
+2021-03-01 07:19:22,386 - admin_db - Level:INFO - # CREATE VM TEMPLATE PHASE
+2021-03-01 07:19:22,387 - admin_db - Level:INFO - Successfully created vm template
+2021-03-01 07:19:22,387 - admin_db - Level:INFO - Instance properties: name:admin_db,host:node04.svt.hn,cluster:Not-found-host,vcpu:1,ram:2
+2021-03-01 07:19:22,524 - admin_db - Level:ERROR - Can not add vm template
+2021-03-01 07:19:22,525 - admin_db - Level:ERROR - Fault reason is "Operation failed". Fault detail is "Invalid UUID string: Not-found-host". HTTP response code is 400.
