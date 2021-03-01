@@ -463,3 +463,79 @@
 2021-03-01 07:19:22,846 - admin-8 - Level:ERROR - Can not attached 30331767-9ee1-49d7-b84e-6738e3e4d3fa to vm
 2021-03-01 07:19:22,894 - admin-8 - Level:INFO - Vm created with status down
 2021-03-01 07:19:22,895 - admin-8 - Level:INFO - start vm...
+2021-03-01 07:30:29,875 - admin-8 - Level:INFO - --------------------------------------------------------
+2021-03-01 07:30:29,875 - admin-8 - Level:INFO - Create vm
+2021-03-01 07:30:29,876 - admin-8 - Level:INFO - # CREATE VM TEMPLATE PHASE
+2021-03-01 07:30:29,878 - admin-8 - Level:INFO - Successfully created vm template
+2021-03-01 07:30:29,879 - admin-8 - Level:INFO - Instance properties: name:admin-8,host:node02.svt.hn,cluster:eb7eed8a-54b8-11eb-a594-00163e3fc1a8,vcpu:1,ram:2
+2021-03-01 07:30:30,139 - admin-8 - Level:INFO - # CREAT VM NIC PHASE
+2021-03-01 07:30:30,291 - admin-8 - Level:INFO - Successfully created vm nic at vlan 123 with mac 56:6f:89:13:01:2f
+2021-03-01 07:30:30,291 - admin-8 - Level:INFO - # CREATE & ATTACH DISK PHASE
+2021-03-01 07:30:30,327 - admin-8 - Level:DEBUG - Trying to map lun c746e044-1d0b-41e5-a1c3-def9b0855cdb to host node02.svt.hn
+2021-03-01 07:30:30,327 - admin-8 - Level:ERROR - Fault reason is "Operation Failed". Fault detail is "[Cannot add Virtual Disk. The provided lun is used by another disk.]". HTTP response code is 409.
+2021-03-01 07:30:30,327 - admin-8 - Level:ERROR - Can not attached c746e044-1d0b-41e5-a1c3-def9b0855cdb to vm
+2021-03-01 07:30:30,365 - admin-8 - Level:DEBUG - Trying to map lun 30331767-9ee1-49d7-b84e-6738e3e4d3fa to host node02.svt.hn
+2021-03-01 07:30:30,365 - admin-8 - Level:ERROR - Fault reason is "Operation Failed". Fault detail is "[Cannot add Virtual Disk. The provided lun is used by another disk.]". HTTP response code is 409.
+2021-03-01 07:30:30,365 - admin-8 - Level:ERROR - Can not attached 30331767-9ee1-49d7-b84e-6738e3e4d3fa to vm
+2021-03-01 07:30:30,403 - admin-8 - Level:INFO - Vm created with status down
+2021-03-01 07:30:30,403 - admin-8 - Level:INFO - start vm...
+2021-03-01 07:32:32,013 - admin-8 - Level:INFO - --------------------------------------------------------
+2021-03-01 07:32:32,013 - admin-8 - Level:DEBUG - Vm existed
+2021-03-01 07:33:48,385 - admin-8 - Level:INFO - --------------------------------------------------------
+2021-03-01 07:33:48,388 - admin-8 - Level:INFO - Create vm
+2021-03-01 07:33:48,388 - admin-8 - Level:INFO - # CREATE VM TEMPLATE PHASE
+2021-03-01 07:33:48,390 - admin-8 - Level:INFO - Successfully created vm template
+2021-03-01 07:33:48,391 - admin-8 - Level:INFO - Instance properties: name:admin-8,host:node02.svt.hn,cluster:eb7eed8a-54b8-11eb-a594-00163e3fc1a8,vcpu:1,ram:2
+2021-03-01 07:33:48,770 - admin-8 - Level:INFO - # CREAT VM NIC PHASE
+2021-03-01 07:33:48,987 - admin-8 - Level:INFO - Successfully created vm nic at vlan 123 with mac 56:6f:89:13:01:30
+2021-03-01 07:33:48,988 - admin-8 - Level:INFO - # CREATE & ATTACH DISK PHASE
+2021-03-01 07:33:49,025 - admin-8 - Level:DEBUG - Trying to map lun c746e044-1d0b-41e5-a1c3-def9b0855cdb to host node02.svt.hn
+2021-03-01 07:33:49,025 - admin-8 - Level:ERROR - Fault reason is "Operation Failed". Fault detail is "[Cannot add Virtual Disk. The provided lun is used by another disk.]". HTTP response code is 409.
+2021-03-01 07:33:49,026 - admin-8 - Level:ERROR - Can not attached c746e044-1d0b-41e5-a1c3-def9b0855cdb to vm
+2021-03-01 07:33:49,120 - admin-8 - Level:DEBUG - Trying to map lun 30331767-9ee1-49d7-b84e-6738e3e4d3fa to host node02.svt.hn
+2021-03-01 07:33:49,121 - admin-8 - Level:ERROR - Fault reason is "Operation Failed". Fault detail is "[Cannot add Virtual Disk. The provided lun is used by another disk.]". HTTP response code is 409.
+2021-03-01 07:33:49,121 - admin-8 - Level:ERROR - Can not attached 30331767-9ee1-49d7-b84e-6738e3e4d3fa to vm
+2021-03-01 07:33:49,168 - admin-8 - Level:INFO - Vm created with status down
+2021-03-01 07:33:49,169 - admin-8 - Level:INFO - Trying to start vm...
+2021-03-01 07:33:49,228 - admin-8 - Level:DEBUG - Vm can not boot
+2021-03-01 07:33:49,228 - admin-8 - Level:ERROR - Fault reason is "Operation Failed". Fault detail is "[Cannot run VM without at least one bootable disk.
+Alternatives:
+- Create a disk for this VM, and rerun the VM.
+- Change the boot sequence using the Edit VM command (Boot Option Sub-Tab).
+- Use the 'Run Once' command to select a different boot option and rerun the VM.]". HTTP response code is 409.
+2021-03-01 07:35:32,850 - admin-8 - Level:INFO - --------------------------------------------------------
+2021-03-01 07:35:32,851 - admin-8 - Level:INFO - Create vm
+2021-03-01 07:35:32,851 - admin-8 - Level:INFO - # CREATE VM TEMPLATE PHASE
+2021-03-01 07:35:32,852 - admin-8 - Level:INFO - Successfully created vm template
+2021-03-01 07:35:32,852 - admin-8 - Level:INFO - Instance properties: name:admin-8,host:node02.svt.hn,cluster:eb7eed8a-54b8-11eb-a594-00163e3fc1a8,vcpu:1,ram:2
+2021-03-01 07:35:33,309 - admin-8 - Level:INFO - # CREAT VM NIC PHASE
+2021-03-01 07:35:33,430 - admin-8 - Level:INFO - Successfully created vm nic at vlan 123 with mac 56:6f:89:13:01:31
+2021-03-01 07:35:33,431 - admin-8 - Level:INFO - # CREATE & ATTACH DISK PHASE
+2021-03-01 07:35:33,469 - admin-8 - Level:DEBUG - Trying to map lun c746e044-1d0b-41e5-a1c3-def9b0855cdb to host node02.svt.hn
+2021-03-01 07:35:33,470 - admin-8 - Level:ERROR - Fault reason is "Operation Failed". Fault detail is "[Cannot add Virtual Disk. The provided lun is used by another disk.]". HTTP response code is 409.
+2021-03-01 07:35:33,471 - admin-8 - Level:ERROR - Can not attached c746e044-1d0b-41e5-a1c3-def9b0855cdb to vm
+2021-03-01 07:35:33,557 - admin-8 - Level:DEBUG - Trying to map lun 30331767-9ee1-49d7-b84e-6738e3e4d3fa to host node02.svt.hn
+2021-03-01 07:35:33,557 - admin-8 - Level:ERROR - Fault reason is "Operation Failed". Fault detail is "[Cannot add Virtual Disk. The provided lun is used by another disk.]". HTTP response code is 409.
+2021-03-01 07:35:33,558 - admin-8 - Level:ERROR - Can not attached 30331767-9ee1-49d7-b84e-6738e3e4d3fa to vm
+2021-03-01 07:35:33,635 - admin-8 - Level:INFO - Vm created with status down
+2021-03-01 07:35:33,635 - admin-8 - Level:INFO - Trying to start vm...
+2021-03-01 07:35:33,676 - admin-8 - Level:DEBUG - Vm can not boot
+2021-03-01 07:35:33,677 - admin-8 - Level:ERROR - Fault reason is "Operation Failed". Fault detail is "[Cannot run VM without at least one bootable disk.
+Alternatives:
+- Create a disk for this VM, and rerun the VM.
+- Change the boot sequence using the Edit VM command (Boot Option Sub-Tab).
+- Use the 'Run Once' command to select a different boot option and rerun the VM.]". HTTP response code is 409.
+2021-03-01 07:36:58,863 - admin-8 - Level:INFO - --------------------------------------------------------
+2021-03-01 07:36:58,864 - admin-8 - Level:INFO - Create vm
+2021-03-01 07:36:58,865 - admin-8 - Level:INFO - # CREATE VM TEMPLATE PHASE
+2021-03-01 07:36:58,866 - admin-8 - Level:INFO - Successfully created vm template
+2021-03-01 07:36:58,866 - admin-8 - Level:INFO - Instance properties: name:admin-8,host:node02.svt.hn,cluster:eb7eed8a-54b8-11eb-a594-00163e3fc1a8,vcpu:1,ram:2
+2021-03-01 07:36:59,019 - admin-8 - Level:INFO - # CREAT VM NIC PHASE
+2021-03-01 07:36:59,260 - admin-8 - Level:INFO - Successfully created vm nic at vlan 123 with mac 56:6f:89:13:01:32
+2021-03-01 07:36:59,260 - admin-8 - Level:INFO - # CREATE & ATTACH DISK PHASE
+2021-03-01 07:36:59,341 - admin-8 - Level:INFO - Success mapping lun c746e044-1d0b-41e5-a1c3-def9b0855cdb with disk 3d1edd6a-1290-430e-9c88-3af1e331090b, bootable True
+2021-03-01 07:36:59,420 - admin-8 - Level:INFO - Success mapping lun 30331767-9ee1-49d7-b84e-6738e3e4d3fa with disk 3e859e01-9cd0-45f9-9f45-57fa3b05e263, bootable False
+2021-03-01 07:36:59,460 - admin-8 - Level:INFO - Successfully attach disk 3d1edd6a-1290-430e-9c88-3af1e331090b to admin-8
+2021-03-01 07:37:04,520 - admin-8 - Level:INFO - Successfully attach disk 3e859e01-9cd0-45f9-9f45-57fa3b05e263 to admin-8
+2021-03-01 07:37:09,659 - admin-8 - Level:INFO - Vm created with status down
+2021-03-01 07:37:09,660 - admin-8 - Level:INFO - Trying to start vm...

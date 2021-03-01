@@ -217,7 +217,7 @@ class Utils:
 			logger.info('Successfully created vm nic at vlan {} with mac {}'.format(vm.vlan,nic_vm.mac.address))
 		else:
 			logger.error('Failed create nic for vm')
-			message ='success_but_fail_nic'
+			message = message +  ',fail_nic'
 			print('Can not create nic for instance {} as vlan is not existed').format(vm.name)
 
 	#3 CREATE & ATTACH DISK
@@ -227,7 +227,7 @@ class Utils:
 		# get luns attachments
 		luns = self.create_and_attach_vm_lun(vm.luns,vm.host , logger)
 		if len(luns) != len(vm.luns):
-			message = message + ',fail disk'	
+			message = message + ',fail_disk'	
 		# attach luns
 		for lun in luns:
 			disk_attachment = disk_attachments_service.add(lun)
@@ -240,9 +240,15 @@ class Utils:
 
 	#4 START VM	
 		logger.info('Vm created with status {}'.format(vm_service.get().status))
-		logger.info('start vm...')
-		#vm_service.start()	
-		return {'name':vm.name,'status':message}
+		try:
+			logger.info('Trying to start vm...')
+			vm_service.start()	
+		except Exception as e: 
+			logger.debug('Vm can not boot')
+			logger.error(e)
+			message = message + ',vm_boot_error'
+		finally:
+			return {'name':vm.name,'status':message}
 		#scontent = self.data.format(mac,ip,mask,gateway,'{print $2}','{a%?}')
 		#self.start_vm(vm_service, True,scontent)
 	else:
