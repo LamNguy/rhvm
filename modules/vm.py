@@ -1,4 +1,6 @@
+import logging 
 class VM:
+
 
 # Class VM provide vm struct 
 #
@@ -16,13 +18,24 @@ class VM:
 	 
     # Print vm properties 
     def test(self):
-        print('VM_NAME:{}').format(self.name)
-	print('VM_CLUSTER:{}').format(self.cluster)
-	print('VM_VLAN:{}').format(self.vlan)
-	print('IP:{},NETMASK:{},GATEWAY:{}').format(self.ip.ip, self.ip.netmask, self.ip.gateway)
-        print('VCPU:{}').format(self.vcpu)
-        print('RAM:{}').format(self.ram)
-	print('HOST:{}').format(self.host)
+
+	logger = logging.getLogger('result')
+	filename = '/home/centos/rhvm/vms/test_vm.txt'
+	#formatter = logging.Formatter(
+      	#	'%(asctime)s - %(name)s - Level:%(levelname)s - %(message)s')
+	handler = logging.FileHandler(filename, mode='w')
+	#handler.setFormatter(formatter)
+	logger.addHandler(handler)
+	logger.info('---------------VM: {}-------------'.format(self.name))
+	logger.info('cluster: {}'.format(self.cluster))
+	logger.info('host: {}'.format(self.host))
+	logger.info('vcpu: {}'.format(self.vcpu))
+	logger.info('memory: {}'.format(self.ram))
+	logger.info('vcpu: {}'.format(self.vcpu))
+	logger.info('network vlan: {}'.format(self.vlan))
+	logger.info('ip: {}'.format(self.ip.ip))
+	logger.info('netmask: {}'.format(self.ip.netmask))
+	logger.info('gateway: {}'.format(self.ip.gateway))
+	
 	for lun in self.luns:
-		print('ID:{},BOOTALBE:{},NAME:{}').format(lun.id, lun.bootable,lun.alias)	
-	print('Cluster: {}').format(self.cluster)
+		logger.info('Lun {},os={},alias={},size={}'.format(lun.id,lun.bootable,lun.alias,lun.size))

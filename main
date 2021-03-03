@@ -21,15 +21,11 @@ logger.addHandler(handler)
 try:
 	conn = connection.connection()
 	data = pd.read_excel(PATH_EXCEL)
-
-	#connection.test()
 	utils = Utils(conn)	
 	conn.test(raise_exception = True)  # return true if connect successful
 	utils = Utils(conn)
-	vms = utils.vms_data(data)
-	#for vm in vms:
-	#	vm.test()	
 	pool = ThreadPool(processes=cpu_count())
+	vms = utils.vms_data(data)
         res = pool.map(utils.create_vm, vms)	
 	for i in res:
 		message = 'Vm {}:{}'.format(i['name'],i['status'])	

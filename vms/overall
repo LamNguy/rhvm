@@ -1,3 +1,1 @@
-2021-03-01 07:44:33,284 - result - Level:INFO - Vm 2FA_N:success,fail_nic
-2021-03-01 07:44:33,284 - result - Level:INFO - Vm admin_db:fail,template
-2021-03-01 07:44:33,285 - result - Level:INFO - Vm admin-8:success
+2021-03-03 04:50:46,079 - result - Level:INFO - Vm MLMN_DB:success,fail_disk

@@ -7,6 +7,6 @@ wget -O ca1.pem --user $user --password $pass --no-check-certificate  https://rh
 sudo pip install numpy==1.12.0\
 sudo pip install pandas==0.24.2\
 sudo pip install xlrd==1.0.0:\
-
+https://docs.google.com/spreadsheets/d/1q9qri-U7mc2lRZ67fHezUocQXmarsn0a2vyItnqnVq8/export?format=csv\
 #note: only with 1 ip
 

@@ -1,0 +1,260 @@
+2021-03-03 03:46:46,709 - MLMN_DB - Level:INFO - --------------------------------------------------------
+2021-03-03 03:46:46,709 - MLMN_DB - Level:INFO - Create vm
+2021-03-03 03:46:46,709 - MLMN_DB - Level:INFO - # CREATE VM TEMPLATE PHASE
+2021-03-03 03:46:46,710 - MLMN_DB - Level:INFO - Successfully created vm template
+2021-03-03 03:46:46,710 - MLMN_DB - Level:INFO - Instance properties: name:MLMN_DB,host:node02.svt.hn,cluster:eb7eed8a-54b8-11eb-a594-00163e3fc1a8,vcpu:8,ram:16384
+2021-03-03 03:46:47,153 - MLMN_DB - Level:INFO - # CREAT VM NIC PHASE
+2021-03-03 03:46:47,306 - MLMN_DB - Level:INFO - Successfully created vm nic at vlan 123 with mac 56:6f:89:13:01:34
+2021-03-03 03:46:47,306 - MLMN_DB - Level:INFO - # CREATE & ATTACH DISK PHASE
+2021-03-03 03:46:47,445 - MLMN_DB - Level:INFO - Success mapping lun 60002AC00000000000000213000199C3 with disk f8e4e9f9-7221-4265-8047-4853d8717909, bootable 1
+2021-03-03 03:46:47,530 - MLMN_DB - Level:INFO - Success mapping lun 60002AC00000000000000215000199C3 with disk 5d0adcf7-a031-4dfe-be6d-53d9b324e392, bootable 0
+2021-03-03 03:46:47,531 - MLMN_DB - Level:DEBUG - Fail at disk attachment
+2021-03-03 03:46:47,531 - MLMN_DB - Level:ERROR - The 'value' parameter must be a boolean
+2021-03-03 03:46:47,531 - MLMN_DB - Level:DEBUG - Fail at disk attachment
+2021-03-03 03:46:47,531 - MLMN_DB - Level:ERROR - The 'value' parameter must be a boolean
+2021-03-03 03:46:47,586 - MLMN_DB - Level:INFO - Vm created with status down
+2021-03-03 03:46:47,586 - MLMN_DB - Level:INFO - Trying to start vm...
+2021-03-03 03:46:47,642 - MLMN_DB - Level:DEBUG - Vm can not boot
+2021-03-03 03:46:47,642 - MLMN_DB - Level:ERROR - Fault reason is "Operation Failed". Fault detail is "[Cannot run VM without at least one bootable disk.
+Alternatives:
+- Create a disk for this VM, and rerun the VM.
+- Change the boot sequence using the Edit VM command (Boot Option Sub-Tab).
+- Use the 'Run Once' command to select a different boot option and rerun the VM.]". HTTP response code is 409.
+2021-03-03 03:52:26,303 - MLMN_DB - Level:INFO - --------------------------------------------------------
+2021-03-03 03:52:26,303 - MLMN_DB - Level:INFO - Create vm
+2021-03-03 03:52:26,304 - MLMN_DB - Level:INFO - # CREATE VM TEMPLATE PHASE
+2021-03-03 03:52:26,305 - MLMN_DB - Level:INFO - Successfully created vm template
+2021-03-03 03:52:26,305 - MLMN_DB - Level:INFO - Instance properties: name:MLMN_DB,host:node02.svt.hn,cluster:eb7eed8a-54b8-11eb-a594-00163e3fc1a8,vcpu:8,ram:16384
+2021-03-03 03:52:26,766 - MLMN_DB - Level:INFO - # CREAT VM NIC PHASE
+2021-03-03 03:52:26,878 - MLMN_DB - Level:INFO - Successfully created vm nic at vlan 123 with mac 56:6f:89:13:01:35
+2021-03-03 03:52:26,879 - MLMN_DB - Level:INFO - # CREATE & ATTACH DISK PHASE
+2021-03-03 03:52:26,916 - MLMN_DB - Level:DEBUG - Trying to map lun 60002AC00000000000000213000199C3 to host node02.svt.hn
+2021-03-03 03:52:26,916 - MLMN_DB - Level:ERROR - Fault reason is "Operation Failed". Fault detail is "[Cannot add Virtual Disk. The provided lun is used by another disk.]". HTTP response code is 409.
+2021-03-03 03:52:26,916 - MLMN_DB - Level:ERROR - Can not attached 60002AC00000000000000213000199C3 to vm
+2021-03-03 03:52:26,944 - MLMN_DB - Level:DEBUG - Trying to map lun 60002AC00000000000000215000199C3 to host node02.svt.hn
+2021-03-03 03:52:26,944 - MLMN_DB - Level:ERROR - Fault reason is "Operation Failed". Fault detail is "[Cannot add Virtual Disk. The provided lun is used by another disk.]". HTTP response code is 409.
+2021-03-03 03:52:26,944 - MLMN_DB - Level:ERROR - Can not attached 60002AC00000000000000215000199C3 to vm
+2021-03-03 03:52:26,999 - MLMN_DB - Level:INFO - Vm created with status down
+2021-03-03 03:52:26,999 - MLMN_DB - Level:INFO - Trying to start vm...
+2021-03-03 03:52:27,064 - MLMN_DB - Level:DEBUG - Vm can not boot
+2021-03-03 03:52:27,064 - MLMN_DB - Level:ERROR - Fault reason is "Operation Failed". Fault detail is "[Cannot run VM without at least one bootable disk.
+Alternatives:
+- Create a disk for this VM, and rerun the VM.
+- Change the boot sequence using the Edit VM command (Boot Option Sub-Tab).
+- Use the 'Run Once' command to select a different boot option and rerun the VM.]". HTTP response code is 409.
+2021-03-03 03:52:50,953 - MLMN_DB - Level:INFO - --------------------------------------------------------
+2021-03-03 03:52:50,954 - MLMN_DB - Level:DEBUG - Vm existed
+2021-03-03 03:53:14,006 - MLMN_DB - Level:INFO - --------------------------------------------------------
+2021-03-03 03:53:14,006 - MLMN_DB - Level:INFO - Create vm
+2021-03-03 03:53:14,006 - MLMN_DB - Level:INFO - # CREATE VM TEMPLATE PHASE
+2021-03-03 03:53:14,007 - MLMN_DB - Level:INFO - Successfully created vm template
+2021-03-03 03:53:14,007 - MLMN_DB - Level:INFO - Instance properties: name:MLMN_DB,host:node02.svt.hn,cluster:eb7eed8a-54b8-11eb-a594-00163e3fc1a8,vcpu:8,ram:16384
+2021-03-03 03:53:14,277 - MLMN_DB - Level:INFO - # CREAT VM NIC PHASE
+2021-03-03 03:53:14,381 - MLMN_DB - Level:INFO - Successfully created vm nic at vlan 123 with mac 56:6f:89:13:01:36
+2021-03-03 03:53:14,381 - MLMN_DB - Level:INFO - # CREATE & ATTACH DISK PHASE
+2021-03-03 03:53:14,464 - MLMN_DB - Level:INFO - Success mapping lun 60002AC00000000000000213000199C3 with disk 89419a06-d513-40c8-9877-cf10403075f3, bootable 1
+2021-03-03 03:53:14,509 - MLMN_DB - Level:INFO - Success mapping lun 60002AC00000000000000215000199C3 with disk ee5e8ed6-e590-4bea-899a-a32cd0013dc6, bootable 0
+2021-03-03 03:53:14,579 - MLMN_DB - Level:INFO - Successfully attach disk 89419a06-d513-40c8-9877-cf10403075f3 to MLMN_DB
+2021-03-03 03:53:19,715 - MLMN_DB - Level:INFO - Successfully attach disk ee5e8ed6-e590-4bea-899a-a32cd0013dc6 to MLMN_DB
+2021-03-03 03:53:24,832 - MLMN_DB - Level:INFO - Vm created with status down
+2021-03-03 03:53:24,832 - MLMN_DB - Level:INFO - Trying to start vm...
+2021-03-03 03:53:24,910 - MLMN_DB - Level:DEBUG - Vm can not boot
+2021-03-03 03:53:24,910 - MLMN_DB - Level:ERROR - Fault reason is "Operation Failed". Fault detail is "[Cannot run VM. There is no host that satisfies current scheduling constraints. See below for details:, The host node02.svt.hn did not satisfy internal filter Memory because its available memory is too low (14612 MB) to run the VM.]". HTTP response code is 409.
+2021-03-03 04:01:05,621 - MLMN_DB - Level:INFO - --------------------------------------------------------
+2021-03-03 04:01:05,621 - MLMN_DB - Level:INFO - Create vm
+2021-03-03 04:01:05,621 - MLMN_DB - Level:INFO - # CREATE VM TEMPLATE PHASE
+2021-03-03 04:01:05,622 - MLMN_DB - Level:INFO - Successfully created vm template
+2021-03-03 04:01:05,622 - MLMN_DB - Level:INFO - Instance properties: name:MLMN_DB,host:node02.svt.hn,cluster:eb7eed8a-54b8-11eb-a594-00163e3fc1a8,vcpu:8,ram:16384
+2021-03-03 04:01:06,002 - MLMN_DB - Level:INFO - # CREAT VM NIC PHASE
+2021-03-03 04:01:06,114 - MLMN_DB - Level:INFO - Successfully created vm nic at vlan 123 with mac 56:6f:89:13:01:37
+2021-03-03 04:01:06,114 - MLMN_DB - Level:INFO - # CREATE & ATTACH DISK PHASE
+2021-03-03 04:01:06,207 - MLMN_DB - Level:DEBUG - Trying to map lun 60002AC00000000000000213000199C3 to host node02.svt.hn
+2021-03-03 04:01:06,207 - MLMN_DB - Level:ERROR - 'Disk' object has no attribute 'size'
+2021-03-03 04:01:06,207 - MLMN_DB - Level:ERROR - Can not attached 60002AC00000000000000213000199C3 to vm
+2021-03-03 04:01:06,260 - MLMN_DB - Level:DEBUG - Trying to map lun 60002AC00000000000000215000199C3 to host node02.svt.hn
+2021-03-03 04:01:06,260 - MLMN_DB - Level:ERROR - 'Disk' object has no attribute 'size'
+2021-03-03 04:01:06,260 - MLMN_DB - Level:ERROR - Can not attached 60002AC00000000000000215000199C3 to vm
+2021-03-03 04:01:06,309 - MLMN_DB - Level:INFO - Vm created with status down
+2021-03-03 04:01:06,309 - MLMN_DB - Level:INFO - Trying to start vm...
+2021-03-03 04:01:06,372 - MLMN_DB - Level:DEBUG - Vm can not boot
+2021-03-03 04:01:06,373 - MLMN_DB - Level:ERROR - Fault reason is "Operation Failed". Fault detail is "[Cannot run VM without at least one bootable disk.
+Alternatives:
+- Create a disk for this VM, and rerun the VM.
+- Change the boot sequence using the Edit VM command (Boot Option Sub-Tab).
+- Use the 'Run Once' command to select a different boot option and rerun the VM.]". HTTP response code is 409.
+2021-03-03 04:03:22,756 - MLMN_DB - Level:INFO - --------------------------------------------------------
+2021-03-03 04:03:22,756 - MLMN_DB - Level:DEBUG - Vm existed
+2021-03-03 04:03:33,864 - MLMN_DB - Level:INFO - --------------------------------------------------------
+2021-03-03 04:03:33,864 - MLMN_DB - Level:INFO - Create vm
+2021-03-03 04:03:33,864 - MLMN_DB - Level:INFO - # CREATE VM TEMPLATE PHASE
+2021-03-03 04:03:33,865 - MLMN_DB - Level:INFO - Successfully created vm template
+2021-03-03 04:03:33,866 - MLMN_DB - Level:INFO - Instance properties: name:MLMN_DB,host:node02.svt.hn,cluster:eb7eed8a-54b8-11eb-a594-00163e3fc1a8,vcpu:8,ram:16384
+2021-03-03 04:03:34,154 - MLMN_DB - Level:INFO - # CREAT VM NIC PHASE
+2021-03-03 04:03:34,243 - MLMN_DB - Level:INFO - Successfully created vm nic at vlan 123 with mac 56:6f:89:13:01:38
+2021-03-03 04:03:34,243 - MLMN_DB - Level:INFO - # CREATE & ATTACH DISK PHASE
+2021-03-03 04:03:34,313 - MLMN_DB - Level:INFO - Success mapping lun 60002AC00000000000000213000199C3 with disk e21ab950-cb9c-460f-9557-1100e2af647c, bootable 1
+2021-03-03 04:03:34,359 - MLMN_DB - Level:INFO - Success mapping lun 60002AC00000000000000215000199C3 with disk 309ebd90-f6cc-43f7-91a0-081507106484, bootable 0
+2021-03-03 04:03:34,417 - MLMN_DB - Level:INFO - Successfully attach disk e21ab950-cb9c-460f-9557-1100e2af647c to MLMN_DB
+2021-03-03 04:03:39,546 - MLMN_DB - Level:INFO - Successfully attach disk 309ebd90-f6cc-43f7-91a0-081507106484 to MLMN_DB
+2021-03-03 04:03:44,664 - MLMN_DB - Level:INFO - Vm created with status down
+2021-03-03 04:03:44,665 - MLMN_DB - Level:INFO - Trying to start vm...
+2021-03-03 04:03:44,745 - MLMN_DB - Level:DEBUG - Vm can not boot
+2021-03-03 04:03:44,745 - MLMN_DB - Level:ERROR - Fault reason is "Operation Failed". Fault detail is "[Cannot run VM. There is no host that satisfies current scheduling constraints. See below for details:, The host node02.svt.hn did not satisfy internal filter Memory because its available memory is too low (14612 MB) to run the VM.]". HTTP response code is 409.
+2021-03-03 04:04:52,686 - MLMN_DB - Level:INFO - --------------------------------------------------------
+2021-03-03 04:04:52,687 - MLMN_DB - Level:INFO - Create vm
+2021-03-03 04:04:52,687 - MLMN_DB - Level:INFO - # CREATE VM TEMPLATE PHASE
+2021-03-03 04:04:52,688 - MLMN_DB - Level:INFO - Successfully created vm template
+2021-03-03 04:04:52,688 - MLMN_DB - Level:INFO - Instance properties: name:MLMN_DB,host:node02.svt.hn,cluster:eb7eed8a-54b8-11eb-a594-00163e3fc1a8,vcpu:8,ram:16384
+2021-03-03 04:04:53,012 - MLMN_DB - Level:INFO - # CREAT VM NIC PHASE
+2021-03-03 04:04:53,118 - MLMN_DB - Level:INFO - Successfully created vm nic at vlan 123 with mac 56:6f:89:13:01:39
+2021-03-03 04:04:53,118 - MLMN_DB - Level:INFO - # CREATE & ATTACH DISK PHASE
+2021-03-03 04:04:53,230 - MLMN_DB - Level:INFO - Success mapping lun 60002AC00000000000000213000199C3 with disk e8ad885c-8aef-4f2c-ab5a-a51a65ef3bd6, bootable 1
+2021-03-03 04:04:53,311 - MLMN_DB - Level:INFO - Success mapping lun 60002AC00000000000000215000199C3 with disk 4e8eda27-a472-4a38-b1ec-c4502f499c1c, bootable 0
+2021-03-03 04:04:53,361 - MLMN_DB - Level:INFO - Successfully attach disk e8ad885c-8aef-4f2c-ab5a-a51a65ef3bd6 to MLMN_DB
+2021-03-03 04:04:58,480 - MLMN_DB - Level:INFO - Successfully attach disk 4e8eda27-a472-4a38-b1ec-c4502f499c1c to MLMN_DB
+2021-03-03 04:05:03,613 - MLMN_DB - Level:INFO - Vm created with status down
+2021-03-03 04:05:03,613 - MLMN_DB - Level:INFO - Trying to start vm...
+2021-03-03 04:05:03,697 - MLMN_DB - Level:DEBUG - Vm can not boot
+2021-03-03 04:05:03,697 - MLMN_DB - Level:ERROR - Fault reason is "Operation Failed". Fault detail is "[Cannot run VM. There is no host that satisfies current scheduling constraints. See below for details:, The host node02.svt.hn did not satisfy internal filter Memory because its available memory is too low (14612 MB) to run the VM.]". HTTP response code is 409.
+2021-03-03 04:09:12,190 - MLMN_DB - Level:INFO - --------------------------------------------------------
+2021-03-03 04:09:12,190 - MLMN_DB - Level:INFO - Create vm
+2021-03-03 04:09:12,190 - MLMN_DB - Level:INFO - # CREATE VM TEMPLATE PHASE
+2021-03-03 04:09:12,191 - MLMN_DB - Level:INFO - Successfully created vm template
+2021-03-03 04:09:12,192 - MLMN_DB - Level:INFO - Instance properties: name:MLMN_DB,host:node02.svt.hn,cluster:eb7eed8a-54b8-11eb-a594-00163e3fc1a8,vcpu:8,ram:16384
+2021-03-03 04:09:12,393 - MLMN_DB - Level:INFO - # CREAT VM NIC PHASE
+2021-03-03 04:09:12,490 - MLMN_DB - Level:INFO - Successfully created vm nic at vlan 123 with mac 56:6f:89:13:01:3a
+2021-03-03 04:09:12,490 - MLMN_DB - Level:INFO - # CREATE & ATTACH DISK PHASE
+2021-03-03 04:09:13,047 - MLMN_DB - Level:DEBUG - Trying to map lun 60002AC00000000000000213000199C3 to host node02.svt.hn
+2021-03-03 04:09:13,048 - MLMN_DB - Level:ERROR - Fault reason is "Operation Failed". Fault detail is "[Cannot add Virtual Disk. The provided LUN is not visible by the specified host, please check storage server connectivity.]". HTTP response code is 400.
+2021-03-03 04:09:13,048 - MLMN_DB - Level:ERROR - Can not attached 60002AC00000000000000213000199C3 to vm
+2021-03-03 04:09:13,637 - MLMN_DB - Level:DEBUG - Trying to map lun 60002AC00000000000000215000199C3 to host node02.svt.hn
+2021-03-03 04:09:13,638 - MLMN_DB - Level:ERROR - Fault reason is "Operation Failed". Fault detail is "[Cannot add Virtual Disk. The provided LUN is not visible by the specified host, please check storage server connectivity.]". HTTP response code is 400.
+2021-03-03 04:09:13,638 - MLMN_DB - Level:ERROR - Can not attached 60002AC00000000000000215000199C3 to vm
+2021-03-03 04:09:13,739 - MLMN_DB - Level:INFO - Vm created with status down
+2021-03-03 04:09:13,740 - MLMN_DB - Level:INFO - Trying to start vm...
+2021-03-03 04:10:23,688 - MLMN_DB - Level:INFO - --------------------------------------------------------
+2021-03-03 04:10:23,689 - MLMN_DB - Level:INFO - Create vm
+2021-03-03 04:10:23,689 - MLMN_DB - Level:INFO - # CREATE VM TEMPLATE PHASE
+2021-03-03 04:10:23,690 - MLMN_DB - Level:INFO - Successfully created vm template
+2021-03-03 04:10:23,690 - MLMN_DB - Level:INFO - Instance properties: name:MLMN_DB,host:node02.svt.hn,cluster:eb7eed8a-54b8-11eb-a594-00163e3fc1a8,vcpu:8,ram:16384
+2021-03-03 04:10:23,946 - MLMN_DB - Level:INFO - # CREAT VM NIC PHASE
+2021-03-03 04:10:24,123 - MLMN_DB - Level:INFO - Successfully created vm nic at vlan 123 with mac 56:6f:89:13:01:3b
+2021-03-03 04:10:24,123 - MLMN_DB - Level:INFO - # CREATE & ATTACH DISK PHASE
+2021-03-03 04:10:24,779 - MLMN_DB - Level:INFO - Success mapping lun 3600508b1001ce6d833711cf659b7380a with disk 96e401ef-ab56-4878-bafb-5a37740fbea6, bootable 1
+2021-03-03 04:10:25,320 - MLMN_DB - Level:DEBUG - Trying to map lun 60002AC00000000000000215000199C3 to host node02.svt.hn
+2021-03-03 04:10:25,320 - MLMN_DB - Level:ERROR - Fault reason is "Operation Failed". Fault detail is "[Cannot add Virtual Disk. The provided LUN is not visible by the specified host, please check storage server connectivity.]". HTTP response code is 400.
+2021-03-03 04:10:25,321 - MLMN_DB - Level:ERROR - Can not attached 60002AC00000000000000215000199C3 to vm
+2021-03-03 04:10:25,520 - MLMN_DB - Level:INFO - Successfully attach disk 96e401ef-ab56-4878-bafb-5a37740fbea6 to MLMN_DB
+2021-03-03 04:10:30,745 - MLMN_DB - Level:INFO - Vm created with status down
+2021-03-03 04:10:30,745 - MLMN_DB - Level:INFO - Trying to start vm...
+2021-03-03 04:15:23,022 - MLMN_DB - Level:INFO - --------------------------------------------------------
+2021-03-03 04:15:23,022 - MLMN_DB - Level:INFO - Create vm
+2021-03-03 04:15:23,023 - MLMN_DB - Level:INFO - # CREATE VM TEMPLATE PHASE
+2021-03-03 04:15:23,024 - MLMN_DB - Level:INFO - Successfully created vm template
+2021-03-03 04:15:23,024 - MLMN_DB - Level:INFO - Instance properties: name:MLMN_DB,host:node02.svt.hn,cluster:eb7eed8a-54b8-11eb-a594-00163e3fc1a8,vcpu:8,ram:16384
+2021-03-03 04:15:23,278 - MLMN_DB - Level:INFO - # CREAT VM NIC PHASE
+2021-03-03 04:15:23,379 - MLMN_DB - Level:INFO - Successfully created vm nic at vlan 123 with mac 56:6f:89:13:01:3c
+2021-03-03 04:15:23,380 - MLMN_DB - Level:INFO - # CREATE & ATTACH DISK PHASE
+2021-03-03 04:15:24,033 - MLMN_DB - Level:INFO - Success mapping lun 3600508b1001ce6d833711cf659b7380a with disk 3ae9424b-e0b4-4ce6-a70f-3cf820aea3ba, bootable 1
+2021-03-03 04:15:24,578 - MLMN_DB - Level:DEBUG - Trying to map lun 60002AC00000000000000215000199C3 to host node02.svt.hn
+2021-03-03 04:15:24,578 - MLMN_DB - Level:ERROR - Fault reason is "Operation Failed". Fault detail is "[Cannot add Virtual Disk. The provided LUN is not visible by the specified host, please check storage server connectivity.]". HTTP response code is 400.
+2021-03-03 04:15:24,578 - MLMN_DB - Level:ERROR - Can not attached 60002AC00000000000000215000199C3 to vm
+2021-03-03 04:15:24,677 - MLMN_DB - Level:INFO - Successfully attach disk 3ae9424b-e0b4-4ce6-a70f-3cf820aea3ba to MLMN_DB
+2021-03-03 04:15:29,886 - MLMN_DB - Level:INFO - Vm created with status down
+2021-03-03 04:15:29,887 - MLMN_DB - Level:INFO - Trying to start vm...
+2021-03-03 04:19:46,430 - MLMN_DB - Level:INFO - --------------------------------------------------------
+2021-03-03 04:19:46,430 - MLMN_DB - Level:INFO - Create vm
+2021-03-03 04:19:46,431 - MLMN_DB - Level:INFO - # CREATE VM TEMPLATE PHASE
+2021-03-03 04:19:46,431 - MLMN_DB - Level:INFO - Successfully created vm template
+2021-03-03 04:19:46,432 - MLMN_DB - Level:INFO - Instance properties: name:MLMN_DB,host:node02.svt.hn,cluster:eb7eed8a-54b8-11eb-a594-00163e3fc1a8,vcpu:8,ram:16384
+2021-03-03 04:19:46,822 - MLMN_DB - Level:INFO - # CREAT VM NIC PHASE
+2021-03-03 04:19:46,929 - MLMN_DB - Level:INFO - Successfully created vm nic at vlan 123 with mac 56:6f:89:13:01:3d
+2021-03-03 04:19:46,929 - MLMN_DB - Level:INFO - # CREATE & ATTACH DISK PHASE
+2021-03-03 04:19:47,553 - MLMN_DB - Level:INFO - Success mapping lun 3600508b1001ce6d833711cf659b7380a with disk 0ef73b78-57ea-472b-93f9-917c65221372, bootable 1
+2021-03-03 04:19:48,086 - MLMN_DB - Level:DEBUG - Trying to map lun 60002AC00000000000000215000199C3 to host node02.svt.hn
+2021-03-03 04:19:48,086 - MLMN_DB - Level:ERROR - Fault reason is "Operation Failed". Fault detail is "[Cannot add Virtual Disk. The provided LUN is not visible by the specified host, please check storage server connectivity.]". HTTP response code is 400.
+2021-03-03 04:19:48,086 - MLMN_DB - Level:ERROR - Can not attached 60002AC00000000000000215000199C3 to vm
+2021-03-03 04:19:48,192 - MLMN_DB - Level:INFO - Successfully attach disk 0ef73b78-57ea-472b-93f9-917c65221372 to MLMN_DB
+2021-03-03 04:19:53,376 - MLMN_DB - Level:INFO - Vm created with status down
+2021-03-03 04:19:53,376 - MLMN_DB - Level:INFO - Trying to start vm...
+2021-03-03 04:21:47,774 - MLMN_DB - Level:INFO - --------------------------------------------------------
+2021-03-03 04:21:47,774 - MLMN_DB - Level:DEBUG - Vm existed
+2021-03-03 04:21:59,718 - MLMN_DB - Level:INFO - --------------------------------------------------------
+2021-03-03 04:21:59,719 - MLMN_DB - Level:INFO - Create vm
+2021-03-03 04:21:59,719 - MLMN_DB - Level:INFO - # CREATE VM TEMPLATE PHASE
+2021-03-03 04:21:59,720 - MLMN_DB - Level:INFO - Successfully created vm template
+2021-03-03 04:21:59,720 - MLMN_DB - Level:INFO - Instance properties: name:MLMN_DB,host:node02.svt.hn,cluster:eb7eed8a-54b8-11eb-a594-00163e3fc1a8,vcpu:8,ram:16384
+2021-03-03 04:22:00,029 - MLMN_DB - Level:INFO - # CREAT VM NIC PHASE
+2021-03-03 04:22:00,133 - MLMN_DB - Level:INFO - Successfully created vm nic at vlan 123 with mac 56:6f:89:13:01:3e
+2021-03-03 04:22:00,133 - MLMN_DB - Level:INFO - # CREATE & ATTACH DISK PHASE
+2021-03-03 04:22:00,774 - MLMN_DB - Level:INFO - Success mapping lun 3600508b1001ce6d833711cf659b7380a with disk 2ad7ea05-b36d-4492-b82f-3b9bcc07f6b4, bootable 1
+2021-03-03 04:22:01,317 - MLMN_DB - Level:DEBUG - Trying to map lun 60002AC00000000000000215000199C3 to host node02.svt.hn
+2021-03-03 04:22:01,317 - MLMN_DB - Level:ERROR - Fault reason is "Operation Failed". Fault detail is "[Cannot add Virtual Disk. The provided LUN is not visible by the specified host, please check storage server connectivity.]". HTTP response code is 400.
+2021-03-03 04:22:01,317 - MLMN_DB - Level:ERROR - Can not attached 60002AC00000000000000215000199C3 to vm
+2021-03-03 04:22:01,512 - MLMN_DB - Level:INFO - Successfully attach disk 2ad7ea05-b36d-4492-b82f-3b9bcc07f6b4 to MLMN_DB
+2021-03-03 04:22:06,644 - MLMN_DB - Level:INFO - Vm created with status down
+2021-03-03 04:22:06,644 - MLMN_DB - Level:INFO - Trying to start vm...
+2021-03-03 04:31:27,882 - MLMN_DB - Level:INFO - --------------------------------------------------------
+2021-03-03 04:31:27,882 - MLMN_DB - Level:INFO - Create vm
+2021-03-03 04:31:27,882 - MLMN_DB - Level:INFO - # CREATE VM TEMPLATE PHASE
+2021-03-03 04:31:27,883 - MLMN_DB - Level:INFO - Successfully created vm template
+2021-03-03 04:31:27,883 - MLMN_DB - Level:INFO - Instance properties: name:MLMN_DB,host:node02.svt.hn,cluster:eb7eed8a-54b8-11eb-a594-00163e3fc1a8,vcpu:8,ram:16384
+2021-03-03 04:31:28,339 - MLMN_DB - Level:INFO - # CREAT VM NIC PHASE
+2021-03-03 04:31:28,449 - MLMN_DB - Level:INFO - Successfully created vm nic at vlan 123 with mac 56:6f:89:13:01:3f
+2021-03-03 04:31:28,449 - MLMN_DB - Level:INFO - # CREATE & ATTACH DISK PHASE
+2021-03-03 04:31:29,076 - MLMN_DB - Level:DEBUG - Trying to map lun 3600508b1001ce6d833711cf659b7380a to host node02.svt.hn
+2021-03-03 04:31:29,076 - MLMN_DB - Level:ERROR - 
+2021-03-03 04:31:29,077 - MLMN_DB - Level:ERROR - Can not attached 3600508b1001ce6d833711cf659b7380a to vm
+2021-03-03 04:31:29,614 - MLMN_DB - Level:DEBUG - Trying to map lun 60002AC00000000000000215000199C3 to host node02.svt.hn
+2021-03-03 04:31:29,614 - MLMN_DB - Level:ERROR - Fault reason is "Operation Failed". Fault detail is "[Cannot add Virtual Disk. The provided LUN is not visible by the specified host, please check storage server connectivity.]". HTTP response code is 400.
+2021-03-03 04:31:29,614 - MLMN_DB - Level:ERROR - Can not attached 60002AC00000000000000215000199C3 to vm
+2021-03-03 04:31:29,705 - MLMN_DB - Level:INFO - Vm created with status down
+2021-03-03 04:31:29,705 - MLMN_DB - Level:INFO - Trying to start vm...
+2021-03-03 04:34:31,235 - MLMN_DB - Level:INFO - --------------------------------------------------------
+2021-03-03 04:34:31,235 - MLMN_DB - Level:INFO - Create vm
+2021-03-03 04:34:31,235 - MLMN_DB - Level:INFO - # CREATE VM TEMPLATE PHASE
+2021-03-03 04:34:31,236 - MLMN_DB - Level:INFO - Successfully created vm template
+2021-03-03 04:34:31,236 - MLMN_DB - Level:INFO - Instance properties: name:MLMN_DB,host:node02.svt.hn,cluster:eb7eed8a-54b8-11eb-a594-00163e3fc1a8,vcpu:8,ram:16384
+2021-03-03 04:34:31,614 - MLMN_DB - Level:INFO - # CREAT VM NIC PHASE
+2021-03-03 04:34:31,713 - MLMN_DB - Level:INFO - Successfully created vm nic at vlan 123 with mac 56:6f:89:13:01:40
+2021-03-03 04:34:31,713 - MLMN_DB - Level:INFO - # CREATE & ATTACH DISK PHASE
+2021-03-03 04:34:31,752 - MLMN_DB - Level:DEBUG - Trying to map lun 3600508b1001ce6d833711cf659b7380a to host node02.svt.hn
+2021-03-03 04:34:31,752 - MLMN_DB - Level:ERROR - Fault reason is "Operation Failed". Fault detail is "[Cannot add Virtual Disk. The provided lun is used by another disk.]". HTTP response code is 409.
+2021-03-03 04:34:31,753 - MLMN_DB - Level:ERROR - Can not attached 3600508b1001ce6d833711cf659b7380a to vm
+2021-03-03 04:34:32,307 - MLMN_DB - Level:DEBUG - Trying to map lun 60002AC00000000000000215000199C3 to host node02.svt.hn
+2021-03-03 04:34:32,307 - MLMN_DB - Level:ERROR - Fault reason is "Operation Failed". Fault detail is "[Cannot add Virtual Disk. The provided LUN is not visible by the specified host, please check storage server connectivity.]". HTTP response code is 400.
+2021-03-03 04:34:32,307 - MLMN_DB - Level:ERROR - Can not attached 60002AC00000000000000215000199C3 to vm
+2021-03-03 04:34:32,402 - MLMN_DB - Level:INFO - Vm created with status down
+2021-03-03 04:34:32,402 - MLMN_DB - Level:INFO - Trying to start vm...
+2021-03-03 04:35:38,958 - MLMN_DB - Level:INFO - --------------------------------------------------------
+2021-03-03 04:35:38,959 - MLMN_DB - Level:INFO - Create vm
+2021-03-03 04:35:38,959 - MLMN_DB - Level:INFO - # CREATE VM TEMPLATE PHASE
+2021-03-03 04:35:38,960 - MLMN_DB - Level:INFO - Successfully created vm template
+2021-03-03 04:35:38,960 - MLMN_DB - Level:INFO - Instance properties: name:MLMN_DB,host:node02.svt.hn,cluster:eb7eed8a-54b8-11eb-a594-00163e3fc1a8,vcpu:8,ram:16384
+2021-03-03 04:35:39,171 - MLMN_DB - Level:INFO - # CREAT VM NIC PHASE
+2021-03-03 04:35:39,262 - MLMN_DB - Level:INFO - Successfully created vm nic at vlan 123 with mac 56:6f:89:13:01:41
+2021-03-03 04:35:39,262 - MLMN_DB - Level:INFO - # CREATE & ATTACH DISK PHASE
+2021-03-03 04:35:39,871 - MLMN_DB - Level:DEBUG - Trying to map lun 3600508b1001ce6d833711cf659b7380a to host node02.svt.hn
+2021-03-03 04:35:39,871 - MLMN_DB - Level:ERROR - size not match
+2021-03-03 04:35:39,871 - MLMN_DB - Level:ERROR - Can not attached 3600508b1001ce6d833711cf659b7380a to vm
+2021-03-03 04:35:40,418 - MLMN_DB - Level:DEBUG - Trying to map lun 60002AC00000000000000215000199C3 to host node02.svt.hn
+2021-03-03 04:35:40,418 - MLMN_DB - Level:ERROR - Fault reason is "Operation Failed". Fault detail is "[Cannot add Virtual Disk. The provided LUN is not visible by the specified host, please check storage server connectivity.]". HTTP response code is 400.
+2021-03-03 04:35:40,418 - MLMN_DB - Level:ERROR - Can not attached 60002AC00000000000000215000199C3 to vm
+2021-03-03 04:35:40,512 - MLMN_DB - Level:INFO - Vm created with status down
+2021-03-03 04:35:40,512 - MLMN_DB - Level:INFO - Trying to start vm...
+2021-03-03 04:50:45,000 - MLMN_DB - Level:INFO - --------------------------------------------------------
+2021-03-03 04:50:45,001 - MLMN_DB - Level:INFO - Create vm
+2021-03-03 04:50:45,001 - MLMN_DB - Level:INFO - # CREATE VM TEMPLATE PHASE
+2021-03-03 04:50:45,002 - MLMN_DB - Level:INFO - Successfully created vm template
+2021-03-03 04:50:45,002 - MLMN_DB - Level:INFO - Instance properties: name:MLMN_DB,host:node02.svt.hn,cluster:eb7eed8a-54b8-11eb-a594-00163e3fc1a8,vcpu:8,ram:16384
+2021-03-03 04:50:45,299 - MLMN_DB - Level:INFO - # CREAT VM NIC PHASE
+2021-03-03 04:50:45,396 - MLMN_DB - Level:INFO - Successfully created vm nic at vlan 123 with mac 56:6f:89:13:01:42
+2021-03-03 04:50:45,397 - MLMN_DB - Level:INFO - # CREATE & ATTACH DISK PHASE
+2021-03-03 04:50:45,437 - MLMN_DB - Level:DEBUG - Trying to map lun 3600508b1001ce6d833711cf659b7380a to host node02.svt.hn
+2021-03-03 04:50:45,437 - MLMN_DB - Level:ERROR - Fault reason is "Operation Failed". Fault detail is "[Cannot add Virtual Disk. The provided lun is used by another disk.]". HTTP response code is 409.
+2021-03-03 04:50:45,437 - MLMN_DB - Level:ERROR - Can not attached 3600508b1001ce6d833711cf659b7380a to vm
+2021-03-03 04:50:45,994 - MLMN_DB - Level:DEBUG - Trying to map lun 60002AC00000000000000215000199C3 to host node02.svt.hn
+2021-03-03 04:50:45,995 - MLMN_DB - Level:ERROR - Fault reason is "Operation Failed". Fault detail is "[Cannot add Virtual Disk. The provided LUN is not visible by the specified host, please check storage server connectivity.]". HTTP response code is 400.
+2021-03-03 04:50:45,995 - MLMN_DB - Level:ERROR - Can not attached 60002AC00000000000000215000199C3 to vm
+2021-03-03 04:50:46,078 - MLMN_DB - Level:INFO - Vm created with status down
+2021-03-03 04:50:46,078 - MLMN_DB - Level:INFO - Trying to start vm...

@@ -26,6 +26,33 @@ class Utils:
 
 
     # start vm with user_script
+
+    # for eth0 centos
+    def start_vm_cloud_init( self, vm_service , vm  ,cloud_init = True):
+	vm_service.start(
+                        use_cloud_init=True,
+                        vm = types.Vm(
+                                initialization=types.Initialization(
+                                        nic_configurations=[
+                                                types.NicConfiguration(
+                                                        name= 'eth0',
+                                                        on_boot=True,
+                                                        boot_protocol=types.BootProtocol.STATIC,
+                                                        ip= types.Ip(
+                                                                version=types.IpVersion.V4,
+                                                                address = vm.ip.ip,
+                                                                netmask = vm.ip.netmask,
+                                                                gateway = vm.ip.gateway
+                                                        )
+                                                )
+                                        ],
+                                        dns_servers = '8.8.8.8',
+                                )
+                        )
+                )
+
+
+
     def start_vm (self, vm_service , cloud_init=True , scontent=None):
 
 	vm_service.start(
@@ -49,11 +76,12 @@ class Utils:
 
     # create disk 
     def create_disk (self,lun,vm_host,logger):
+	
 	disk=types.Disk(
-            name='test',
+            name=lun.alias,
             lun_storage=types.HostStorage(
                type=types.StorageType.FCP,
-	       #host=types.Host(name=vm_host),
+	       host=types.Host(name=vm_host),
 	       logical_units= [
 	    		types.LogicalUnit(
                         	id=lun.id,
@@ -63,6 +91,7 @@ class Utils:
         )
 	try :
 		new_disk = self.disk_service.add(disk)
+		assert (new_disk.lun_storage.logical_units[0].size == lun.size),'size not match'
 	except Exception as e:
 		logger.debug('Trying to map lun {} to host {}'.format(lun.id,vm_host))
 		logger.error(e)
@@ -83,10 +112,10 @@ class Utils:
         	vm['luns'] = []
         	pre_vm = next((i for i in vms if i.id == row['id']),None)
         	if pre_vm is not None:
-                	pre_vm.luns.append(LUN(row['os'],row['bootable'],row['lun_name']))
+                	pre_vm.luns.append(LUN(row['lun_id'],row['bootable'],row['lun_name'],row['size']))
                 	continue
 
-        	vm['luns'].append(LUN(row['os'],row['bootable'],row['lun_name']))
+        	vm['luns'].append(LUN(row['lun_id'],row['bootable'],row['lun_name'],row['size']))
 		vm['ip'] = nics(row['ip'], row['subnet'], row['gateway'])
         	vm['id'] = row['id']
         	vm['name'] = row['name']
@@ -113,7 +142,7 @@ class Utils:
 		
 	template =  types.Vm(
         		name=vm.name,
-                        memory=vm.ram*1024*1024*1024,
+                        memory=vm.ram*1024*1024,   #MB
                         cpu=types.Cpu(topology=cpu),
                         cluster=types.Cluster(
                        		id=vm.cluster,
@@ -151,18 +180,18 @@ class Utils:
 	for lun in luns:
 		vm_disk  = self.create_disk(lun,host,logger)
 		if vm_disk is not None:
+			_bootable = (lun.bootable==1)
 			disk =	types.DiskAttachment(
                                 		disk= types.Disk(
                                         		id = vm_disk.id,
                                 		),
                                 		interface=types.DiskInterface.VIRTIO,
                                 		active = True,
-                                		bootable = lun.bootable,
+                                		bootable = _bootable,
                         	)
 			res.append(disk)	
 		else:
 			logger.error('Can not attached {} to vm'.format(lun.id))
-			print('{} is attached to a volume').format(lun.id)
 	return res 
 
 
@@ -248,7 +277,7 @@ class Utils:
 		logger.info('Vm created with status {}'.format(vm_service.get().status))
 		try:
 			logger.info('Trying to start vm...')
-			vm_service.start()	
+			#vm_service.start()	
 		except Exception as e: 
 			logger.debug('Vm can not boot')
 			logger.error(e)
