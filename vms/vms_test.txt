@@ -1,0 +1,44 @@
+---------------VM: CHC_CORE-------------
+cluster: eb7eed8a-54b8-11eb-a594-00163e3fc1a8
+host: node02.svt.hn
+vcpu: 4
+memory: 8192
+vcpu: 4
+network vlan: 311
+ip: 10.3.11.22
+netmask: 255.255.0.0
+gateway: 10.16.150.1
+Lun 3600507680c8002d9480000000000082d,os=1,alias=CHC_CORE_OS,size=200
+---------------VM: CHC_CORE1-------------
+cluster: eb7eed8a-54b8-11eb-a594-00163e3fc1a8
+host: node02.svt.hn
+vcpu: 5
+memory: 8192
+vcpu: 5
+network vlan: 311
+ip: 10.3.11.23
+netmask: 255.255.0.0
+gateway: 10.16.150.1
+Lun 3600507680c8002d9480000000000082e,os=1,alias=CHC_CORE1_OS,size=300
+---------------VM: CHC_CORE2-------------
+cluster: eb7eed8a-54b8-11eb-a594-00163e3fc1a8
+host: node02.svt.hn
+vcpu: 6
+memory: 8192
+vcpu: 6
+network vlan: 311
+ip: 10.3.11.24
+netmask: 255.255.0.0
+gateway: 10.16.150.1
+Lun 3600507680c8002d9480000000000082f,os=1,alias=CHC_CORE2_OS,size=400
+---------------VM: CHC_CORE3-------------
+cluster: eb7eed8a-54b8-11eb-a594-00163e3fc1a8
+host: node02.svt.hn
+vcpu: 7
+memory: 8192
+vcpu: 7
+network vlan: 311
+ip: 10.3.11.25
+netmask: 255.255.0.0
+gateway: 10.16.150.1
+Lun 3600507680c8002d9480000000000082g,os=1,alias=CHC_CORE3_OS,size=500

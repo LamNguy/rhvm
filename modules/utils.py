@@ -5,6 +5,7 @@ import ovirtsdk4.types as types
 import time
 import json
 import logging
+import os
 
 # class Utils provide process action to start a virtual machine
 #
@@ -21,7 +22,7 @@ class Utils:
 	self.networks_service = self.conn.system_service().networks_service()
 	#self.dcs_service = self.conn.system_service().data_centers_service()
 	self.hosts_service = self.conn.system_service().hosts_service()
-	self.data = open('/home/centos/rhvm/modules/user_script', 'r').read()
+	#self.data = open('/home/centos/rhvm/modules/user_script', 'r').read()
 
 
 
@@ -81,7 +82,7 @@ class Utils:
             name=lun.alias,
             lun_storage=types.HostStorage(
                type=types.StorageType.FCP,
-	       host=types.Host(name=vm_host),
+	       #host=types.Host(name=vm_host),
 	       logical_units= [
 	    		types.LogicalUnit(
                         	id=lun.id,
@@ -91,7 +92,9 @@ class Utils:
         )
 	try :
 		new_disk = self.disk_service.add(disk)
-		assert (new_disk.lun_storage.logical_units[0].size == lun.size),'size not match'
+		print(lun.size)
+		#assert (new_disk.lun_storage.logical_units[0].size == lun.size),'size not match'
+		
 	except Exception as e:
 		logger.debug('Trying to map lun {} to host {}'.format(lun.id,vm_host))
 		logger.error(e)
@@ -173,23 +176,40 @@ class Utils:
         )
 
 
+
+    # luns = [ i for i in disks if i.storage_type == types.DiskStorageType.LUN  and i.lun_storage.logical_units[0].id == '3600507680c8002d9480000000000082f' ]/
+
     # luu y: all luns thuoc host cua vm
     def create_and_attach_vm_lun (self, luns , host , logger):
 	# create disks attaching to vm
 	res = []
 	for lun in luns:
-		vm_disk  = self.create_disk(lun,host,logger)
-		if vm_disk is not None:
-			_bootable = (lun.bootable==1)
-			disk =	types.DiskAttachment(
-                                		disk= types.Disk(
-                                        		id = vm_disk.id,
-                                		),
-                                		interface=types.DiskInterface.VIRTIO,
-                                		active = True,
-                                		bootable = _bootable,
-                        	)
-			res.append(disk)	
+		check = [ i for i in self.disk_service.list() if i.storage_type == types.DiskStorageType.LUN  and i.lun_storage.logical_units[0].id == lun.id ]
+		if check:
+			_bootable = (lun.bootable == 1)
+			logger.info('Found existing disk {} with lun id {}'.format(check[0].id,lun.id))
+			disk =  types.DiskAttachment(
+                                                disk= types.Disk(
+                                                        id = check[0].id,
+                                                ),
+                                                interface=types.DiskInterface.VIRTIO,
+                                                active = True,
+                                                bootable = _bootable,
+                               )
+			res.append(disk)
+		elif not check:
+			vm_disk  = self.create_disk(lun,host,logger)
+			if vm_disk is not None:
+				_bootable = (lun.bootable==1)
+				disk =	types.DiskAttachment(
+                                			disk= types.Disk(
+                                        			id = vm_disk.id,
+                                			),
+                                			interface=types.DiskInterface.VIRTIO,
+                                			active = True,
+                                			bootable = _bootable,
+                        		)
+				res.append(disk)	
 		else:
 			logger.error('Can not attached {} to vm'.format(lun.id))
 	return res 
@@ -204,7 +224,7 @@ class Utils:
 	
 	import logging
         logger = logging.getLogger(vm.name)
-        filename = '/home/centos/rhvm/vms/{}'.format(vm.name)
+        filename = os.getcwd() + '/vms/{}'.format(vm.name)
 	formatter = logging.Formatter(
     		'%(asctime)s - %(name)s - Level:%(levelname)s - %(message)s')
 	

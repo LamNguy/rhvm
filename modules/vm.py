@@ -1,4 +1,5 @@
 import logging 
+import os
 class VM:
 
 
@@ -17,15 +18,7 @@ class VM:
 	self.host = vm['host']
 	 
     # Print vm properties 
-    def test(self):
-
-	logger = logging.getLogger('result')
-	filename = '/home/centos/rhvm/vms/test_vm.txt'
-	#formatter = logging.Formatter(
-      	#	'%(asctime)s - %(name)s - Level:%(levelname)s - %(message)s')
-	handler = logging.FileHandler(filename, mode='w')
-	#handler.setFormatter(formatter)
-	logger.addHandler(handler)
+    def test(self,logger):
 	logger.info('---------------VM: {}-------------'.format(self.name))
 	logger.info('cluster: {}'.format(self.cluster))
 	logger.info('host: {}'.format(self.host))
@@ -36,6 +29,7 @@ class VM:
 	logger.info('ip: {}'.format(self.ip.ip))
 	logger.info('netmask: {}'.format(self.ip.netmask))
 	logger.info('gateway: {}'.format(self.ip.gateway))
-	
+	 
+
 	for lun in self.luns:
 		logger.info('Lun {},os={},alias={},size={}'.format(lun.id,lun.bootable,lun.alias,lun.size))

@@ -2,17 +2,18 @@ from os import environ as env
 import logging
 import ovirtsdk4 as sdk
 import pandas as pd
+import os
+import configparser
 
 # Connection class provide the connection to rhvm manager, admin activate 'adminrc' file
 # to authenticate with certification file (ca.pem)
 
 class Connection:
     def __init__ (self, env=env ):
-        self.url = env['URL']
-        self.username = env['USER_NAME']
-        self.password = env['PASSWORD']
-        self.cert_path = env['CERT_PATH']
-
+        self.url = env['URL'] 
+        self.username = env['USER_NAME'] 
+        self.password = env['PASSWORD'] 
+        self.cert_path =  os.getcwd() + env['CERT_PATH'] 
 
     # connect to rhv manager 
     def connection(self):
@@ -26,6 +27,16 @@ class Connection:
                    log=logging.getLogger(),
         )
 
+    def create_logger(self,name,path):
+	logger = logging.getLogger(name)
+	filename = os.getcwd() + path 
+	#formatter = logging.Formatter(
+	#       '%(asctime)s - %(name)s - Level:%(levelname)s - %(message)s')
+	handler = logging.FileHandler(filename, mode='w')
+	#handler.setFormatter(formatter)
+	logger.addHandler(handler)
+	return logger
+	
 	
     # Print connection properties
     def test(self):
@@ -40,3 +51,5 @@ class Connection:
 	vms = vms_service.list()
 	for vm in vms:
 		print('{}:{}').format(vm.name,vm.status)
+
+	 
