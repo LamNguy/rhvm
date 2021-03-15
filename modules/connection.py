@@ -1,7 +1,6 @@
 from os import environ as env
 import logging
 import ovirtsdk4 as sdk
-import pandas as pd
 import os
 import configparser
 

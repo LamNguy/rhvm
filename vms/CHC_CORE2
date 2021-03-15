@@ -1,2 +1,42 @@
 2021-03-11 06:04:33,433 - CHC_CORE2 - Level:INFO - --------------------------------------------------------
 2021-03-11 06:04:33,434 - CHC_CORE2 - Level:DEBUG - Vm existed
+2021-03-15 00:49:18,661 - CHC_CORE2 - Level:INFO - --------------------------------------------------------
+2021-03-15 00:49:18,661 - CHC_CORE2 - Level:DEBUG - Vm existed
+2021-03-15 00:50:32,365 - CHC_CORE2 - Level:INFO - --------------------------------------------------------
+2021-03-15 00:50:32,367 - CHC_CORE2 - Level:INFO - Create vm
+2021-03-15 00:50:32,367 - CHC_CORE2 - Level:INFO - # CREATE VM TEMPLATE PHASE
+2021-03-15 00:50:32,369 - CHC_CORE2 - Level:INFO - Successfully created vm template
+2021-03-15 00:50:32,371 - CHC_CORE2 - Level:INFO - Instance properties: name:CHC_CORE2, host:node02.svt.hn, cluster:eb7eed8a-54b8-11eb-a594-00163e3fc1a8, vcpu:6, ram:8192
+2021-03-15 00:50:32,742 - CHC_CORE2 - Level:INFO - # CREAT VM NIC PHASE
+2021-03-15 00:50:32,894 - CHC_CORE2 - Level:ERROR - Failed create nic for vm
+2021-03-15 00:50:32,895 - CHC_CORE2 - Level:ERROR - Can not find network with vlan311
+2021-03-15 00:50:32,895 - CHC_CORE2 - Level:INFO - # CREATE & ATTACH DISK PHASE
+2021-03-15 00:50:33,214 - CHC_CORE2 - Level:INFO - No disk has created with lun id 3600507680c8002d9480000000000082f yet, so is creating...
+2021-03-15 00:50:33,215 - CHC_CORE2 - Level:ERROR - Can not attached disk with lun_id 3600507680c8002d9480000000000082f to vm
+2021-03-15 00:50:33,216 - CHC_CORE2 - Level:ERROR - global name 'vm_host' is not defined
+2021-03-15 00:52:54,587 - CHC_CORE2 - Level:INFO - --------------------------------------------------------
+2021-03-15 00:52:54,588 - CHC_CORE2 - Level:INFO - Create vm
+2021-03-15 00:52:54,588 - CHC_CORE2 - Level:INFO - # CREATE VM TEMPLATE PHASE
+2021-03-15 00:52:54,590 - CHC_CORE2 - Level:INFO - Successfully created vm template
+2021-03-15 00:52:54,591 - CHC_CORE2 - Level:INFO - Instance properties: name:CHC_CORE2, host:node02.svt.hn, cluster:eb7eed8a-54b8-11eb-a594-00163e3fc1a8, vcpu:6, ram:8192
+2021-03-15 00:52:54,835 - CHC_CORE2 - Level:INFO - # CREAT VM NIC PHASE
+2021-03-15 00:52:54,989 - CHC_CORE2 - Level:ERROR - Failed create nic for vm
+2021-03-15 00:52:54,990 - CHC_CORE2 - Level:ERROR - Can not find network with vlan311
+2021-03-15 00:52:54,991 - CHC_CORE2 - Level:INFO - # CREATE & ATTACH DISK PHASE
+2021-03-15 00:52:55,244 - CHC_CORE2 - Level:INFO - No disk has created with lun id 3600507680c8002d9480000000000082f yet, so is creating...
+2021-03-15 00:52:55,246 - CHC_CORE2 - Level:INFO - Trying to create disk with lun 3600507680c8002d9480000000000082f in host node02.svt.hn
+2021-03-15 00:52:55,424 - CHC_CORE2 - Level:ERROR - Can not attached disk with lun_id 3600507680c8002d9480000000000082f to vm
+2021-03-15 00:52:55,424 - CHC_CORE2 - Level:ERROR - size not match
+2021-03-15 00:55:38,847 - CHC_CORE2 - Level:INFO - --------------------------------------------------------
+2021-03-15 00:55:38,847 - CHC_CORE2 - Level:INFO - Create vm
+2021-03-15 00:55:38,847 - CHC_CORE2 - Level:INFO - # CREATE VM TEMPLATE PHASE
+2021-03-15 00:55:38,848 - CHC_CORE2 - Level:INFO - Successfully created vm template
+2021-03-15 00:55:38,848 - CHC_CORE2 - Level:INFO - Instance properties: name:CHC_CORE2, host:node02.svt.hn, cluster:eb7eed8a-54b8-11eb-a594-00163e3fc1a8, vcpu:6, ram:8192
+2021-03-15 00:55:39,580 - CHC_CORE2 - Level:INFO - # CREAT VM NIC PHASE
+2021-03-15 00:55:39,936 - CHC_CORE2 - Level:ERROR - Failed create nic for vm
+2021-03-15 00:55:39,943 - CHC_CORE2 - Level:ERROR - Can not find network with vlan311
+2021-03-15 00:55:39,944 - CHC_CORE2 - Level:INFO - # CREATE & ATTACH DISK PHASE
+2021-03-15 00:55:40,426 - CHC_CORE2 - Level:INFO - Found existing disk dc4e9698-2ad8-425e-849e-40ef210f4141 with lun id 3600507680c8002d9480000000000082f
+2021-03-15 00:55:40,502 - CHC_CORE2 - Level:INFO - Successfully attach disk dc4e9698-2ad8-425e-849e-40ef210f4141 to CHC_CORE2
+2021-03-15 00:55:40,547 - CHC_CORE2 - Level:INFO - Vm created with status down
+2021-03-15 00:55:40,547 - CHC_CORE2 - Level:INFO - Trying to start vm...

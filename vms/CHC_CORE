@@ -1,2 +1,42 @@
 2021-03-11 06:04:33,301 - CHC_CORE - Level:INFO - --------------------------------------------------------
 2021-03-11 06:04:33,301 - CHC_CORE - Level:DEBUG - Vm existed
+2021-03-15 00:49:18,500 - CHC_CORE - Level:INFO - --------------------------------------------------------
+2021-03-15 00:49:18,501 - CHC_CORE - Level:DEBUG - Vm existed
+2021-03-15 00:50:31,419 - CHC_CORE - Level:INFO - --------------------------------------------------------
+2021-03-15 00:50:31,420 - CHC_CORE - Level:INFO - Create vm
+2021-03-15 00:50:31,420 - CHC_CORE - Level:INFO - # CREATE VM TEMPLATE PHASE
+2021-03-15 00:50:31,423 - CHC_CORE - Level:INFO - Successfully created vm template
+2021-03-15 00:50:31,424 - CHC_CORE - Level:INFO - Instance properties: name:CHC_CORE, host:node02.svt.hn, cluster:eb7eed8a-54b8-11eb-a594-00163e3fc1a8, vcpu:4, ram:8192
+2021-03-15 00:50:31,921 - CHC_CORE - Level:INFO - # CREAT VM NIC PHASE
+2021-03-15 00:50:32,336 - CHC_CORE - Level:ERROR - Failed create nic for vm
+2021-03-15 00:50:32,338 - CHC_CORE - Level:ERROR - Can not find network with vlan311
+2021-03-15 00:50:32,339 - CHC_CORE - Level:INFO - # CREATE & ATTACH DISK PHASE
+2021-03-15 00:50:32,693 - CHC_CORE - Level:INFO - No disk has created with lun id 3600507680c8002d9480000000000082d yet, so is creating...
+2021-03-15 00:50:32,693 - CHC_CORE - Level:ERROR - Can not attached disk with lun_id 3600507680c8002d9480000000000082d to vm
+2021-03-15 00:50:32,693 - CHC_CORE - Level:ERROR - global name 'vm_host' is not defined
+2021-03-15 00:52:53,896 - CHC_CORE - Level:INFO - --------------------------------------------------------
+2021-03-15 00:52:53,896 - CHC_CORE - Level:INFO - Create vm
+2021-03-15 00:52:53,898 - CHC_CORE - Level:INFO - # CREATE VM TEMPLATE PHASE
+2021-03-15 00:52:53,899 - CHC_CORE - Level:INFO - Successfully created vm template
+2021-03-15 00:52:53,900 - CHC_CORE - Level:INFO - Instance properties: name:CHC_CORE, host:node02.svt.hn, cluster:eb7eed8a-54b8-11eb-a594-00163e3fc1a8, vcpu:4, ram:8192
+2021-03-15 00:52:54,183 - CHC_CORE - Level:INFO - # CREAT VM NIC PHASE
+2021-03-15 00:52:54,830 - CHC_CORE - Level:ERROR - Failed create nic for vm
+2021-03-15 00:52:54,835 - CHC_CORE - Level:ERROR - Can not find network with vlan311
+2021-03-15 00:52:54,838 - CHC_CORE - Level:INFO - # CREATE & ATTACH DISK PHASE
+2021-03-15 00:52:55,473 - CHC_CORE - Level:INFO - No disk has created with lun id 3600507680c8002d9480000000000082d yet, so is creating...
+2021-03-15 00:52:55,474 - CHC_CORE - Level:INFO - Trying to create disk with lun 3600507680c8002d9480000000000082d in host node02.svt.hn
+2021-03-15 00:52:55,559 - CHC_CORE - Level:ERROR - Can not attached disk with lun_id 3600507680c8002d9480000000000082d to vm
+2021-03-15 00:52:55,560 - CHC_CORE - Level:ERROR - size not match
+2021-03-15 00:55:38,709 - CHC_CORE - Level:INFO - --------------------------------------------------------
+2021-03-15 00:55:38,710 - CHC_CORE - Level:INFO - Create vm
+2021-03-15 00:55:38,711 - CHC_CORE - Level:INFO - # CREATE VM TEMPLATE PHASE
+2021-03-15 00:55:38,712 - CHC_CORE - Level:INFO - Successfully created vm template
+2021-03-15 00:55:38,713 - CHC_CORE - Level:INFO - Instance properties: name:CHC_CORE, host:node02.svt.hn, cluster:eb7eed8a-54b8-11eb-a594-00163e3fc1a8, vcpu:4, ram:8192
+2021-03-15 00:55:39,087 - CHC_CORE - Level:INFO - # CREAT VM NIC PHASE
+2021-03-15 00:55:39,413 - CHC_CORE - Level:ERROR - Failed create nic for vm
+2021-03-15 00:55:39,414 - CHC_CORE - Level:ERROR - Can not find network with vlan311
+2021-03-15 00:55:39,415 - CHC_CORE - Level:INFO - # CREATE & ATTACH DISK PHASE
+2021-03-15 00:55:39,781 - CHC_CORE - Level:INFO - Found existing disk 74550f94-73d6-4b2d-bbd1-c10c6a32cec7 with lun id 3600507680c8002d9480000000000082d
+2021-03-15 00:55:40,032 - CHC_CORE - Level:INFO - Successfully attach disk 74550f94-73d6-4b2d-bbd1-c10c6a32cec7 to CHC_CORE
+2021-03-15 00:55:40,191 - CHC_CORE - Level:INFO - Vm created with status down
+2021-03-15 00:55:40,192 - CHC_CORE - Level:INFO - Trying to start vm...

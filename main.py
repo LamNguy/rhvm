@@ -10,9 +10,7 @@ import os
 
 PATH_EXCEL = os.getcwd() + '/test_data.xlsx'
 
-
 connection = Connection()
-
 logger = logging.getLogger('result')
 filename = os.getcwd() + '/vms/results'
 formatter = logging.Formatter(
@@ -33,10 +31,12 @@ try:
 	for i in res:
 		message = 'Vm {}:{}'.format(i['name'],i['status'])	
 		logger.info(message)
+	print('Done')
 except ovirtsdk4.AuthError :
 	print('Authentication failed, please check adminrc')
 except IOError: 
 	print('File data not exists')
+	print(e)
 except Exception as e:
 	print(e)
 finally:

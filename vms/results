@@ -1,0 +1,4 @@
+2021-03-15 00:55:40,548 - result - Level:INFO - Vm CHC_CORE:success,fail_create_nic
+2021-03-15 00:55:40,549 - result - Level:INFO - Vm CHC_CORE1:success,fail_create_nic
+2021-03-15 00:55:40,549 - result - Level:INFO - Vm CHC_CORE2:success,fail_create_nic
+2021-03-15 00:55:40,549 - result - Level:INFO - Vm CHC_CORE3:success,fail_create_nic

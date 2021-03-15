@@ -1,2 +1,43 @@
 2021-03-11 06:04:33,346 - CHC_CORE1 - Level:INFO - --------------------------------------------------------
 2021-03-11 06:04:33,347 - CHC_CORE1 - Level:DEBUG - Vm existed
+2021-03-15 00:49:18,557 - CHC_CORE1 - Level:INFO - --------------------------------------------------------
+2021-03-15 00:49:18,557 - CHC_CORE1 - Level:DEBUG - Vm existed
+2021-03-15 00:50:31,450 - CHC_CORE1 - Level:INFO - --------------------------------------------------------
+2021-03-15 00:50:31,451 - CHC_CORE1 - Level:INFO - Create vm
+2021-03-15 00:50:31,452 - CHC_CORE1 - Level:INFO - # CREATE VM TEMPLATE PHASE
+2021-03-15 00:50:31,455 - CHC_CORE1 - Level:INFO - Successfully created vm template
+2021-03-15 00:50:31,456 - CHC_CORE1 - Level:INFO - Instance properties: name:CHC_CORE1, host:node02.svt.hn, cluster:eb7eed8a-54b8-11eb-a594-00163e3fc1a8, vcpu:5, ram:8192
+2021-03-15 00:50:32,080 - CHC_CORE1 - Level:INFO - # CREAT VM NIC PHASE
+2021-03-15 00:50:32,337 - CHC_CORE1 - Level:ERROR - Failed create nic for vm
+2021-03-15 00:50:32,339 - CHC_CORE1 - Level:ERROR - Can not find network with vlan311
+2021-03-15 00:50:32,341 - CHC_CORE1 - Level:INFO - # CREATE & ATTACH DISK PHASE
+2021-03-15 00:50:32,551 - CHC_CORE1 - Level:INFO - Found existing disk bc9938a6-00ca-4a9a-8771-e7a5748001bb with lun id 3600507680c8002d9480000000000082e
+2021-03-15 00:50:33,048 - CHC_CORE1 - Level:INFO - Successfully attach disk bc9938a6-00ca-4a9a-8771-e7a5748001bb to CHC_CORE1
+2021-03-15 00:50:33,352 - CHC_CORE1 - Level:INFO - Vm created with status down
+2021-03-15 00:50:33,352 - CHC_CORE1 - Level:INFO - Trying to start vm...
+2021-03-15 00:52:53,922 - CHC_CORE1 - Level:INFO - --------------------------------------------------------
+2021-03-15 00:52:53,923 - CHC_CORE1 - Level:INFO - Create vm
+2021-03-15 00:52:53,924 - CHC_CORE1 - Level:INFO - # CREATE VM TEMPLATE PHASE
+2021-03-15 00:52:53,926 - CHC_CORE1 - Level:INFO - Successfully created vm template
+2021-03-15 00:52:53,927 - CHC_CORE1 - Level:INFO - Instance properties: name:CHC_CORE1, host:node02.svt.hn, cluster:eb7eed8a-54b8-11eb-a594-00163e3fc1a8, vcpu:5, ram:8192
+2021-03-15 00:52:54,350 - CHC_CORE1 - Level:INFO - # CREAT VM NIC PHASE
+2021-03-15 00:52:54,584 - CHC_CORE1 - Level:ERROR - Failed create nic for vm
+2021-03-15 00:52:54,585 - CHC_CORE1 - Level:ERROR - Can not find network with vlan311
+2021-03-15 00:52:54,587 - CHC_CORE1 - Level:INFO - # CREATE & ATTACH DISK PHASE
+2021-03-15 00:52:54,865 - CHC_CORE1 - Level:INFO - Found existing disk bc9938a6-00ca-4a9a-8771-e7a5748001bb with lun id 3600507680c8002d9480000000000082e
+2021-03-15 00:52:55,052 - CHC_CORE1 - Level:INFO - Successfully attach disk bc9938a6-00ca-4a9a-8771-e7a5748001bb to CHC_CORE1
+2021-03-15 00:52:55,273 - CHC_CORE1 - Level:INFO - Vm created with status down
+2021-03-15 00:52:55,274 - CHC_CORE1 - Level:INFO - Trying to start vm...
+2021-03-15 00:55:38,737 - CHC_CORE1 - Level:INFO - --------------------------------------------------------
+2021-03-15 00:55:38,738 - CHC_CORE1 - Level:INFO - Create vm
+2021-03-15 00:55:38,739 - CHC_CORE1 - Level:INFO - # CREATE VM TEMPLATE PHASE
+2021-03-15 00:55:38,740 - CHC_CORE1 - Level:INFO - Successfully created vm template
+2021-03-15 00:55:38,741 - CHC_CORE1 - Level:INFO - Instance properties: name:CHC_CORE1, host:node02.svt.hn, cluster:eb7eed8a-54b8-11eb-a594-00163e3fc1a8, vcpu:5, ram:8192
+2021-03-15 00:55:39,395 - CHC_CORE1 - Level:INFO - # CREAT VM NIC PHASE
+2021-03-15 00:55:39,612 - CHC_CORE1 - Level:ERROR - Failed create nic for vm
+2021-03-15 00:55:39,614 - CHC_CORE1 - Level:ERROR - Can not find network with vlan311
+2021-03-15 00:55:39,615 - CHC_CORE1 - Level:INFO - # CREATE & ATTACH DISK PHASE
+2021-03-15 00:55:40,114 - CHC_CORE1 - Level:INFO - Found existing disk bc9938a6-00ca-4a9a-8771-e7a5748001bb with lun id 3600507680c8002d9480000000000082e
+2021-03-15 00:55:40,236 - CHC_CORE1 - Level:INFO - Successfully attach disk bc9938a6-00ca-4a9a-8771-e7a5748001bb to CHC_CORE1
+2021-03-15 00:55:40,461 - CHC_CORE1 - Level:INFO - Vm created with status down
+2021-03-15 00:55:40,462 - CHC_CORE1 - Level:INFO - Trying to start vm...
